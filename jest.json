@@ -1,0 +1,11 @@
+{
+  "moduleFileExtensions": ["js", "jsx", "json", "ts", "tsx"],
+  "transform": {
+    "\\.[jt]sx?$": "<rootDir>/jest-preprocessor.js"
+  },
+  "moduleNameMapper": {
+    "\\.s?css$": "identity-obj-proxy",
+    "\\.(woff2?|png|tiff?|jpe?g)$": "<rootDir>/src/__mocks__/fileMock.js"
+  },
+  "testMatch": ["**/__tests__/**/*.(j|t)s?(x)", "**/?(*.)(spec|test).(j|t)s?(x)"]
+}

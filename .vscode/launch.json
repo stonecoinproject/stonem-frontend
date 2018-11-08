@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:5678",
+            "webRoot": "${workspaceRoot}",
+            "smartStep": true,
+            "disableNetworkCache": true,
+            "showAsyncStacks": true
+        }
+    ]
+}

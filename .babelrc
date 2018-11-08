@@ -1,0 +1,27 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["chrome >= 57"]
+      },
+      "modules": false
+    }],
+    "stage-3",
+    "react"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["react-hot-loader/babel"]
+    },
+    "test": {
+      "presets": [
+        ["env", {
+            "targets": {
+              "node": "current"
+            }
+        }],
+        "jest"
+      ]
+    }
+  }
+}
