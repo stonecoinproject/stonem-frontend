@@ -1,10 +1,15 @@
 import React from 'react';
-import { Box } from 'rebass';
+import {
+  Box,
+  Flex,
+} from 'rebass';
 import styled, { createGlobalStyle } from 'styled-components';
 import { theme } from '../../config';
+import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
 
-const Base = styled(Box)`
-  background: ${theme.colors.darkgray};
+const Base = styled(Flex)`
+  background: ${theme.colors.gray};
   width: 100%;
   height: 100%;
 `;
@@ -26,7 +31,11 @@ const App = (props:any) => {
   return (
     <Base>
       <GlobalStyle />
-      {children}
+        <Sidebar/>
+        <Base flexDirection={'column'}>
+          <Header/>
+          <Base flexDirection={'column'}>{children}</Base>
+        </Base>
     </Base>
   );
 };

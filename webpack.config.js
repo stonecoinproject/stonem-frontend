@@ -59,7 +59,7 @@ module.exports = {
         fix: true
       }
     }, {
-      test: /\.(woff2?|png|tiff?|jpe?g)$/,
+      test: /\.(woff2?|png|svg|tiff?|jpe?g)$/,
       use: [{
         // Include files as data urls
         loader: 'url-loader',

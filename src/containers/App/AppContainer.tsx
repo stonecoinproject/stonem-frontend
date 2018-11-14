@@ -9,13 +9,13 @@ import HeaderContainer from '../Header';
 
 const AppContainer = () => {
   return (
-    <App>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <App>
         <Router>
           {routes}
         </Router>
-      </ThemeProvider>
-    </App>
+      </App>
+    </ThemeProvider>
   );
 };
 

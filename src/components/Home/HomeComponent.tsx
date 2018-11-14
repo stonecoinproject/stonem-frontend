@@ -1,11 +1,28 @@
 import React from 'react';
-import { Button } from 'rebass';
+import {
+  Box,
+  Text,
+} from 'rebass';
+
+interface HomeComponentStyles {
+  HomeComponentContainer: object;
+}
+
+const styles:HomeComponentStyles = {
+  HomeComponentContainer: {
+    height: '95%',
+  },
+};
 
 const HomeComponent = () => (
-  <div>
-      <Button>Hello</Button>
-      <p>Welcome to React!</p>
-  </div>
+  <Box
+    bg={'white'}
+    mx={4}
+    my={4}
+    css={styles.HomeComponentContainer}
+  >
+      <Text>&nbsp;</Text>
+  </Box>
 );
 
 export default HomeComponent;

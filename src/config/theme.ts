@@ -1,17 +1,22 @@
 const blue:string = '#07c';
-const lightgray:string = '#f3f3f3';
+const gray:string = '#f3f3f3';
+const lightgray:string = '#fafbfc';
+const lightergray:string = '#fcfcfc';
 const darkgray:string = '#999';
 const turquoise:string = '#0ab';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
+const headerHeight = 73;
 
 export default {
   fontSizes,
   space,
   colors: {
     blue,
+    gray,
     lightgray,
+    lightergray,
     darkgray,
     turquoise,
   },
@@ -50,5 +55,8 @@ export default {
       color: 'black',
       padding: space[0],
     },
+  },
+  Header: {
+    height: headerHeight,
   },
 };
