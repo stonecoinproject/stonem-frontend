@@ -18,11 +18,15 @@ import { theme, app } from '../../config';
 
 interface HomeComponentStyles {
   HomeComponentContainer: object;
+  HomeComponentFiltersContainer: object;
 }
 
 const styles:HomeComponentStyles = {
   HomeComponentContainer: {
     height: '95%',
+  },
+  HomeComponentFiltersContainer: {
+    borderBottom: `1px solid ${theme.colors.lightgray}`,
   },
 };
 
@@ -34,14 +38,16 @@ const HomeComponent = () => (
     px={4}
     css={styles.HomeComponentContainer}
   >
-    <Box>
+    <Box
+      pb={3}
+      css={styles.HomeComponentFiltersContainer}
+    >
       <FilterCriteriaHeading />
       <Flex>
         <FilterCriteriaBar filterCriteria={app.filterCriteria}/>
         <FilterSearchBar/>
         <FilterLayoutSwitcher/>
       </Flex>
-
     </Box>
   </Box>
 );
