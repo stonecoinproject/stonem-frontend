@@ -38,7 +38,7 @@ const SidebarComponentItem = ({ children, cssStyles }:any) => {
       alignItems={'center'}
       css={{ 
         ...sidebarComponentItemStyles,
-        cssStyles,
+        ...cssStyles,
       }}
     >
         <Box px={3}>

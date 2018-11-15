@@ -1,16 +1,20 @@
-const blue:string = '#07c';
+const blue:string = '#4da1ff';
 const gray:string = '#f3f3f3';
 const lightgray:string = '#fafbfc';
 const lightergray:string = '#fcfcfc';
-const darkgray:string = '#999';
+const darkgray:string = '#ccc';
+const darkergray:string = '#999';
+const darkestgray:string = '#333';
 const turquoise:string = '#0ab';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
 const headerHeight = 73;
+const radiusSizes = [4, 25];
 
 export default {
   fontSizes,
+  radiusSizes,
   space,
   colors: {
     blue,
@@ -18,6 +22,8 @@ export default {
     lightgray,
     lightergray,
     darkgray,
+    darkergray,
+    darkestgray,
     turquoise,
   },
   fonts: {
@@ -40,6 +46,19 @@ export default {
     primary: {
       color: '#fff',
       backgroundColor: blue,
+    },
+    default: {
+      color: darkestgray,
+      fontWeight: 'normal',
+      backgroundColor: 'white',
+      position: 'relative',      
+      boxShadow: `${gray} 0 0 0 1px`,
+      '&:hover': {
+        boxShadow: `${darkgray} 0 0 0 1px`,
+      },
+      '&:focus': {
+        boxShadow: `${darkestgray} 0 0 0 1px`,
+      },
     },
     outline: {
       color: blue,
