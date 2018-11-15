@@ -5,6 +5,7 @@ const lightergray:string = '#fcfcfc';
 const darkgray:string = '#ccc';
 const darkergray:string = '#999';
 const darkestgray:string = '#333';
+const placeholdergray:string = '#323c47';
 const turquoise:string = '#0ab';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
@@ -24,6 +25,7 @@ export default {
     darkgray,
     darkergray,
     darkestgray,
+    placeholdergray,
     turquoise,
   },
   fonts: {

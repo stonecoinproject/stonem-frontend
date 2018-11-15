@@ -56,17 +56,17 @@ const HeaderComponent = () => (
           <Flex>
             <Box pt={2} mr={3}>
               <Text fontSize={1} textAlign="center">Available MNs</Text>
-              <Text fontSize={4} textAlign="center">200</Text>
+              <Text fontSize={3} textAlign="center">200</Text>
             </Box>
 
             <Box pt={2} mr={3}>
               <Text fontSize={1} textAlign="center">Active MNs</Text>
-              <Text fontSize={4} textAlign="center">1k</Text>
+              <Text fontSize={3} textAlign="center">1k</Text>
             </Box>
 
             <Box pt={2}>
               <Text fontSize={1} textAlign="center">Hosted Value</Text>
-              <Text fontSize={4} textAlign="center">$2m</Text>
+              <Text fontSize={3} textAlign="center">$2m</Text>
             </Box>
           </Flex> {/* End header info display */}
         </Flex>

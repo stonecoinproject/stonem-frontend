@@ -37,7 +37,8 @@ const Input = styled.input`
   margin: 0;
 
   ::placeholder {
-    color: ${theme.colors.gray};
+    color: ${theme.colors.placeholdergray};
+    opacity: 0.4;
   }
 
   ::-ms-clear {
