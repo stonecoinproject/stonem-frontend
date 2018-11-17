@@ -16,4 +16,4 @@ export default handleActions({
       name: payload.isLoading,
     };
   },
-}, initialState);
+},                           initialState);

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { CapsText } from '../../components/UI';
 
 const IncomeStatsCardHeading = ({ children }:any) => (

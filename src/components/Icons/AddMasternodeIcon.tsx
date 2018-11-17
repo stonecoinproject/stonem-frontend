@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const AddMasternodeIcon = ({ ...props }) => (
     <svg width={35} height={35} {...props}>

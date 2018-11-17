@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     Box,
     Flex,
@@ -57,7 +57,7 @@ const HeaderComponent = () => (
             flexDirection={'column'}
             justifyContent={'center'}
           >
-            <LoginIcon /> 
+            <LoginIcon />
           </Flex>
 
           <Flex>

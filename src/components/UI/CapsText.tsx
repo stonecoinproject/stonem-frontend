@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import * as React from 'react';
+import styledComponents from 'styled-components';
 import { Text } from 'rebass';
 
-const CapsText = styled(Text)`
+const CapsText = styledComponents(Text)`
   text-transform: uppercase
 `;
 

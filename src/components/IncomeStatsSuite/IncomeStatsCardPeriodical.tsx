@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     Card,
     Button,
@@ -43,7 +43,7 @@ const IncomeStatsCardPeriodical = ({
               Required Coin: {requiredCoin}
             </CapsText>
           </Flex>
-  
+
           <Flex
             flexWrap={'wrap'}
             mx={-2}
@@ -56,7 +56,7 @@ const IncomeStatsCardPeriodical = ({
               // Constructs a table for displaying periodical data.
               const xBorder = isEven(i + 1) ? 'borderLeft' : 'borderRight';
               const yBorder = i > 1 ? 'borderTop' : 'borderBottom';
-              
+
               return (
                     <IncomeStatsCard
                         width={1 / 2}
@@ -70,11 +70,11 @@ const IncomeStatsCardPeriodical = ({
                         <IncomeStat>$0.4889</IncomeStat>
                         <IncomeStat>0.00005943 BTC</IncomeStat>
                         <IncomeStat>14.496 STONE</IncomeStat>
-                    </IncomeStatsCard>      
+                    </IncomeStatsCard>
               );
-            })}  
+            })}
           </Flex>
-          
+
           <Flex
             flexDirection={'column'}
             alignItems={'center'}
@@ -84,9 +84,9 @@ const IncomeStatsCardPeriodical = ({
               <CapsText fontSize={2}>Create Now</CapsText>
             </Button>
           </Flex>
-        </Card>      
+        </Card>
       </Box>
   );
 };
-  
+
 export default IncomeStatsCardPeriodical;

@@ -1,14 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import {
   Box,
   Flex,
 } from 'rebass';
-import styled, { createGlobalStyle } from 'styled-components';
+import styledComponents, { createGlobalStyle } from 'styled-components';
 import { theme } from '../../config';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 
-const Base = styled(Flex)`
+const Base = styledComponents(Flex)`
   background: ${theme.colors.gray};
   flex-direction: column;
   height: 100%;

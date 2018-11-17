@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     Box,
     Flex,
@@ -16,7 +16,7 @@ const IncomeStatsCard = ({ children, ...props }:any) => (
       >
         { children }
       </Flex>
-  
+
     </Box>
   );
 

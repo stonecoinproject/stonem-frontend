@@ -65,7 +65,7 @@ export default {
       color: darkestgray,
       fontWeight: 'normal',
       backgroundColor: 'white',
-      position: 'relative',      
+      position: 'relative',
       boxShadow: `${gray} 0 0 0 1px`,
       '&:hover': {
         boxShadow: `${darkgray} 0 0 0 1px`,

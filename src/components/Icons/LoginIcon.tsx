@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import * as React from 'react';
+import styledComponents from 'styled-components';
 
 const BaseLoginIcon = ({ ...props }) => (
     <svg width={29} height={29} {...props}>
@@ -8,7 +8,7 @@ const BaseLoginIcon = ({ ...props }) => (
   </svg>
 );
 
-const LoginIcon = styled(BaseLoginIcon)`
+const LoginIcon = styledComponents(BaseLoginIcon)`
   &:hover {
     fill: #888;
   }

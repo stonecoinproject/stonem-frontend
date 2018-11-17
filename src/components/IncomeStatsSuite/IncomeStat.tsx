@@ -1,14 +1,14 @@
-import React from 'react';
+import * as React from 'react';
 import { Text } from 'rebass';
 import { CapsText } from '../../components/UI';
 
 const IncomeStat = ({ children, isAllCaps, ...props }:any) => {
   const TextRenderer = isAllCaps ? CapsText : Text;
-  
+
   return (
         <TextRenderer
           color={'copywritegray'}
-          fontSize={1} 
+          fontSize={1}
           mb={1}
           {...props}
         >
@@ -16,7 +16,7 @@ const IncomeStat = ({ children, isAllCaps, ...props }:any) => {
        </TextRenderer>
   );
 };
-  
+
 IncomeStat.defaultProps = {
   isAllCaps: true,
 };

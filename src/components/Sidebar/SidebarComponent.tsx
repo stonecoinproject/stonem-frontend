@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     Box,
     Flex,
@@ -42,7 +42,7 @@ const SidebarComponentItem = ({ children, cssStyles }:any) => {
       flexDirection={'column'}
       justifyContent={'center'}
       alignItems={'center'}
-      css={{ 
+      css={{
         ...sidebarComponentItemStyles,
         ...cssStyles,
       }}

@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import react, { SFC } from 'react';
 
 import { connect } from 'react-redux';
 import Home from '../../components/Home';

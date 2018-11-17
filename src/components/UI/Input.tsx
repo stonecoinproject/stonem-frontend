@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styledComponents, { keyframes } from 'styled-components';
 import theme from '../../config/theme';
 
 const borders = ({ color, theme }:any) => {
@@ -11,7 +11,7 @@ const borders = ({ color, theme }:any) => {
     ':hover': {
       'border-color': hoverColor,
       'box-shadow': `0 0 0 1px ${hoverColor}`,
-    },  
+    },
     ':focus': {
       outline: 0,
       'border-color': focusColor,
@@ -20,7 +20,7 @@ const borders = ({ color, theme }:any) => {
   };
 };
 
-const Input = styled.input`
+const Input = styledComponents.input`
   appearance: none;
   display: block;
   width: 100%;

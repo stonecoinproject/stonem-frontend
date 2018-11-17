@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const WalletManagementIcon = ({ ...props }) => (
   <svg width={24} height={24} {...props}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Button } from 'rebass';
 import { Dot } from '../UI';
 import { theme } from '../../config';
@@ -9,10 +9,10 @@ const FilterButton = ({ isSelected, children }:any) => (
     variant={'default'}
     data-testid={'filter-button'}
   >
-    {/* 
+    {/*
       If `isSelected` is true, render a <Dot/> within the button.
     */}
-    {isSelected && 
+    {isSelected &&
       <Dot
         theme={theme}
         css={{

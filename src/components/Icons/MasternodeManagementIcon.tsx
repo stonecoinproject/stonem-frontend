@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const MasternodeManagementIcon = ({ ...props }) => (
     <svg width={35} height={36} {...props}>

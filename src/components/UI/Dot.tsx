@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import * as React from 'react';
+import styledComponents from 'styled-components';
 import { Box } from 'rebass';
 
-const Dot = styled(Box)`
+const Dot = styledComponents(Box)`
   width: 10px;
   height: 10px;
   background: ${({ theme }) => theme.colors.blue};

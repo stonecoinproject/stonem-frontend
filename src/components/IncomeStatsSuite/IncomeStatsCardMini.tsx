@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
     Button,
     Box,
@@ -50,7 +50,7 @@ const IncomeStatsCardMini = ({
                 Mn Worth: {worth}
             </IncomeStat>
             </Box>
-    
+
             <Flex
             flexDirection={'column'}
             alignItems={'center'}
@@ -64,5 +64,5 @@ const IncomeStatsCardMini = ({
     </Box>
   );
 };
-  
+
 export default IncomeStatsCardMini;

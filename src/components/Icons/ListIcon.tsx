@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 const ListIcon = ({ ...props }) => (
     <svg width={22} height={23} {...props}>

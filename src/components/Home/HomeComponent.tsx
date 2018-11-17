@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   Button,
   Box,
@@ -7,7 +7,7 @@ import {
   Flex,
   Text,
 } from 'rebass';
-import styled from 'styled-components';
+import styledComponents from 'styled-components';
 
 import {
   FilterCriteriaBar,
@@ -83,12 +83,12 @@ const HomeComponent = () => (
           mb={3}
           bg={'white'}
           width={1 / 4}
-          key={i}  
+          key={i}
         />
       ))}
       </Flex>
 
-    </Flex>    
+    </Flex>
   </Box>
 );
 
