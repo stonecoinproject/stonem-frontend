@@ -20,7 +20,7 @@ const borders = ({ color, theme }:any) => {
   };
 };
 
-const Input = styledComponents.input`
+const input = styledComponents.input`
   appearance: none;
   display: block;
   width: 100%;
@@ -48,9 +48,9 @@ const Input = styledComponents.input`
   ${({ color }) => borders({ color, theme })}
 `;
 
-Input.displayName = 'Input';
-Input.defaultProps = {
+input.displayName = 'Input';
+input.defaultProps = {
   color: 'gray',
 };
 
-export default Input;
+export default input;

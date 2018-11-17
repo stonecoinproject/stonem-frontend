@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const AddMasternodeIcon = ({ ...props }) => (
+const addMasternodeIcon = ({ ...props }) => (
     <svg width={35} height={35} {...props}>
     <g fill="none" fillRule="evenodd">
       <rect
@@ -20,4 +20,4 @@ const AddMasternodeIcon = ({ ...props }) => (
   </svg>
 );
 
-export default AddMasternodeIcon;
+export default addMasternodeIcon;

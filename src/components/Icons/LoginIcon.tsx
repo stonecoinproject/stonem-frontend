@@ -1,17 +1,17 @@
 import * as React from 'react';
 import styledComponents from 'styled-components';
 
-const BaseLoginIcon = ({ ...props }) => (
+const baseLoginIcon = ({ ...props }) => (
     <svg width={29} height={29} {...props}>
     <path d="M21.091 11.151V7.403c0-.502-.468-.876-1.046-.85a1.082 1.082 0 0 0-.67.284c-.774.661-1.55 1.322-2.328 1.982l-5.905 5.018c-.178.152-.325.313-.362.533a.726.726 0 0 0 .219.66c.032.032.066.062.1.092l8.28 7.042c.283.241.612.346 1 .246.368-.094.601-.308.69-.627a.934.934 0 0 0 .021-.25v-3.687h6.795c.666 0 1.078-.351 1.078-.92v-4.86c0-.563-.41-.914-1.072-.914h-6.8z" />
     <path d="M15.9 25.262c-6.491 0-11.774-4.827-11.774-10.762 0-5.935 5.281-10.762 11.774-10.762 1.13 0 2.045-.837 2.045-1.869S17.029 0 15.9 0C7.153 0 .037 6.505.037 14.5S7.153 29 15.9 29c1.13 0 2.045-.837 2.045-1.87 0-1.031-.916-1.868-2.045-1.868z" />
   </svg>
 );
 
-const LoginIcon = styledComponents(BaseLoginIcon)`
+const loginIcon = styledComponents(baseLoginIcon)`
   &:hover {
     fill: #888;
   }
 `;
 
-export default LoginIcon;
+export default loginIcon;

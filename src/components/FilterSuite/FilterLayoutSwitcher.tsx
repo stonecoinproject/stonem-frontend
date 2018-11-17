@@ -5,7 +5,7 @@ import {
     Image,
 } from 'rebass';
 
-const FilterLayoutSwitcher = () => (
+const filterLayoutSwitcher = () => (
     <Flex flexDirection={'column'} justifyContent={'center'}>
       <Flex>
         <Box mr={3}>
@@ -18,4 +18,4 @@ const FilterLayoutSwitcher = () => (
     </Flex>
 );
 
-export default FilterLayoutSwitcher;
+export default filterLayoutSwitcher;

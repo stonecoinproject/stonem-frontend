@@ -5,18 +5,18 @@ import {
     Heading,
     Text,
 } from 'rebass';
-import { LoginIcon } from '../../components/Icons';
+import { LoginIcon } from '../Icons';
 
 import { app, theme } from '../../config';
 
 interface HeaderComponentStyles {
-  HeaderComponentContainer: object;
-  HeaderComponentWrapper: object;
-  HeaderComponentInfoContainer: object;
+  headerComponentContainer: object;
+  headerComponentWrapper: object;
+  headerComponentInfoContainer: object;
 }
 
 const styles:HeaderComponentStyles = {
-  HeaderComponentContainer: {
+  headerComponentContainer: {
     background: theme.colors.lightergray,
     height: theme.Header.height,
     position: 'fixed',
@@ -24,14 +24,14 @@ const styles:HeaderComponentStyles = {
     width: `calc(100% - ${theme.Sidebar.width}px)`,
     zIndex: theme.Header.zIndex,
   },
-  HeaderComponentWrapper: { height: '100%' },
-  HeaderComponentInfoContainer: { width: '80%' },
+  headerComponentWrapper: { height: '100%' },
+  headerComponentInfoContainer: { width: '80%' },
 };
 
-const HeaderComponent = () => (
-  <Box css={styles.HeaderComponentContainer}>
+const headerComponent = () => (
+  <Box css={styles.headerComponentContainer}>
     <Flex
-      css={styles.HeaderComponentWrapper}
+      css={styles.headerComponentWrapper}
       flexDirection="column"
       justifyContent="center"
       px={4}
@@ -50,7 +50,7 @@ const HeaderComponent = () => (
 
         <Flex
           flexDirection="row-reverse"
-          css={styles.HeaderComponentInfoContainer}
+          css={styles.headerComponentInfoContainer}
         >
           <Flex
             ml={4}
@@ -83,4 +83,4 @@ const HeaderComponent = () => (
   </Box>
 );
 
-export default HeaderComponent;
+export default headerComponent;

@@ -1,34 +1,13 @@
 import * as React from 'react';
-import {
-  Box,
-  Flex,
-} from 'rebass';
-import styledComponents, { createGlobalStyle } from 'styled-components';
 import { theme } from '../../config';
-import Header from '../../components/Header';
-import Sidebar from '../../components/Sidebar';
+import Header from '../Header';
+import Sidebar from '../Sidebar';
+import {
+  Base,
+  GlobalStyle,
+} from '../UI';
 
-const Base = styledComponents(Flex)`
-  background: ${theme.colors.gray};
-  flex-direction: column;
-  height: 100%;
-`;
-
-const GlobalStyle = createGlobalStyle`
-  html,
-  body,
-  #root {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    padding-top: ${theme.Header.height}px;
-  }
-`;
-
-const App = (props:any) => {
+const appComponent = (props:any) => {
   const { children } = props;
 
   return (
@@ -46,4 +25,4 @@ const App = (props:any) => {
   );
 };
 
-export default App;
+export default appComponent;

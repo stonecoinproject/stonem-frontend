@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { CapsText } from '../../components/UI';
+import { CapsText } from '../UI';
 
-const IncomeStatsCardHeading = ({ children }:any) => (
+const incomeStatsCardHeading = ({ children }:any) => (
     <CapsText
       color={'darkgray'}
       fontSize={0}
@@ -11,4 +11,4 @@ const IncomeStatsCardHeading = ({ children }:any) => (
     </CapsText>
   );
 
-export default IncomeStatsCardHeading;
+export default incomeStatsCardHeading;

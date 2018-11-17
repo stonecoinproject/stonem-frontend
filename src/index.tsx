@@ -10,7 +10,7 @@ import App from './containers/App';
 function renderMain(App: React.ReactType) {
   return (
     <AppContainer>
-      <Provider>
+      <Provider store={store()}>
           <App />
       </Provider>
     </AppContainer>

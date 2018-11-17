@@ -3,7 +3,7 @@ import { Button } from 'rebass';
 import { Dot } from '../UI';
 import { theme } from '../../config';
 
-const FilterButton = ({ isSelected, children }:any) => (
+const filterButton = ({ isSelected, children }:any) => (
   <Button
     px={3}
     variant={'default'}
@@ -27,8 +27,8 @@ const FilterButton = ({ isSelected, children }:any) => (
   </Button>
 );
 
-FilterButton.defaultProps = {
+filterButton.defaultProps = {
   isSelected: false,
 };
 
-export default FilterButton;
+export default filterButton;

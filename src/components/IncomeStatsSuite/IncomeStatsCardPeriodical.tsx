@@ -6,15 +6,15 @@ import {
     Flex,
     Image,
 } from 'rebass';
-import IncomeStat from './IncomeStat';
-import IncomeStatsCard from './IncomeStatsCard';
-import IncomeStatsCardHeading from './IncomeStatsCardHeading';
+import { default as IncomeStat } from './incomeStat';
+import { default as IncomeStatsCard } from './incomeStatsCard';
+import { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
 
-import { CapsText } from '../../components/UI';
+import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 
-const IncomeStatsCardPeriodical = ({
+const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
     ...props }:any) => {
@@ -89,4 +89,4 @@ const IncomeStatsCardPeriodical = ({
   );
 };
 
-export default IncomeStatsCardPeriodical;
+export default incomeStatsCardPeriodical;

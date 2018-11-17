@@ -1,6 +1,6 @@
-export { default as AddMasternodeIcon } from './AddMasternodeIcon';
-export { default as CardsIcon } from './CardsIcon';
-export { default as ListIcon } from './ListIcon';
-export { default as LoginIcon } from './LoginIcon';
-export { default as MasternodeManagementIcon } from './MasternodeManagementIcon';
-export { default as WalletManagementIcon } from './WalletManagementIcon';
+export { default as AddMasternodeIcon } from './addMasternodeIcon';
+export { default as CardsIcon } from './cardsIcon';
+export { default as ListIcon } from './listIcon';
+export { default as LoginIcon } from './loginIcon';
+export { default as MasternodeManagementIcon } from './masternodeManagementIcon';
+export { default as WalletManagementIcon } from './walletManagementIcon';

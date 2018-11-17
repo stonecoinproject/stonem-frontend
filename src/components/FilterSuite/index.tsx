@@ -1,5 +1,5 @@
-export { default as FilterButton } from './FilterButton';
-export { default as FilterCriteriaBar } from './FilterCriteriaBar';
-export { default as FilterCriteriaHeading } from './FilterCriteriaHeading';
-export { default as FilterLayoutSwitcher } from './FilterLayoutSwitcher';
-export { default as FilterSearchBar } from './FilterSearchBar';
+export { default as FilterButton } from './filterButton';
+export { default as FilterCriteriaBar } from './filterCriteriaBar';
+export { default as FilterCriteriaHeading } from './filterCriteriaHeading';
+export { default as FilterLayoutSwitcher } from './filterLayoutSwitcher';
+export { default as FilterSearchBar } from './filterSearchBar';

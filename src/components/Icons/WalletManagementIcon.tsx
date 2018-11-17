@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const WalletManagementIcon = ({ ...props }) => (
+const walletManagementIcon = ({ ...props }) => (
   <svg width={24} height={24} {...props}>
     <g fill="#BEBEBE" fillOpacity={0.45} fillRule="evenodd">
       <path d="M20.718 0H3.281C2.14 0 1.329.404.788 1 .255 1.588-.01 2.375 0 3.16V8a3.67 3.67 0 0 1 .297-.442C.78 6.941 1.49 6.48 2.423 6.302v-.776c0-.725.232-1.39.621-1.884.39-.493.95-.82 1.576-.82h14.759c.626 0 1.186.326 1.575.82.39.493.622 1.157.622 1.884v.611c.687-.145 1.217-.465 1.608-.884.54-.58.816-1.359.816-2.142 0-.783-.275-1.562-.816-2.141C22.644.39 21.84 0 20.718 0z" />
@@ -12,4 +12,4 @@ const WalletManagementIcon = ({ ...props }) => (
   </svg>
 );
 
-export default WalletManagementIcon;
+export default walletManagementIcon;

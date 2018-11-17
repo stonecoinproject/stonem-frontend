@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Flex } from 'rebass';
 import { CapsText } from '../UI';
 
-const FilterCriteriaHeading = () => {
+const filterCriteriaHeading = () => {
   return (
         <Flex>
             <CapsText
@@ -30,4 +30,4 @@ const FilterCriteriaHeading = () => {
   );
 };
 
-export default FilterCriteriaHeading;
+export default filterCriteriaHeading;

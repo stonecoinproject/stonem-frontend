@@ -14,7 +14,7 @@ import {
   FilterCriteriaHeading,
   FilterLayoutSwitcher,
   FilterSearchBar,
-} from '../../components/FilterSuite';
+} from '../FilterSuite';
 
 import {
   IncomeStat,
@@ -22,36 +22,36 @@ import {
   IncomeStatsCardHeading,
   IncomeStatsCardMini,
   IncomeStatsCardPeriodical,
-} from '../../components/IncomeStatsSuite';
+} from '../IncomeStatsSuite';
 
 import { theme, app } from '../../config';
 
 interface HomeComponentStyles {
-  HomeComponentContainer: object;
-  HomeComponentFiltersContainer: object;
+  homeComponentContainer: object;
+  homeComponentFiltersContainer: object;
 }
 
 const styles:HomeComponentStyles = {
-  HomeComponentContainer: {
+  homeComponentContainer: {
     height: '95%',
   },
-  HomeComponentFiltersContainer: {
+  homeComponentFiltersContainer: {
     borderBottom: `1px solid ${theme.colors.lightgray}`,
   },
 };
 
-const HomeComponent = () => (
+const homeComponent = () => (
   <Box
     bg={'white'}
     mx={5}
     my={4}
     px={4}
     pb={4}
-    css={styles.HomeComponentContainer}
+    css={styles.homeComponentContainer}
   >
     <Box
       pb={3}
-      css={styles.HomeComponentFiltersContainer}
+      css={styles.homeComponentFiltersContainer}
     >
       <FilterCriteriaHeading />
       <Flex>
@@ -92,4 +92,4 @@ const HomeComponent = () => (
   </Box>
 );
 
-export default HomeComponent;
+export default homeComponent;

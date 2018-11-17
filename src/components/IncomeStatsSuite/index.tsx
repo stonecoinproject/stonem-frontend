@@ -1,5 +1,5 @@
-export { default as IncomeStat } from './IncomeStat';
-export { default as IncomeStatsCard } from './IncomeStatsCard';
-export { default as IncomeStatsCardHeading } from './IncomeStatsCardHeading';
-export { default as IncomeStatsCardMini } from './IncomeStatsCardMini';
-export { default as IncomeStatsCardPeriodical } from './IncomeStatsCardPeriodical';
+export { default as IncomeStat } from './incomeStat';
+export { default as IncomeStatsCard } from './incomeStatsCard';
+export { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
+export { default as IncomeStatsCardMini } from './incomeStatsCardMini';
+export { default as IncomeStatsCardPeriodical } from './incomeStatsCardPeriodical';

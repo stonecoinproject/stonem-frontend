@@ -7,7 +7,7 @@ import { theme } from '../../config';
 import App from '../../components/App';
 import routes from '../../routes';
 
-const AppContainer = () => {
+const appContainer = () => {
   return (
     <ThemeProvider theme={theme}>
       <App>
@@ -19,4 +19,4 @@ const AppContainer = () => {
   );
 };
 
-export default AppContainer;
+export default appContainer;

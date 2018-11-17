@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Flex } from 'rebass';
-import { Input } from '../../components/UI';
+import { Input } from '../UI';
 
-const FilterSearchBar = () => {
+const filterSearchBar = () => {
   return (
         <Flex mr={3}>
             <Input placeholder={'Search Masternode'} />
@@ -10,4 +10,4 @@ const FilterSearchBar = () => {
   );
 };
 
-export default FilterSearchBar;
+export default filterSearchBar;

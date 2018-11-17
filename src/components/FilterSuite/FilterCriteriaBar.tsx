@@ -5,14 +5,14 @@ import {
     Flex,
     Text,
 } from 'rebass';
-import FilterButton from './FilterButton';
+import { FilterButton } from './index';
 
 export interface FilterCriteriaInterface {
   isSelected: boolean;
   name: string;
 }
 
-const FilterCriteriaBar = ({ filterCriteria }:any) => (
+const filterCriteriaBar = ({ filterCriteria }:any) => (
     <Flex mr={3}>
     {filterCriteria.map((filter:FilterCriteriaInterface, key:number) => (
       <Box
@@ -27,4 +27,4 @@ const FilterCriteriaBar = ({ filterCriteria }:any) => (
     </Flex>
   );
 
-export default FilterCriteriaBar;
+export default filterCriteriaBar;
