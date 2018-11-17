@@ -1,4 +1,3 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
@@ -10,24 +9,6 @@ if (NODE_ENV !== 'production' && NODE_ENV !== 'development') {
 }
 
 const IS_PROD = NODE_ENV === 'production';
-
-const cssLoaders = (other) => ExtractTextPlugin.extract({
-  use: [{
-    loader: 'css-loader',
-    options: {
-      sourceMap: true,
-      // Enable CSS Modules to scope class names
-      modules: true,
-      minimize: IS_PROD,
-      importLoaders: 1 + other.length
-    }
-  }, {
-    // Adjust URLs in CSS files so that they are relative to the source file rather than the output file
-    loader: 'resolve-url-loader'
-  }, ...other],
-  // Do not extract in development mode for hot reloading
-  fallback: 'style-loader'
-});
 
 const jsLoaders = (other) => [{
   loader: 'babel-loader'
@@ -59,17 +40,6 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.css$/,
-      use: cssLoaders([])
-    }, {
-      test: /\.scss$/,
-      use: cssLoaders([{
-        loader: 'sass-loader',
-        options: {
-          sourceMap: true
-        }
-      }])
-    }, {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       use: jsLoaders([])
@@ -86,11 +56,10 @@ module.exports = {
       // Force TSLint before other loaders
       enforce: 'pre',
       options: {
-        fix: true,
-        emitWarning: true
+        fix: true
       }
     }, {
-      test: /\.(woff2?|png|tiff?|jpe?g)$/,
+      test: /\.(woff2?|png|svg|tiff?|jpe?g)$/,
       use: [{
         // Include files as data urls
         loader: 'url-loader',
@@ -102,11 +71,6 @@ module.exports = {
     }]
   },
   plugins: [...[
-    // Actually output extracted CSS
-    new ExtractTextPlugin({
-      filename: 'main.css',
-      disable: !IS_PROD
-    }),
     // Generate an HTML-file to include all bundle outputs
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
