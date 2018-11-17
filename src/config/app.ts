@@ -11,8 +11,13 @@ const filterCriteria = [
   { name: 'MN Worth', isSelected: true },
 ];
 
+const incomeSummaries = [
+  { price: '$0.0337', ROI: '369.87%', worth: '$51' },
+];
+
 export default {
   name,
   tagline,
   filterCriteria,
+  incomeSummaries,
 };

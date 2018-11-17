@@ -20,7 +20,7 @@ const styles:HeaderComponentStyles = {
     height: theme.Header.height,
   },
   HeaderComponentWrapper: { height: '100%' },
-  HeaderComponentInfoContainer: { width: '82%' },
+  HeaderComponentInfoContainer: { width: '80%' },
 };
 
 const HeaderComponent = () => (

@@ -9,10 +9,10 @@ const FilterLayoutSwitcher = () => (
     <Flex flexDirection={'column'} justifyContent={'center'}>
       <Flex>
         <Box mr={3}>
-          <Image src={require('../Home/cards.svg')}/>
+          <Image src={require('./cards.svg')}/>
         </Box>
         <Box>
-          <Image src={require('../Home/list.svg')}/>
+          <Image src={require('./list.svg')}/>
         </Box>
       </Flex>
     </Flex>

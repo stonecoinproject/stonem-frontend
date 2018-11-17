@@ -6,6 +6,7 @@ const darkgray:string = '#ccc';
 const darkergray:string = '#999';
 const darkestgray:string = '#333';
 const placeholdergray:string = '#323c47';
+const copywritegray:string = '#9b9b9b';
 const turquoise:string = '#0ab';
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
@@ -26,6 +27,7 @@ export default {
     darkergray,
     darkestgray,
     placeholdergray,
+    copywritegray,
     turquoise,
   },
   fonts: {
@@ -42,12 +44,19 @@ export default {
   },
   Text: {
     fontFamily: '"Montserrat", sans-serif',
+    letterSpacing: 0.3,
     lineHeight: 1.25,
   },
   buttons: {
     primary: {
       color: '#fff',
       backgroundColor: blue,
+    },
+    primaryLarge: {
+      color: '#fff',
+      backgroundColor: blue,
+      padding: `${space[3]}px ${space[5]}px`,
+      fontWeight: 'normal',
     },
     default: {
       color: darkestgray,
@@ -61,6 +70,11 @@ export default {
       '&:focus': {
         boxShadow: `${darkestgray} 0 0 0 1px`,
       },
+    },
+    outlineDefault: {
+      color: blue,
+      backgroundColor: 'white',
+      boxShadow: '0 0 2px 1px',
     },
     outline: {
       color: blue,

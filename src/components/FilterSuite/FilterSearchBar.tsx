@@ -4,7 +4,7 @@ import { Input } from '../../components/UI';
 
 const FilterSearchBar = () => {
   return (
-        <Flex mr={4}>
+        <Flex mr={3}>
             <Input placeholder={'Search Masternode'} />
         </Flex>
   );
