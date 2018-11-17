@@ -3,10 +3,13 @@ import {
     Box,
     Flex,
     Image,
-    Heading,
-    Text,
 } from 'rebass';
-import { app, theme } from '../../config';
+import {
+  AddMasternodeIcon,
+  MasternodeManagementIcon,
+  WalletManagementIcon,
+} from '../../components/Icons';
+import { theme } from '../../config';
 
 interface SidebarComponentStyles {
   SidebarComponentContainer: object;
@@ -59,15 +62,15 @@ const SidebarComponent = ({ ...props }:any) => (
     </SidebarComponentItem>
 
     <SidebarComponentItem>
-      <Image src={require('../Sidebar/add-masternode.svg')}/>
+      <AddMasternodeIcon />
     </SidebarComponentItem>
 
     <SidebarComponentItem>
-      <Image src={require('../Sidebar/masternode-management.svg')}/>
+      <MasternodeManagementIcon />
     </SidebarComponentItem>
 
     <SidebarComponentItem>
-      <Image src={require('../Sidebar/wallet-management.svg')}/>
+      <WalletManagementIcon />
     </SidebarComponentItem>
   </Box>
 );
