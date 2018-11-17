@@ -6982,13 +6982,6 @@ styled-components@^4.1.1:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
-styled-css-grid@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/styled-css-grid/-/styled-css-grid-1.1.1.tgz#8ef64da8b8b6a47464b333a676bb5564336da314"
-  integrity sha512-m2Vg78So2CIu2+ZDFD/WVHkKKuR98HAqe39h8AZqrXwnWpBv7D3hmRhg5YmZuwla2OJTZNXbVVkz7WyZX4iOpw==
-  dependencies:
-    prop-types "^15.6.0"
-
 styled-system@^3.1.11:
   version "3.1.11"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.1.11.tgz#a91a38cf7a0f0e625b897a04fdd506a359a3629f"

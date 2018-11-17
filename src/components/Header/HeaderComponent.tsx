@@ -2,10 +2,11 @@ import React from 'react';
 import {
     Box,
     Flex,
-    Image,
     Heading,
     Text,
 } from 'rebass';
+import { LoginIcon } from '../../components/Icons';
+
 import { app, theme } from '../../config';
 
 interface HeaderComponentStyles {
@@ -51,10 +52,12 @@ const HeaderComponent = () => (
           flexDirection="row-reverse"
           css={styles.HeaderComponentInfoContainer}
         >
-          <Flex ml={4}>
-            <Image
-                src={require('../Header/login-icon.svg')}
-              />
+          <Flex
+            ml={4}
+            flexDirection={'column'}
+            justifyContent={'center'}
+          >
+            <LoginIcon /> 
           </Flex>
 
           <Flex>
