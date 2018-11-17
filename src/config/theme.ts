@@ -9,10 +9,13 @@ const placeholdergray:string = '#323c47';
 const copywritegray:string = '#9b9b9b';
 const turquoise:string = '#0ab';
 
+const headerHeight = 73;
+const sidebarWidth = 70;
+
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
-const headerHeight = 73;
 const radiusSizes = [4, 25];
+const zIndexScale = [-100, 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
 export default {
   fontSizes,
@@ -93,5 +96,10 @@ export default {
   },
   Header: {
     height: headerHeight,
+    zIndex: zIndexScale[7],
+  },
+  Sidebar: {
+    width: sidebarWidth,
+    zIndex: zIndexScale[7],
   },
 };

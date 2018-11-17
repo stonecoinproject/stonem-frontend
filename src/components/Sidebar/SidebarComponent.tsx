@@ -20,7 +20,10 @@ const sidebarComponentItemStyles = {
 
 const styles:SidebarComponentStyles = {
   SidebarComponentContainer: {
-    height: '100%',
+    position: 'fixed',
+    width: theme.Sidebar.width,
+    top: 0,
+    bottom: 0,
     background: theme.colors.lightergray,
     borderRight: `1px solid ${theme.colors.gray}`,
   },
@@ -48,8 +51,8 @@ const SidebarComponentItem = ({ children, cssStyles }:any) => {
   );
 };
 
-const SidebarComponent = () => (
-  <Box css={styles.SidebarComponentContainer}>
+const SidebarComponent = ({ ...props }:any) => (
+  <Box css={styles.SidebarComponentContainer} {...props}>
 
     <SidebarComponentItem cssStyles={styles.SidebarComponentBrandContainer}>
       <Image src={require('../Sidebar/stone-icon.png')}/>

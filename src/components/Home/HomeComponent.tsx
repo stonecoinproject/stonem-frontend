@@ -46,6 +46,7 @@ const HomeComponent = () => (
     mx={5}
     my={4}
     px={4}
+    pb={4}
     css={styles.HomeComponentContainer}
   >
     <Box
@@ -61,8 +62,6 @@ const HomeComponent = () => (
     </Box>
 
     <Flex
-      flexWrap={'wrap'}
-      mx={-2}
     >
 
       <IncomeStatsCardPeriodical
@@ -74,7 +73,7 @@ const HomeComponent = () => (
       />
 
       <Flex width={2 / 3} flexWrap={'wrap'}>
-      {[...Array(14).keys()].map((key, i) => (
+      {[...Array(12).keys()].map((key, i) => (
         <IncomeStatsCardMini
           price={app.incomeSummaries[0].price}
           ROI={app.incomeSummaries[0].ROI}

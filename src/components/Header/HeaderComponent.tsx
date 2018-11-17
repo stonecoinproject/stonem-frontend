@@ -18,6 +18,10 @@ const styles:HeaderComponentStyles = {
   HeaderComponentContainer: {
     background: theme.colors.lightergray,
     height: theme.Header.height,
+    position: 'fixed',
+    top: 0,
+    width: `calc(100% - ${theme.Sidebar.width}px)`,
+    zIndex: theme.Header.zIndex,
   },
   HeaderComponentWrapper: { height: '100%' },
   HeaderComponentInfoContainer: { width: '80%' },

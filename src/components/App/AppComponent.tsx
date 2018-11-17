@@ -10,7 +10,7 @@ import Sidebar from '../../components/Sidebar';
 
 const Base = styled(Flex)`
   background: ${theme.colors.gray};
-  width: 100%;
+  flex-direction: column;
   height: 100%;
 `;
 
@@ -18,10 +18,13 @@ const GlobalStyle = createGlobalStyle`
   html,
   body,
   #root {
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  body {
+    padding-top: ${theme.Header.height}px;
   }
 `;
 
@@ -32,9 +35,12 @@ const App = (props:any) => {
     <Base>
       <GlobalStyle />
         <Sidebar/>
-        <Base flexDirection={'column'}>
+        <Base css={{
+          width: `calc(100%-${theme.Sidebar.width}px)`,
+          marginLeft: theme.Sidebar.width,
+        }}>
           <Header/>
-          <Base flexDirection={'column'}>{children}</Base>
+          <Base width={1}>{children}</Base>
         </Base>
     </Base>
   );
