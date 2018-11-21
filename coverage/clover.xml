@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1542780347022" clover="3.2.0">
+  <project timestamp="1542780347023" name="All files">
+    <metrics statements="154" coveredstatements="138" conditionals="72" coveredconditionals="48" methods="33" coveredmethods="19" elements="259" coveredelements="205" complexity="0" loc="154" ncloc="154" packages="3" files="15" classes="15">
+      <package name="components.FilterSuite">
+        <metrics statements="60" coveredstatements="54" conditionals="46" coveredconditionals="30" methods="17" coveredmethods="10"/>
+        <file name="filterButton.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\FilterSuite\filterButton.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="10" coveredconditionals="7" methods="2" coveredmethods="2"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="17" count="38" type="cond" truecount="5" falsecount="3"/>
+          <line num="19" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+        </file>
+        <file name="filterCriteriaBar.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\FilterSuite\filterCriteriaBar.tsx">
+          <metrics statements="8" coveredstatements="8" conditionals="8" coveredconditionals="5" methods="3" coveredmethods="3"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="19" type="cond" truecount="5" falsecount="3"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+        </file>
+        <file name="filterCriteriaHeading.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\FilterSuite\filterCriteriaHeading.tsx">
+          <metrics statements="9" coveredstatements="8" conditionals="8" coveredconditionals="5" methods="2" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="19" type="cond" truecount="5" falsecount="3"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+        </file>
+        <file name="filterLayoutSwitcher.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\FilterSuite\filterLayoutSwitcher.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="5" methods="2" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="19" type="cond" truecount="5" falsecount="3"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="filterSearchBar.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\FilterSuite\filterSearchBar.tsx">
+          <metrics statements="9" coveredstatements="8" conditionals="8" coveredconditionals="5" methods="2" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="19" type="cond" truecount="5" falsecount="3"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+        </file>
+        <file name="index.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\FilterSuite\index.tsx">
+          <metrics statements="17" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="2"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="3" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="52" count="3" type="cond" truecount="3" falsecount="1"/>
+        </file>
+      </package>
+      <package name="components.UI">
+        <metrics statements="61" coveredstatements="52" conditionals="22" coveredconditionals="15" methods="13" coveredmethods="7"/>
+        <file name="base.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\UI\base.tsx">
+          <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="15" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+        </file>
+        <file name="capsText.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\UI\capsText.tsx">
+          <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+        </file>
+        <file name="dot.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\UI\dot.tsx">
+          <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+        </file>
+        <file name="globalStyle.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\UI\globalStyle.tsx">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+        </file>
+        <file name="index.ts" path="C:\Users\hp\Documents\stonem-frontend\src\components\UI\index.ts">
+          <metrics statements="17" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="6" coveredmethods="2"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+          <line num="36" count="2" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="43" count="2" type="stmt"/>
+          <line num="45" count="2" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="52" count="2" type="cond" truecount="3" falsecount="1"/>
+        </file>
+        <file name="input.tsx" path="C:\Users\hp\Documents\stonem-frontend\src\components\UI\input.tsx">
+          <metrics statements="16" coveredstatements="11" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="1"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="15" count="4" type="cond" truecount="3" falsecount="1"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="62" count="2" type="stmt"/>
+          <line num="63" count="2" type="stmt"/>
+          <line num="66" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="config">
+        <metrics statements="33" coveredstatements="32" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <file name="app.ts" path="C:\Users\hp\Documents\stonem-frontend\src\config\app.ts">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+        </file>
+        <file name="index.ts" path="C:\Users\hp\Documents\stonem-frontend\src\config\index.ts">
+          <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="2"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="21" count="6" type="stmt"/>
+          <line num="25" count="6" type="cond" truecount="3" falsecount="1"/>
+        </file>
+        <file name="theme.ts" path="C:\Users\hp\Documents\stonem-frontend\src\config\theme.ts">
+          <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
