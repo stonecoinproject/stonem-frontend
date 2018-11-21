@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-typesript-boilerplate",
+  "name": "stonem-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A rock-solid frontend for a rock-solid, feature-rich crypto ecosystem.",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./dist",
@@ -9,16 +9,16 @@
     "build:prod": "npm run clean && cross-env NODE_ENV=production webpack --progress --color",
     "dev-server": "cross-env NODE_ENV=development webpack-dev-server --progress --color",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "test": "jest --config=jest.json --no-cache"
+    "test": "jest --config=jest.json --coverage --no-cache"
   },
-  "author": "Cu3PO42",
+  "author": "Stonecoin Project",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Cu3PO42/react-redux-typescript-boilerplate/issues"
+    "url": "https://github.com/stonecoinproject/stonem-frontend/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Cu3PO42/react-redux-typescript-boilerplate.git"
+    "url": "https://github.com/stonecoinproject/stonem-frontend.git"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.6",
