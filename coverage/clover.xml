@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1542780347022" clover="3.2.0">
-  <project timestamp="1542780347023" name="All files">
+<coverage generated="1542797083851" clover="3.2.0">
+  <project timestamp="1542797083852" name="All files">
     <metrics statements="154" coveredstatements="138" conditionals="72" coveredconditionals="48" methods="33" coveredmethods="19" elements="259" coveredelements="205" complexity="0" loc="154" ncloc="154" packages="3" files="15" classes="15">
       <package name="components.FilterSuite">
         <metrics statements="60" coveredstatements="54" conditionals="46" coveredconditionals="30" methods="17" coveredmethods="10"/>
