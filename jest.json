@@ -11,4 +11,5 @@
   "testURL": "http://localhost/",
   "collectCoverage": true,
   "coverageReporters": ["lcov"]
+  "coverage": "<rootDir>"
 }
