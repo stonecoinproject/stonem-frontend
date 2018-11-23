@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-testing-library';
-import FilterButton from './filterButton';
+import FilterButton from '../../components/FilterSuite/filterButton';
 
 test('A `Dot` element is rendered when the filter button is selected', () => {
     const {
