@@ -10,6 +10,5 @@
   "testMatch": ["**/__tests__/**/*.(j|t)s?(x)", "**/?(*.)(spec|test).(j|t)s?(x)"],
   "testURL": "http://localhost/",
   "collectCoverage": true,
-  "coverageReporters": ["lcov"],
-  "coverage": "<rootDir>"
+  "coverageReporters": ["lcov"]
 }
