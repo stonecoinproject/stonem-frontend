@@ -7,7 +7,10 @@ import {
 } from 'rebass';
 import { LoginIcon } from '../Icons';
 
-import { app, theme } from '../../config';
+import {
+  app,
+  theme
+} from '../../config';
 
 interface HeaderComponentStyles {
   headerComponentContainer: object;
