@@ -1,8 +1,7 @@
 import * as React from 'react';
 import {
-    Button,
     Box,
-    Flex,
+    Image,
 } from 'rebass';
 import { default as IncomeStat } from './incomeStat';
 import { default as IncomeStatsCard } from './incomeStatsCard';
@@ -24,6 +23,9 @@ const incomeStatsCardMini = ({
               borderRadius: theme.radiusSizes[0],
             }}
         >
+            <Box>
+                <Image width={50} src={require('./logo-mini.png')}/>
+            </Box>
             <CapsText
             fontSize={3}
             fontWeight={'bold'}
