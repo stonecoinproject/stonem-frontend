@@ -4,7 +4,7 @@ import {
     Flex,
     Image,
 } from 'rebass';
-import { default as SidebarComponentItem } from './sidebarComponentItem';
+import { default as SidebarComponentItem } from './sidebarItemComponent';
 import {
   AddMasternodeIcon,
   MasternodeManagementIcon,

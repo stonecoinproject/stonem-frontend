@@ -7,7 +7,7 @@ import {
 } from 'rebass';
 import {
   ListIcon,
-  CardsIcon
+  CardsIcon,
 } from '../Icons';
 
 const filterLayoutSwitcher = () => (

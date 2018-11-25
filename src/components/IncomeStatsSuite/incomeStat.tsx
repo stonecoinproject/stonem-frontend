@@ -8,6 +8,7 @@ const incomeStat = ({
   ...props }:any) => {
 
   return (
+    isAllCaps ?
         <CapsText
           color={'copywritegray'}
           fontSize={1}
@@ -15,7 +16,16 @@ const incomeStat = ({
           {...props}
         >
           { children }
-       </CapsText>
+        </CapsText> :
+        <Text
+          color={'copywritegray'}
+          fontSize={1}
+          mb={1}
+          {...props}
+      >
+        { children }
+     </Text>
+
   );
 };
 

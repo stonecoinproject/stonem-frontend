@@ -9,8 +9,9 @@ import { LoginIcon } from '../Icons';
 
 import {
   app,
-  theme
+  theme,
 } from '../../config';
+import { default as HeaderStat } from './headerStat';
 
 interface HeaderComponentStyles {
   headerComponentContainer: object;
@@ -64,20 +65,23 @@ const headerComponent = () => (
           </Flex>
 
           <Flex>
-            <Box pt={2} mr={3}>
-              <Text fontSize={1} textAlign="center">Available MNs</Text>
-              <Text fontSize={3} textAlign="center">200</Text>
-            </Box>
+            <HeaderStat
+              label={'Available MNs'}
+              value={200}
+              pt={2}
+            />
 
-            <Box pt={2} mr={3}>
-              <Text fontSize={1} textAlign="center">Active MNs</Text>
-              <Text fontSize={3} textAlign="center">1k</Text>
-            </Box>
+            <HeaderStat
+              label={'Active MNs'}
+              value={'1k'}
+              pt={2}
+            />
 
-            <Box pt={2}>
-              <Text fontSize={1} textAlign="center">Hosted Value</Text>
-              <Text fontSize={3} textAlign="center">$2m</Text>
-            </Box>
+            <HeaderStat
+              label={'Hosted Value'}
+              value={'$2m'}
+              pt={2}
+            />
           </Flex> {/* End header info display */}
         </Flex>
 

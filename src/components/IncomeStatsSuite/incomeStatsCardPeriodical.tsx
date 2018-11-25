@@ -9,6 +9,7 @@ import {
 import { default as IncomeStat } from './incomeStat';
 import { default as IncomeStatsCard } from './incomeStatsCard';
 import { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
+import { default as IncomeStatsCardButton } from './incomeStatsCardButton';
 
 import { CapsText } from '../UI';
 import { theme } from '../../config';
@@ -75,15 +76,12 @@ const incomeStatsCardPeriodical = ({
             })}
           </Flex>
 
-          <Flex
-            flexDirection={'column'}
-            alignItems={'center'}
+          <IncomeStatsCardButton
             mb={-(theme.space[3] * 2)}
-          >
-            <Button variant={'primaryLarge'}>
-              <CapsText fontSize={2}>Create Now</CapsText>
-            </Button>
-          </Flex>
+            variant={'primaryLarge'}
+            text={'Create Now'}
+          />
+
         </Card>
       </Box>
   );

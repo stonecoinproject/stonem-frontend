@@ -6,6 +6,7 @@ import {
 } from 'rebass';
 import { default as IncomeStat } from './incomeStat';
 import { default as IncomeStatsCard } from './incomeStatsCard';
+import { default as IncomeStatsCardButton } from './incomeStatsCardButton';
 
 import { CapsText } from '../UI';
 import { theme } from '../../config';
@@ -51,15 +52,12 @@ const incomeStatsCardMini = ({
             </IncomeStat>
             </Box>
 
-            <Flex
-            flexDirection={'column'}
-            alignItems={'center'}
-            mb={-(theme.space[3] * 2)}
-            >
-            <Button variant={'outlineDefault'}>
-                <CapsText fontSize={1}>Create</CapsText>
-            </Button>
-            </Flex>
+            <IncomeStatsCardButton
+                mb={-(theme.space[3] * 2)}
+                variant={'outlineDefault'}
+                text={'Create'}
+            />
+
         </IncomeStatsCard>
     </Box>
   );
