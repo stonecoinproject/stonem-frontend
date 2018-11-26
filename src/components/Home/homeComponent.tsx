@@ -61,10 +61,9 @@ const homeComponent = () => (
       </Flex>
     </Box>
 
-    <Flex
-    >
-
+    <Flex>
       <IncomeStatsCardPeriodical
+        data-testid={'income-stats-card-periodical'}
         requiredCoin={'1500 STONE'}
         periodicalData = {app.periodicalData}
         px={2}
@@ -80,7 +79,7 @@ const homeComponent = () => (
           worth={app.incomeSummaries[0].worth}
           px={2}
           py={2}
-          mb={3}
+          mb={4}
           bg={'white'}
           width={1 / 4}
           key={i}

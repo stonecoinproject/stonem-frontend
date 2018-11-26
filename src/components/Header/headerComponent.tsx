@@ -7,7 +7,11 @@ import {
 } from 'rebass';
 import { LoginIcon } from '../Icons';
 
-import { app, theme } from '../../config';
+import {
+  app,
+  theme,
+} from '../../config';
+import { default as HeaderStat } from './headerStat';
 
 interface HeaderComponentStyles {
   headerComponentContainer: object;
@@ -61,20 +65,20 @@ const headerComponent = () => (
           </Flex>
 
           <Flex>
-            <Box pt={2} mr={3}>
-              <Text fontSize={1} textAlign="center">Available MNs</Text>
-              <Text fontSize={3} textAlign="center">200</Text>
-            </Box>
+            <HeaderStat
+              label={'Available MNs'}
+              value={'200'}
+            />
 
-            <Box pt={2} mr={3}>
-              <Text fontSize={1} textAlign="center">Active MNs</Text>
-              <Text fontSize={3} textAlign="center">1k</Text>
-            </Box>
+            <HeaderStat
+              label={'Active MNs'}
+              value={'1k'}
+            />
 
-            <Box pt={2}>
-              <Text fontSize={1} textAlign="center">Hosted Value</Text>
-              <Text fontSize={3} textAlign="center">$2m</Text>
-            </Box>
+            <HeaderStat
+              label={'Hosted Value'}
+              value={'$2m'}
+            />
           </Flex> {/* End header info display */}
         </Flex>
 

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/Icons/walletManagementIcon.tsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">components/Icons</a> walletManagementIcon.tsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.77% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">47.62% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>13/13</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from 'react';
+&nbsp;
+const walletManagementIcon = ({ ...props }) =&gt; (
+  &lt;svg width={24} height={24} {...props}&gt;
+    &lt;g fill="#BEBEBE" fillOpacity={0.45} fillRule="evenodd"&gt;
+      &lt;path d="M20.718 0H3.281C2.14 0 1.329.404.788 1 .255 1.588-.01 2.375 0 3.16V8a3.67 3.67 0 0 1 .297-.442C.78 6.941 1.49 6.48 2.423 6.302v-.776c0-.725.232-1.39.621-1.884.39-.493.95-.82 1.576-.82h14.759c.626 0 1.186.326 1.575.82.39.493.622 1.157.622 1.884v.611c.687-.145 1.217-.465 1.608-.884.54-.58.816-1.359.816-2.142 0-.783-.275-1.562-.816-2.141C22.644.39 21.84 0 20.718 0z" /&gt;
+      &lt;path d="M19.387 4H4.613c-.422 0-.814.23-1.115.634C3.196 5.04 3 5.614 3 6.253V7c.083-.005.166-.008.252-.009a.28.28 0 0 1 .02 0h17.456c.093 0 .183-.003.272-.009v-.73c0-.64-.196-1.215-.497-1.619C20.202 4.23 19.809 4 19.387 4z" /&gt;
+      &lt;path d="M24 5c-.113.18-.241.35-.387.509-.65.71-1.634 1.18-2.896 1.18H3.297c-1.225 0-2.018.455-2.538 1.134C.238 8.5 0 9.428 0 10.35v.557c.18.2.384.276.657.313.278.038.615.02.975.03H8.54c1.237 0 2.201.487 2.836 1.22.634.732.944 1.695.944 2.655 0 .96-.31 1.923-.944 2.656-.635.732-1.6 1.22-2.836 1.22H1.63c-.328 0-.731-.024-1.114-.118A2.308 2.308 0 0 1 0 18.697v2.065C0 22.544 1.44 24 3.201 24H20.8c1.76 0 3.2-1.456 3.2-3.238V5z" /&gt;
+      &lt;path d="M0 12c.192.097.401.154.599.182.37.05.732.018 1.066.028h7.07c1.114 0 1.911.422 2.451 1.052.54.63.814 1.485.814 2.343 0 .858-.274 1.713-.814 2.343-.54.63-1.337 1.052-2.45 1.052H1.674a4.36 4.36 0 0 1-1-.105c-.318-.079-.557-.212-.655-.364A.303.303 0 0 0 0 18.512V12zm8.633 1.99c-.846 0-1.543.701-1.543 1.567 0 .869.697 1.578 1.543 1.578s1.534-.71 1.534-1.578c0-.865-.688-1.568-1.534-1.568z" /&gt;
+      &lt;path d="M9.002 15A.995.995 0 0 0 8 15.998.996.996 0 0 0 9.002 17 .992.992 0 0 0 10 15.998.992.992 0 0 0 9.002 15z" /&gt;
+    &lt;/g&gt;<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+  &lt;/svg&gt;
+);<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+&nbsp;
+export default wallet<span class="cstat-no" title="statement not covered" >ManagementIcon;<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span></span></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 26 2018 08:45:34 GMT+0100 (W. Central Africa Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
