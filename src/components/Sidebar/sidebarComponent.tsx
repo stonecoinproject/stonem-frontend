@@ -41,6 +41,7 @@ const sidebarComponent = ({ ...props }:any) => (
   <Box css={styles.sidebarComponentContainer} {...props}>
 
     <SidebarComponentItem
+      data-testid={'sidebar-component-item'}
       css={{
         ...sidebarComponentItemStyles,
         ...styles.sidebarComponentBrandContainer,
@@ -49,15 +50,15 @@ const sidebarComponent = ({ ...props }:any) => (
       <Image src={require('../Sidebar/stone-icon.png')}/>
     </SidebarComponentItem>
 
-    <SidebarComponentItem>
+    <SidebarComponentItem data-testid={'sidebar-component-item'}>
       <AddMasternodeIcon />
     </SidebarComponentItem>
 
-    <SidebarComponentItem>
+    <SidebarComponentItem data-testid={'sidebar-component-item'}>
       <MasternodeManagementIcon />
     </SidebarComponentItem>
 
-    <SidebarComponentItem>
+    <SidebarComponentItem data-testid={'sidebar-component-item'}>
       <WalletManagementIcon />
     </SidebarComponentItem>
   </Box>
