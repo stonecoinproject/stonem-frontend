@@ -6,13 +6,18 @@ import {
     Text,
 } from 'rebass';
 import { FilterButton } from './index';
-export interface FilterCriteriaInterface {
+
+interface filterCriteriaItemInterface {
   isSelected: boolean;
   name: string;
 }
+
+export interface FilterCriteriaInterface {
+  filterCriteria: Array<filterCriteriaItemInterface>;
+}
 const filterCriteriaBar = ({ filterCriteria }:any) => (
     <Flex mr={3}>
-    {filterCriteria.map((filter:FilterCriteriaInterface, key:number) => (
+    {filterCriteria.map((filter:filterCriteriaItemInterface, key:number) => (
       <Box
         mr={2}
         key={key}

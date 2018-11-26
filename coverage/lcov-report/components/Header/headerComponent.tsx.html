@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">94.74% </span>
+        <span class="strong">95.45% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>18/19</span>
+        <span class='fraction'>21/22</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.5% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>5/8</span>
+        <span class='fraction'>8/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>13/13</span>
       </div>
     </div>
   </div>
@@ -132,11 +132,21 @@
 87
 88
 89
-90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+90
+91
+92
+93
+94</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -219,8 +229,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from 'react';
 import {
     Box,
@@ -232,17 +240,18 @@ import { LoginIcon } from '../Icons';
 &nbsp;
 import {
   app,
-  theme
+  theme,
 } from '../../config';
+import { default as HeaderStat } from './headerStat';
 &nbsp;
 interface HeaderComponentStyles {
   headerComponentContainer: object;
-  headerComponentWrapper: object;<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+  headerComponentWrapper: object;
   headerComponentInfoContainer: object;
 }
-&nbsp;
+<span class="branch-1 cbranch-no" title="branch not covered" ></span>
 const styles:HeaderComponentStyles = {
-  headerComponentContainer: {
+  headerComponentContainer: {<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
     background: theme.colors.lightergray,
     height: theme.Header.height,
     position: 'fixed',
@@ -287,20 +296,23 @@ const headerComponent = () =&gt; (
           &lt;/Flex&gt;
 &nbsp;
           &lt;Flex&gt;
-            &lt;Box pt={2} mr={3}&gt;
-              &lt;Text fontSize={1} textAlign="center"&gt;Available MNs&lt;/Text&gt;
-              &lt;Text fontSize={3} textAlign="center"&gt;200&lt;/Text&gt;
-            &lt;/Box&gt;
+            &lt;HeaderStat
+              label={'Available MNs'}
+              value={200}
+              pt={2}
+            /&gt;
 &nbsp;
-            &lt;Box pt={2} mr={3}&gt;
-              &lt;Text fontSize={1} textAlign="center"&gt;Active MNs&lt;/Text&gt;
-              &lt;Text fontSize={3} textAlign="center"&gt;1k&lt;/Text&gt;
-            &lt;/Box&gt;
+            &lt;HeaderStat
+              label={'Active MNs'}
+              value={'1k'}
+              pt={2}
+            /&gt;
 &nbsp;
-            &lt;Box pt={2}&gt;
-              &lt;Text fontSize={1} textAlign="center"&gt;Hosted Value&lt;/Text&gt;
-              &lt;Text fontSize={3} textAlign="center"&gt;$2m&lt;/Text&gt;
-            &lt;/Box&gt;
+            &lt;HeaderStat
+              label={'Hosted Value'}
+              value={'$2m'}
+              pt={2}
+            /&gt;
           &lt;/Flex&gt; {/* End header info display */}
         &lt;/Flex&gt;
 &nbsp;
@@ -316,7 +328,7 @@ export default headerComponent;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Nov 24 2018 15:54:06 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 26 2018 08:45:34 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

@@ -4,7 +4,7 @@ import {
     Flex,
     Image,
 } from 'rebass';
-import { default as SidebarComponentItem } from './sidebarComponentItem';
+import { default as SidebarComponentItem } from './sidebarItemComponent';
 import {
   AddMasternodeIcon,
   MasternodeManagementIcon,
@@ -50,15 +50,24 @@ const sidebarComponent = ({ ...props }:any) => (
       <Image src={require('../Sidebar/stone-icon.png')}/>
     </SidebarComponentItem>
 
-    <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem
+      css={sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    >
       <AddMasternodeIcon />
     </SidebarComponentItem>
 
-    <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem
+      css={sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    >
       <MasternodeManagementIcon />
     </SidebarComponentItem>
 
-    <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem
+      css={sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    >
       <WalletManagementIcon />
     </SidebarComponentItem>
   </Box>

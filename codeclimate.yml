@@ -1,3 +1,4 @@
 ## other configuration excluded from example...
 exclude_patterns:
 - "coverage/"
+- "src/__tests__/"

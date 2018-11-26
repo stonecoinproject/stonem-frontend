@@ -7,9 +7,7 @@ import {
   GlobalStyle,
 } from '../UI';
 
-const appComponent = (props:any) => {
-  const { children } = props;
-
+const appComponent = ({ children }:any) => {
   return (
     <Base>
       <GlobalStyle />
