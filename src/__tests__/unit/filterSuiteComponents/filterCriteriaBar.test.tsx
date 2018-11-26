@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-testing-library';
-import FilterCriteriaBar from '../../components/FilterSuite/filterCriteriaBar';
+import FilterCriteriaBar from '../../../components/FilterSuite/filterCriteriaBar';
 
 test('Criteria filter buttons are rendered for each filter criteria.', () => {
     const filterCriteria = [

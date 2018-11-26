@@ -3,16 +3,27 @@ import {
     Box,
     Flex,
     Image,
+    Card,
 } from 'rebass';
+import {
+  ListIcon,
+  CardsIcon
+} from '../Icons';
 
 const filterLayoutSwitcher = () => (
-    <Flex flexDirection={'column'} justifyContent={'center'}>
+    <Flex
+      flexDirection={'column'}
+      justifyContent={'center'}
+    >
       <Flex>
-        <Box mr={3}>
-          <Image src={require('./cards.svg')}/>
+        <Box
+          data-testid={'switcher-icon'}
+          mr={3}
+        >
+          <CardsIcon />
         </Box>
-        <Box>
-          <Image src={require('./list.svg')}/>
+        <Box data-testid={'switcher-icon'}>
+          <ListIcon />
         </Box>
       </Flex>
     </Flex>
