@@ -4,10 +4,14 @@ import {
     Text,
 } from 'rebass';
 
+interface headerStatProps {
+  label: string;
+  value: string;
+}
+
 const headerStat = ({
     label,
-    value,
-    ...props }:any) => {
+    value }:headerStatProps) => {
   return (
     <Box pt={2} mr={3}>
         <Text fontSize={1} textAlign="center">{label}</Text>

@@ -2,6 +2,11 @@ import * as React from 'react';
 import { Text } from 'rebass';
 import { CapsText } from '../../components/UI';
 
+interface incomeStatProps {
+  children?: any;
+  isAllCaps: boolean;
+}
+
 const incomeStat = ({
   children,
   isAllCaps,
@@ -24,8 +29,7 @@ const incomeStat = ({
           {...props}
       >
         { children }
-     </Text>
-
+    </Text>
   );
 };
 

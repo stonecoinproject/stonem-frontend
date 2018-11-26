@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.89% </span>
+        <span class="strong">92.11% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>34/37</span>
+        <span class='fraction'>35/38</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">68% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>24/24</span>
+        <span class='fraction'>25/25</span>
       </div>
     </div>
   </div>
@@ -111,7 +111,17 @@
 66
 67
 68
-69</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -151,14 +161,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -191,30 +211,40 @@ import { default as IncomeStatsCardButton } from './incomeStatsCardButton';
 import { CapsText } from '../UI';
 import { theme } from '../../config';
 &nbsp;
+interface incomeStatsCardMiniProps {
+  price: string;
+  ROI: string;
+  worth: string;
+}
+&nbsp;
+const styles:any = {
+  IncomeStatsCardContainer: {
+    borderRadius: theme.radiusSizes[0],
+    boxShadow:'0 2px 9px 0 rgba(0, 0, 0, 0.03)',
+  },
+};
+&nbsp;
 const incomeStatsCardMini = ({
     price,
     ROI,
-    worth,
+    worth,<span class="branch-1 cbranch-no" title="branch not covered" ></span>
     ...props }:any) =&gt; {
-  return (
+  return (<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
       &lt;Box {...props}&gt;
-        &lt;IncomeStatsCard
-            css={{
-              border: `1px solid ${theme.colors.lightgray}`,
-              borderRadius: theme.radiusSizes[0],
-            }}
+        &lt;IncomeStatsCard<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+            css={styles.IncomeStatsCardContainer}
         &gt;
-            &lt;Box&gt;
+    <span class="missing-if-branch" title="else path not taken" >E</span>        &lt;Box&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
                 &lt;Image width={50} src={require('./logo-mini.png')}/&gt;
             &lt;/Box&gt;
-            &lt;CapsText<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+            &lt;CapsText
             fontSize={3}
-            fontWeight={'bold'}<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+            fontWeight={'bold'}
             mb={2}
-            &gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+            &gt;
             Stone
             &lt;/CapsText&gt;
-    <span class="missing-if-branch" title="else path not taken" >E</span>        &lt;Box mb={3}&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+            &lt;Box mb={3}&gt;
             &lt;IncomeStat
                 isAllCaps={false}
                 fontSize={0}
@@ -253,7 +283,7 @@ export default incomeStatsCardMini;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Nov 25 2018 14:47:46 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Nov 26 2018 08:45:34 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

@@ -67,20 +67,17 @@ const headerComponent = () => (
           <Flex>
             <HeaderStat
               label={'Available MNs'}
-              value={200}
-              pt={2}
+              value={'200'}
             />
 
             <HeaderStat
               label={'Active MNs'}
               value={'1k'}
-              pt={2}
             />
 
             <HeaderStat
               label={'Hosted Value'}
               value={'$2m'}
-              pt={2}
             />
           </Flex> {/* End header info display */}
         </Flex>

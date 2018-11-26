@@ -10,6 +10,19 @@ import { default as IncomeStatsCardButton } from './incomeStatsCardButton';
 import { CapsText } from '../UI';
 import { theme } from '../../config';
 
+interface incomeStatsCardMiniProps {
+  price: string;
+  ROI: string;
+  worth: string;
+}
+
+const styles:any = {
+  IncomeStatsCardContainer: {
+    borderRadius: theme.radiusSizes[0],
+    boxShadow:'0 2px 9px 0 rgba(0, 0, 0, 0.03)',
+  },
+};
+
 const incomeStatsCardMini = ({
     price,
     ROI,
@@ -18,18 +31,15 @@ const incomeStatsCardMini = ({
   return (
       <Box {...props}>
         <IncomeStatsCard
-            css={{
-              border: `1px solid ${theme.colors.lightgray}`,
-              borderRadius: theme.radiusSizes[0],
-            }}
+            css={styles.IncomeStatsCardContainer}
         >
             <Box>
                 <Image width={50} src={require('./logo-mini.png')}/>
             </Box>
             <CapsText
-            fontSize={3}
-            fontWeight={'bold'}
-            mb={2}
+                fontSize={3}
+                fontWeight={'bold'}
+                mb={2}
             >
             Stone
             </CapsText>

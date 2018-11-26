@@ -15,6 +15,16 @@ import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 
+interface periodItemProps {
+  label: string;
+  incomeFigures: Array<string>;
+}
+
+interface incomeStatsCardPeriodicalProps {
+  requiredCoin: string;
+  periodicalData: Array<periodItemProps>;
+}
+
 const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
@@ -51,7 +61,7 @@ const incomeStatsCardPeriodical = ({
             mb={3}
           >
             {periodicalData.map((
-                period:any,
+                period: periodItemProps,
                 i:number,
             ) => {
               // Constructs a table for displaying periodical data.

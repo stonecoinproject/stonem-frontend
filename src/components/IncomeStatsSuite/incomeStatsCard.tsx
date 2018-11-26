@@ -4,7 +4,9 @@ import {
     Flex,
 } from 'rebass';
 
-const incomeStatsCard = ({ children, ...props }:any) => (
+const incomeStatsCard = ({
+  children,
+  ...props }:any) => (
     <Box
       px={2}
       py={2}
@@ -16,7 +18,6 @@ const incomeStatsCard = ({ children, ...props }:any) => (
       >
         { children }
       </Flex>
-
     </Box>
   );
 

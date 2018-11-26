@@ -6,6 +6,10 @@ import {
 
 import { CapsText } from '../UI';
 
+interface incomeStatsCardButtonProps {
+  text: string;
+}
+
 const incomeStatsCardButton = ({
     text,
     variant,
