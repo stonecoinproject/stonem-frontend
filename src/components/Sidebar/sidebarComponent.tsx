@@ -59,6 +59,15 @@ const sidebarComponent = ({ ...props }:any) => (
     </SidebarComponentItem>
 
     <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem>
+      <AddMasternodeIcon />
+    </SidebarComponentItem>
+
+    <SidebarComponentItem>
+      <MasternodeManagementIcon />
+    </SidebarComponentItem>
+
+    <SidebarComponentItem>
       <WalletManagementIcon />
     </SidebarComponentItem>
   </Box>
