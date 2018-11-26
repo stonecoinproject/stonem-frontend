@@ -9,7 +9,7 @@ import {
   AddMasternodeIcon,
   MasternodeManagementIcon,
   WalletManagementIcon,
-} from '../../components/Icons';
+} from '../Icons';
 import { theme } from '../../config';
 
 interface SidebarComponentStyles {

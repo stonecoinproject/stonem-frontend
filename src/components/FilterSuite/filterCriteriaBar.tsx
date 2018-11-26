@@ -6,12 +6,10 @@ import {
     Text,
 } from 'rebass';
 import { FilterButton } from './index';
-
 export interface FilterCriteriaInterface {
   isSelected: boolean;
   name: string;
 }
-
 const filterCriteriaBar = ({ filterCriteria }:any) => (
     <Flex mr={3}>
     {filterCriteria.map((filter:FilterCriteriaInterface, key:number) => (
@@ -26,5 +24,4 @@ const filterCriteriaBar = ({ filterCriteria }:any) => (
     ))}
     </Flex>
   );
-
 export default filterCriteriaBar;

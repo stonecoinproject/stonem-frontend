@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Button } from 'rebass';
 import { Dot } from '../UI';
 import { theme } from '../../config';
-
 const filterButton = ({ isSelected, children }:any) => (
   <Button
     px={3}
@@ -26,9 +25,7 @@ const filterButton = ({ isSelected, children }:any) => (
     {children}
   </Button>
 );
-
 filterButton.defaultProps = {
   isSelected: false,
 };
-
 export default filterButton;
