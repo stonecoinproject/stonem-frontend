@@ -29,7 +29,7 @@ const styles:SidebarComponentStyles = {
     top: 0,
     bottom: 0,
     background: theme.colors.lightergray,
-    borderRight: `1px solid ${theme.colors.gray}`
+    borderRight: `1px solid ${theme.colors.gray}`,
   },
   sidebarComponentBrandContainer: {
     ...sidebarComponentItemStyles,

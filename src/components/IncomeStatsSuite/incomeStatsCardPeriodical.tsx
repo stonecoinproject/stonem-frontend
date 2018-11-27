@@ -7,6 +7,7 @@ import {
     Image,
 } from 'rebass';
 import { default as IncomeStat } from './incomeStat';
+import { default as IncomeStatButton } from './incomeStatButton';
 import { default as IncomeStatsCard } from './incomeStatsCard';
 import { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
 
@@ -74,16 +75,12 @@ const incomeStatsCardPeriodical = ({
               );
             })}
           </Flex>
-
-          <Flex
-            flexDirection={'column'}
-            alignItems={'center'}
+          <IncomeStatButton
+            variant={'primaryLarge'}
             mb={-(theme.space[3] * 2)}
           >
-            <Button variant={'primaryLarge'}>
-              <CapsText fontSize={2}>Create Now</CapsText>
-            </Button>
-          </Flex>
+            Create Now
+          </IncomeStatButton>
         </Card>
       </Box>
   );

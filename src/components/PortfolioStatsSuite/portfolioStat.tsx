@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {
     Box,
-    Text
+    Text,
 } from 'rebass';
 
 interface portfolioStatProps {
-    label: string;
-    value: string;
+  label: string;
+  value: string;
 }
 
 const portfolioStat = ({
@@ -16,10 +16,20 @@ const portfolioStat = ({
 
   return (
     <Box {...props}>
-        <Text fontSize={1} textAlign="center">{label}</Text>
-        <Text fontSize={3} textAlign="center">{value}</Text>
+        <Text
+            fontSize={1}
+            textAlign="center"
+        >
+            {label}
+        </Text>
+        <Text
+            fontSize={3}
+            textAlign="center"
+        >
+            {value}
+        </Text>
     </Box>
-    );
+  );
 };
 
 export default portfolioStat;

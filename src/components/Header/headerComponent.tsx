@@ -8,7 +8,7 @@ import {
 import { LoginIcon } from '../Icons';
 import {
   app,
-  theme
+  theme,
 } from '../../config';
 import { PortfolioStat } from '../PortfolioStatsSuite';
 

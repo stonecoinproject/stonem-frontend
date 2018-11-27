@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">92.68% </span>
+        <span class="strong">93.02% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>38/41</span>
+        <span class='fraction'>40/43</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">72.41% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>28/28</span>
+        <span class='fraction'>30/30</span>
       </div>
     </div>
   </div>
@@ -132,10 +132,7 @@
 87
 88
 89
-90
-91
-92
-93</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,7 +162,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,13 +221,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from 'react';
 import {
     Card,
@@ -236,6 +230,7 @@ import {
     Image,
 } from 'rebass';
 import { default as IncomeStat } from './incomeStat';
+import { default as IncomeStatButton } from './incomeStatButton';
 import { default as IncomeStatsCard } from './incomeStatsCard';
 import { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
 &nbsp;
@@ -257,17 +252,17 @@ const incomeStatsCardPeriodical = ({
             borderRadius: theme.radiusSizes[0],
           }}
           boxShadow={'0 0 15px rgba(77, 161, 255, 0.07)'}
-        &gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+        &gt;
           &lt;Flex
-            flexDirection={'column'}<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
-            alignItems={'center'}
-          &gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
-            &lt;Box mb={3}&gt;
+            flexDirection={'column'}
+            alignItems={'center'}<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+          &gt;
+            &lt;Box mb={3}&gt;<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
               &lt;Image src={require('./logo-copy.png')}/&gt;
-    <span class="missing-if-branch" title="else path not taken" >E</span>        &lt;/Box&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+            &lt;/Box&gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
             &lt;CapsText
               mb={3}
-              fontSize={1}
+    <span class="missing-if-branch" title="else path not taken" >E</span>          fontSize={1}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
             &gt;
               Required Coin: {requiredCoin}
             &lt;/CapsText&gt;
@@ -303,16 +298,12 @@ const incomeStatsCardPeriodical = ({
               );
             })}
           &lt;/Flex&gt;
-&nbsp;
-          &lt;Flex
-            flexDirection={'column'}
-            alignItems={'center'}
+          &lt;IncomeStatButton
+            variant={'primaryLarge'}
             mb={-(theme.space[3] * 2)}
           &gt;
-            &lt;Button variant={'primaryLarge'}&gt;
-              &lt;CapsText fontSize={2}&gt;Create Now&lt;/CapsText&gt;
-            &lt;/Button&gt;
-          &lt;/Flex&gt;
+            Create Now
+          &lt;/IncomeStatButton&gt;
         &lt;/Card&gt;
       &lt;/Box&gt;
   );
@@ -325,7 +316,7 @@ export default incomeStatsCardPeriodical;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Nov 27 2018 17:38:28 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Nov 27 2018 18:07:02 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

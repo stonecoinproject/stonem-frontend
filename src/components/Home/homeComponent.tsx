@@ -79,7 +79,7 @@ const homeComponent = () => (
           worth={app.incomeSummaries[0].worth}
           px={2}
           py={2}
-          mb={3}
+          mb={4}
           bg={'white'}
           width={1 / 4}
           key={i}
