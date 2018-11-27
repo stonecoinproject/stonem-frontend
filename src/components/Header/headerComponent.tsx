@@ -6,11 +6,11 @@ import {
     Text,
 } from 'rebass';
 import { LoginIcon } from '../Icons';
-
 import {
   app,
   theme
 } from '../../config';
+import { PortfolioStat } from '../PortfolioStatsSuite';
 
 interface HeaderComponentStyles {
   headerComponentContainer: object;
@@ -64,20 +64,26 @@ const headerComponent = () => (
           </Flex>
 
           <Flex>
-            <Box pt={2} mr={3}>
-              <Text fontSize={1} textAlign="center">Available MNs</Text>
-              <Text fontSize={3} textAlign="center">200</Text>
-            </Box>
+            <PortfolioStat
+              label={'Available MNs'}
+              value={'200'}
+              pt={2}
+              mr={3}
+            />
 
-            <Box pt={2} mr={3}>
-              <Text fontSize={1} textAlign="center">Active MNs</Text>
-              <Text fontSize={3} textAlign="center">1k</Text>
-            </Box>
+            <PortfolioStat
+              label={'Active MNs'}
+              value={'1k'}
+              pt={2}
+              mr={3}
+            />
 
-            <Box pt={2}>
-              <Text fontSize={1} textAlign="center">Hosted Value</Text>
-              <Text fontSize={3} textAlign="center">$2m</Text>
-            </Box>
+            <PortfolioStat
+              label={'Hosted Value'}
+              value={'$2m'}
+              pt={2}
+            />
+
           </Flex> {/* End header info display */}
         </Flex>
 
