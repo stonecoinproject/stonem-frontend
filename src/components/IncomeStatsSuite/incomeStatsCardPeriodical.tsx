@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
     Card,
-    Button,
     Box,
     Flex,
     Image,
@@ -15,6 +14,19 @@ import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 
+interface periodInterface {
+  label: string;
+  incomeFigures: Array<string>;
+}
+
+const styles = {
+  incomeStatsCardPeriodicalContainer: {
+    border: 'solid 2px #4da1ff',
+    borderRadius: theme.radiusSizes[0],
+    boxShadow: '0 0 15px rgba(77, 161, 255, 0.07)',
+  },
+};
+
 const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
@@ -24,11 +36,7 @@ const incomeStatsCardPeriodical = ({
         <Card
           p={3}
           borderRadius={4}
-          css={{
-            border: 'solid 2px #4da1ff',
-            borderRadius: theme.radiusSizes[0],
-          }}
-          boxShadow={'0 0 15px rgba(77, 161, 255, 0.07)'}
+          css={styles.incomeStatsCardPeriodicalContainer}
         >
           <Flex
             flexDirection={'column'}
@@ -51,7 +59,7 @@ const incomeStatsCardPeriodical = ({
             mb={3}
           >
             {periodicalData.map((
-                period:any,
+                period:periodInterface,
                 i:number,
             ) => {
               // Constructs a table for displaying periodical data.
@@ -68,9 +76,11 @@ const incomeStatsCardPeriodical = ({
                         key={i}
                     >
                         <IncomeStatsCardHeading>{period.label}</IncomeStatsCardHeading>
-                        <IncomeStat>$0.4889</IncomeStat>
-                        <IncomeStat>0.00005943 BTC</IncomeStat>
-                        <IncomeStat>14.496 STONE</IncomeStat>
+                        {
+                          period.incomeFigures.map((incomeFigure, i) => (
+                            <IncomeStat key={i}>{incomeFigure}</IncomeStat>
+                          ))
+                        }
                     </IncomeStatsCard>
               );
             })}

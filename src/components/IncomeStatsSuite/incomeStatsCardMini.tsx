@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { Box } from 'rebass';
+import {
+    Box,
+    Image,
+} from 'rebass';
 import { default as IncomeStat } from './incomeStat';
 import { default as IncomeStatButton } from './incomeStatButton';
 import { default as IncomeStatsCard } from './incomeStatsCard';
@@ -23,6 +26,12 @@ const incomeStatsCardMini = ({
   return (
       <Box {...props}>
         <IncomeStatsCard css={styles.IncomeStatsCardBase}>
+            <Box mb={1}>
+              <Image
+                width={50}
+                src={require('./stone-logo.png')}/>
+            </Box>
+
             <CapsText
                 fontSize={3}
                 fontWeight={'bold'}
