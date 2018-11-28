@@ -1,14 +1,22 @@
 import * as React from 'react';
 import {
-    Button,
     Box,
-    Flex,
+    Image,
 } from 'rebass';
 import { default as IncomeStat } from './incomeStat';
+import { default as IncomeStatButton } from './incomeStatButton';
 import { default as IncomeStatsCard } from './incomeStatsCard';
 
 import { CapsText } from '../UI';
 import { theme } from '../../config';
+
+const styles:any = {
+  IncomeStatsCardBase: {
+    border: `1px solid ${theme.colors.lightgray}`,
+    borderRadius: theme.radiusSizes[0],
+    boxShadow: '0 2px 9px 0 rgba(0, 0, 0, 0.03)',
+  },
+};
 
 const incomeStatsCardMini = ({
     price,
@@ -17,16 +25,17 @@ const incomeStatsCardMini = ({
     ...props }:any) => {
   return (
       <Box {...props}>
-        <IncomeStatsCard
-            css={{
-              border: `1px solid ${theme.colors.lightgray}`,
-              borderRadius: theme.radiusSizes[0],
-            }}
-        >
+        <IncomeStatsCard css={styles.IncomeStatsCardBase}>
+            <Box mb={1}>
+              <Image
+                width={50}
+                src={require('./stone-logo.png')}/>
+            </Box>
+
             <CapsText
-            fontSize={3}
-            fontWeight={'bold'}
-            mb={2}
+                fontSize={3}
+                fontWeight={'bold'}
+                mb={2}
             >
             Stone
             </CapsText>
@@ -50,16 +59,7 @@ const incomeStatsCardMini = ({
                 Mn Worth: {worth}
             </IncomeStat>
             </Box>
-
-            <Flex
-            flexDirection={'column'}
-            alignItems={'center'}
-            mb={-(theme.space[3] * 2)}
-            >
-            <Button variant={'outlineDefault'}>
-                <CapsText fontSize={1}>Create</CapsText>
-            </Button>
-            </Flex>
+          <IncomeStatButton mb={-(theme.space[3] * 2)}>Create</IncomeStatButton>
         </IncomeStatsCard>
     </Box>
   );

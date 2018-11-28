@@ -6,16 +6,17 @@ const incomeStat = ({
   children,
   isAllCaps,
   ...props }:any) => {
+  const specifiedProps:any = {
+    color: 'copywritegray',
+    fontSize: 1,
+    mb: 1,
+    ...props,
+  };
 
   return (
-        <CapsText
-          color={'copywritegray'}
-          fontSize={1}
-          mb={1}
-          {...props}
-        >
-          { children }
-       </CapsText>
+      isAllCaps ?
+        <CapsText {...specifiedProps}>{ children }</CapsText> :
+        <Text {...specifiedProps}>{ children }</Text>
   );
 };
 

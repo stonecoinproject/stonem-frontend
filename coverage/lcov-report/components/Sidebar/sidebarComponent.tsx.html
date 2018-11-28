@@ -110,7 +110,17 @@
 65
 66
 67
-68</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,11 +166,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,24 +212,26 @@ import {
 import { theme } from '../../config';
 &nbsp;
 interface SidebarComponentStyles {
+  sidebarComponentItemStyles: object;
   sidebarComponentContainer: object;
   sidebarComponentBrandContainer: object;
 }
 &nbsp;
-const sidebarComponentItemStyles = {
-  width: '100%',<span class="branch-1 cbranch-no" title="branch not covered" ></span>
-  height: theme.Header.height,
-};<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
-&nbsp;
-const styles:SidebarCompon<span class="branch-1 cbranch-no" title="branch not covered" >entStyles = {</span>
-  sidebarComponentContainer: {
-    position: 'fixed'<span class="cstat-no" title="statement not covered" >,<span class="cstat-no" title="statement not covered" ></span></span>
-    <span class="missing-if-branch" title="else path not taken" >E</span>width: theme.Sidebar.width,<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+const sidebarComponentItemStyles = {<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  width: '100%',
+  height: theme.Header.height,<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+};
+<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+const styles:SidebarComponentStyles = {
+  sidebarComponentCon<span class="cstat-no" title="statement not covered" >tainer: {<span class="cstat-no" title="statement not covered" ></span></span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>position: 'fixed',<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+    width: theme.Sidebar.width,
     top: 0,
     bottom: 0,
     background: theme.colors.lightergray,
     borderRight: `1px solid ${theme.colors.gray}`,
   },
+  sidebarComponentItemStyles,
   sidebarComponentBrandContainer: {
     ...sidebarComponentItemStyles,
     borderBottom: `1px solid ${theme.colors.gray}`,
@@ -218,7 +240,6 @@ const styles:SidebarCompon<span class="branch-1 cbranch-no" title="branch not co
 &nbsp;
 const sidebarComponent = ({ ...props }:any) =&gt; (
   &lt;Box css={styles.sidebarComponentContainer} {...props}&gt;
-&nbsp;
     &lt;SidebarComponentItem
       data-testid={'sidebar-component-item'}
       css={{
@@ -229,15 +250,24 @@ const sidebarComponent = ({ ...props }:any) =&gt; (
       &lt;Image src={require('../Sidebar/stone-icon.png')}/&gt;
     &lt;/SidebarComponentItem&gt;
 &nbsp;
-    &lt;SidebarComponentItem data-testid={'sidebar-component-item'}&gt;
+    &lt;SidebarComponentItem
+      css={styles.sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    &gt;
       &lt;AddMasternodeIcon /&gt;
     &lt;/SidebarComponentItem&gt;
 &nbsp;
-    &lt;SidebarComponentItem data-testid={'sidebar-component-item'}&gt;
+    &lt;SidebarComponentItem
+      css={styles.sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    &gt;
       &lt;MasternodeManagementIcon /&gt;
     &lt;/SidebarComponentItem&gt;
 &nbsp;
-    &lt;SidebarComponentItem data-testid={'sidebar-component-item'}&gt;
+    &lt;SidebarComponentItem
+      css={styles.sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    &gt;
       &lt;WalletManagementIcon /&gt;
     &lt;/SidebarComponentItem&gt;
   &lt;/Box&gt;
@@ -250,7 +280,7 @@ export default sidebarComponent;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Nov 24 2018 15:54:06 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 28 2018 11:57:16 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>
