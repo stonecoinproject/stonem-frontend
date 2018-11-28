@@ -13,6 +13,7 @@ import {
 import { theme } from '../../config';
 
 interface SidebarComponentStyles {
+  sidebarComponentItemStyles: object;
   sidebarComponentContainer: object;
   sidebarComponentBrandContainer: object;
 }
@@ -29,8 +30,9 @@ const styles:SidebarComponentStyles = {
     top: 0,
     bottom: 0,
     background: theme.colors.lightergray,
-    borderRight: `1px solid ${theme.colors.gray}`
+    borderRight: `1px solid ${theme.colors.gray}`,
   },
+  sidebarComponentItemStyles,
   sidebarComponentBrandContainer: {
     ...sidebarComponentItemStyles,
     borderBottom: `1px solid ${theme.colors.gray}`,
@@ -49,15 +51,24 @@ const sidebarComponent = ({ ...props }:any) => (
       <Image src={require('../Sidebar/stone-icon.png')}/>
     </SidebarComponentItem>
 
-    <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem
+      css={styles.sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    >
       <AddMasternodeIcon />
     </SidebarComponentItem>
 
-    <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem
+      css={styles.sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    >
       <MasternodeManagementIcon />
     </SidebarComponentItem>
 
-    <SidebarComponentItem data-testid={'sidebar-component-item'}>
+    <SidebarComponentItem
+      css={styles.sidebarComponentItemStyles}
+      data-testid={'sidebar-component-item'}
+    >
       <WalletManagementIcon />
     </SidebarComponentItem>
   </Box>

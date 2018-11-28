@@ -1,4 +1,5 @@
 export { default as IncomeStat } from './incomeStat';
+export { default as IncomeStatButton } from './incomeStatButton';
 export { default as IncomeStatsCard } from './incomeStatsCard';
 export { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
 export { default as IncomeStatsCardMini } from './incomeStatsCardMini';
