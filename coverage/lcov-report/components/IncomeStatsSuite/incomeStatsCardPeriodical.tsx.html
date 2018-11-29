@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">92.68% </span>
+        <span class="strong">93.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>38/41</span>
+        <span class='fraction'>42/45</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">72.41% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>28/28</span>
+        <span class='fraction'>32/32</span>
       </div>
     </div>
   </div>
@@ -135,7 +135,14 @@
 90
 91
 92
-93</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+93
+94
+95
+96
+97
+98
+99
+100</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,7 +172,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,23 +188,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -230,12 +244,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from 'react';
 import {
     Card,
-    Button,
     Box,
     Flex,
     Image,
 } from 'rebass';
 import { default as IncomeStat } from './incomeStat';
+import { default as IncomeStatButton } from './incomeStatButton';
 import { default as IncomeStatsCard } from './incomeStatsCard';
 import { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
 &nbsp;
@@ -243,28 +257,37 @@ import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 &nbsp;
+interface periodInterface {
+  label: string;
+  incomeFigures: Array&lt;string&gt;;
+}
+&nbsp;
+const styles = {
+  incomeStatsCardPeriodicalContainer: {
+    border: 'solid 2px #4da1ff',
+    borderRadius: theme.radiusSizes[0],
+    boxShadow: '0 0 15px rgba(77, 161, 255, 0.07)',
+  },
+};
+&nbsp;
 const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
     ...props }:any) =&gt; {
   return (
-      &lt;Box {...props}&gt;
+      &lt;Box {...props}&gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
         &lt;Card
-          p={3}
+          p={3}<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
           borderRadius={4}
-          css={{
-            border: 'solid 2px #4da1ff',
-            borderRadius: theme.radiusSizes[0],
-          }}
-          boxShadow={'0 0 15px rgba(77, 161, 255, 0.07)'}
-        &gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+          css={styles.inco<span class="branch-1 cbranch-no" title="branch not covered" >meStatsCardPeriod</span>icalContainer}
+        &gt;
           &lt;Flex
-            flexDirection={'column'}<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>        flexDirection={'column'}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
             alignItems={'center'}
-          &gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+          &gt;
             &lt;Box mb={3}&gt;
               &lt;Image src={require('./logo-copy.png')}/&gt;
-    <span class="missing-if-branch" title="else path not taken" >E</span>        &lt;/Box&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+            &lt;/Box&gt;
             &lt;CapsText
               mb={3}
               fontSize={1}
@@ -279,7 +302,7 @@ const incomeStatsCardPeriodical = ({
             mb={3}
           &gt;
             {periodicalData.map((
-                period:any,
+                period:periodInterface,
                 i:number,
             ) =&gt; {
               // Constructs a table for displaying periodical data.
@@ -296,23 +319,21 @@ const incomeStatsCardPeriodical = ({
                         key={i}
                     &gt;
                         &lt;IncomeStatsCardHeading&gt;{period.label}&lt;/IncomeStatsCardHeading&gt;
-                        &lt;IncomeStat&gt;$0.4889&lt;/IncomeStat&gt;
-                        &lt;IncomeStat&gt;0.00005943 BTC&lt;/IncomeStat&gt;
-                        &lt;IncomeStat&gt;14.496 STONE&lt;/IncomeStat&gt;
+                        {
+                          period.incomeFigures.map((incomeFigure, i) =&gt; (
+                            &lt;IncomeStat key={i}&gt;{incomeFigure}&lt;/IncomeStat&gt;
+                          ))
+                        }
                     &lt;/IncomeStatsCard&gt;
               );
             })}
           &lt;/Flex&gt;
-&nbsp;
-          &lt;Flex
-            flexDirection={'column'}
-            alignItems={'center'}
+          &lt;IncomeStatButton
+            variant={'primaryLarge'}
             mb={-(theme.space[3] * 2)}
           &gt;
-            &lt;Button variant={'primaryLarge'}&gt;
-              &lt;CapsText fontSize={2}&gt;Create Now&lt;/CapsText&gt;
-            &lt;/Button&gt;
-          &lt;/Flex&gt;
+            Create Now
+          &lt;/IncomeStatButton&gt;
         &lt;/Card&gt;
       &lt;/Box&gt;
   );
@@ -325,7 +346,7 @@ export default incomeStatsCardPeriodical;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Nov 24 2018 15:54:06 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 28 2018 11:57:16 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>
