@@ -9,7 +9,7 @@ import { LoginIcon } from '../Icons';
 
 import {
   app,
-  theme
+  theme,
 } from '../../config';
 
 interface HeaderComponentStyles {
