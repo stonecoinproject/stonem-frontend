@@ -14,10 +14,10 @@ import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 
-interface periodInterface {
+type periodInterface = {
   label: string;
-  incomeFigures: Array<string>;
-}
+  incomeFigures: String[];
+};
 
 const styles = {
   incomeStatsCardPeriodicalContainer: {

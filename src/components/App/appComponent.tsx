@@ -7,8 +7,11 @@ import {
   GlobalStyle,
 } from '../UI';
 
-const appComponent = (props:any) => {
-  const { children } = props;
+type appComponentProps = {
+  children: React.ReactNode;
+};
+
+const appComponent:React.SFC = ({ children }: appComponentProps) => {
 
   return (
     <Base>

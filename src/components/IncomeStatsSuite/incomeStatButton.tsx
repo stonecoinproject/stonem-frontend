@@ -7,11 +7,9 @@ import {
 
 import { CapsText } from '../UI';
 
-import { theme } from '../../config';
-
-interface incomeStatButtonProps {
+type incomeStatButtonProps = {
   variant: string;
-}
+};
 
 const incomeStatButton = ({
     children,
