@@ -5,10 +5,29 @@ import {
 import styledComponents from 'styled-components';
 import { theme } from '../../config';
 
-const base = styledComponents(Flex)`
-  background: ${theme.colors.gray};
-  flex-direction: column;
-  height: 100%;
-`;
+type baseProps = {
+  children?: React.ReactNode,
+  style?: React.CSSProperties,
+  width?: any,
+};
+
+const baseStyles: any = {
+  display: 'flex',
+  background: `${theme.colors.gray}`,
+  flexDirection: 'row',
+  height: '100%',
+};
+
+const base:React.SFC<baseProps> = ({
+  children,
+  style,
+}) => {
+  return (
+    <div style={{
+      ...style,
+      ...baseStyles,
+    }}>{children}</div>
+  );
+};
 
 export default base;

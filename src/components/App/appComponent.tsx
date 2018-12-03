@@ -17,7 +17,7 @@ const appComponent:React.SFC = ({ children }: appComponentProps) => {
     <Base>
       <GlobalStyle />
         <Sidebar/>
-        <Base css={{
+        <Base style={{
           width: `calc(100%-${theme.Sidebar.width}px)`,
           marginLeft: theme.Sidebar.width,
         }}>
