@@ -7,7 +7,7 @@ import routes from './routes';
 import App from './containers/App';
 
 // tslint:disable-next-line:variable-name
-function renderMain(App: React.ReactType) {
+function renderMain(App: any) {
   return (
     <AppContainer>
       <Provider store={store()}>
