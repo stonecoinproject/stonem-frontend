@@ -36,7 +36,7 @@ const incomeStatsCardPeriodical = ({
         <Card
           p={3}
           borderRadius={4}
-          css={styles.incomeStatsCardPeriodicalContainer}
+          style={styles.incomeStatsCardPeriodicalContainer}
         >
           <Flex
             flexDirection={'column'}
@@ -69,7 +69,7 @@ const incomeStatsCardPeriodical = ({
               return (
                     <IncomeStatsCard
                         width={1 / 2}
-                        css={{
+                        style={{
                           [xBorder]: `1px solid ${theme.colors.lightgray}`,
                           [yBorder]: `1px solid ${theme.colors.lightgray}`,
                         }}

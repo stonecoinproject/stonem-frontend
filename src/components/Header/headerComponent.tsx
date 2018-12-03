@@ -32,9 +32,9 @@ const styles:HeaderComponentStyles = {
 };
 
 const headerComponent = () => (
-  <Box css={styles.headerComponentContainer}>
+  <Box style={styles.headerComponentContainer}>
     <Flex
-      css={styles.headerComponentWrapper}
+      style={styles.headerComponentWrapper}
       flexDirection="column"
       justifyContent="center"
       px={4}
@@ -53,7 +53,7 @@ const headerComponent = () => (
 
         <Flex
           flexDirection="row-reverse"
-          css={styles.headerComponentInfoContainer}
+          style={styles.headerComponentInfoContainer}
         >
           <Flex
             ml={4}
