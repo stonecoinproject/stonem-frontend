@@ -24,6 +24,7 @@ const sidebarComponentItemStyles = {
 };
 
 const styles:SidebarComponentStyles = {
+  sidebarComponentItemStyles,
   sidebarComponentContainer: {
     position: 'fixed',
     width: theme.Sidebar.width,
@@ -32,7 +33,6 @@ const styles:SidebarComponentStyles = {
     background: theme.colors.lightergray,
     borderRight: `1px solid ${theme.colors.gray}`,
   },
-  sidebarComponentItemStyles,
   sidebarComponentBrandContainer: {
     ...sidebarComponentItemStyles,
     borderBottom: `1px solid ${theme.colors.gray}`,

@@ -4,10 +4,10 @@ import {
     Text,
 } from 'rebass';
 
-interface portfolioStatProps {
+type portfolioStatProps = {
   label: string;
   value: string;
-}
+};
 
 const portfolioStat = ({
     label,
