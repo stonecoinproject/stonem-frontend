@@ -25,7 +25,7 @@ const incomeStatsCardMini = ({
     ...props }:any) => {
   return (
       <Box {...props}>
-        <IncomeStatsCard css={styles.IncomeStatsCardBase}>
+        <IncomeStatsCard style={styles.IncomeStatsCardBase}>
             <Box mb={1}>
               <Image
                 width={50}
