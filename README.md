@@ -19,6 +19,8 @@ Looking to contribute code? You may [fork this repository](https://github.com/st
 
 If you're trying to author a fix for a bug, you may run `git checkout -b fix/modal-popup-bug` to create a topical branch for a modal popup bug.
 
+Setting up.
+
 ## NPM / Yarn scripts
 
 The following scripts are provided to build, lint, etc:
