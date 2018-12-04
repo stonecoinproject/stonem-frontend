@@ -15,7 +15,7 @@ This is the base for the StoneM client. It comes configured with the following t
 
 ### Getting Started.
 
-Looking to contribute code? You may [fork this repository](https://github.com/stonecoinproject/stonem-frontend.git).
+Looking to contribute code? You may [fork this repository](https://github.com/stonecoinproject/stonem-frontend.git) and create a topical branch. If you are looking to add a feature that checks the health of masternodes, you may run `git checkout -b feature/check-masternodes-health` to create a topical branch for a new feature.
 
 ## NPM / Yarn scripts
 
