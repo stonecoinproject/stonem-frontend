@@ -13,6 +13,10 @@ This is the base for the StoneM client. It comes configured with the following t
 - TSLint with Airbnb config.
 - Jest with configuration to support the environment, i.e. TypeScript and Babel, CSS modules and webpack-file-loader.
 
+### Getting Started.
+
+Looking to contribute code? You may [fork this repository](https://github.com/stonecoinproject/stonem-frontend.git).
+
 ## NPM / Yarn scripts
 
 The following scripts are provided to build, lint, etc:
