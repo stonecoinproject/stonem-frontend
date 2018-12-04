@@ -1,5 +1,5 @@
 ## other configuration excluded from example...
 exclude_patterns:
 - "coverage/"
-- "__tests__/"
+- "__tests__/**"
 - "**/reducer.ts"
