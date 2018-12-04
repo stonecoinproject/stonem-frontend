@@ -7,14 +7,17 @@ import {
   GlobalStyle,
 } from '../UI';
 
-const appComponent = (props:any) => {
-  const { children } = props;
+type appComponentProps = {
+  children: React.ReactNode;
+};
+
+const appComponent:React.SFC = ({ children }: appComponentProps) => {
 
   return (
     <Base>
       <GlobalStyle />
         <Sidebar/>
-        <Base css={{
+        <Base style={{
           width: `calc(100%-${theme.Sidebar.width}px)`,
           marginLeft: theme.Sidebar.width,
         }}>

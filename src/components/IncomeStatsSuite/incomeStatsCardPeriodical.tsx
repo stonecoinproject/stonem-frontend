@@ -14,10 +14,10 @@ import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 
-interface periodInterface {
+type periodInterface = {
   label: string;
-  incomeFigures: Array<string>;
-}
+  incomeFigures: String[];
+};
 
 const styles = {
   incomeStatsCardPeriodicalContainer: {
@@ -36,7 +36,7 @@ const incomeStatsCardPeriodical = ({
         <Card
           p={3}
           borderRadius={4}
-          css={styles.incomeStatsCardPeriodicalContainer}
+          style={styles.incomeStatsCardPeriodicalContainer}
         >
           <Flex
             flexDirection={'column'}
@@ -69,7 +69,7 @@ const incomeStatsCardPeriodical = ({
               return (
                     <IncomeStatsCard
                         width={1 / 2}
-                        css={{
+                        style={{
                           [xBorder]: `1px solid ${theme.colors.lightgray}`,
                           [yBorder]: `1px solid ${theme.colors.lightgray}`,
                         }}

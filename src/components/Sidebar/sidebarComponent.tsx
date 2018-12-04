@@ -24,6 +24,7 @@ const sidebarComponentItemStyles = {
 };
 
 const styles:SidebarComponentStyles = {
+  sidebarComponentItemStyles,
   sidebarComponentContainer: {
     position: 'fixed',
     width: theme.Sidebar.width,
@@ -32,7 +33,6 @@ const styles:SidebarComponentStyles = {
     background: theme.colors.lightergray,
     borderRight: `1px solid ${theme.colors.gray}`,
   },
-  sidebarComponentItemStyles,
   sidebarComponentBrandContainer: {
     ...sidebarComponentItemStyles,
     borderBottom: `1px solid ${theme.colors.gray}`,
@@ -40,10 +40,10 @@ const styles:SidebarComponentStyles = {
 };
 
 const sidebarComponent = ({ ...props }:any) => (
-  <Box css={styles.sidebarComponentContainer} {...props}>
+  <Box style={styles.sidebarComponentContainer} {...props}>
     <SidebarComponentItem
       data-testid={'sidebar-component-item'}
-      css={{
+      style={{
         ...sidebarComponentItemStyles,
         ...styles.sidebarComponentBrandContainer,
       }}
@@ -52,21 +52,21 @@ const sidebarComponent = ({ ...props }:any) => (
     </SidebarComponentItem>
 
     <SidebarComponentItem
-      css={styles.sidebarComponentItemStyles}
+      style={styles.sidebarComponentItemStyles}
       data-testid={'sidebar-component-item'}
     >
       <AddMasternodeIcon />
     </SidebarComponentItem>
 
     <SidebarComponentItem
-      css={styles.sidebarComponentItemStyles}
+      style={styles.sidebarComponentItemStyles}
       data-testid={'sidebar-component-item'}
     >
       <MasternodeManagementIcon />
     </SidebarComponentItem>
 
     <SidebarComponentItem
-      css={styles.sidebarComponentItemStyles}
+      style={styles.sidebarComponentItemStyles}
       data-testid={'sidebar-component-item'}
     >
       <WalletManagementIcon />

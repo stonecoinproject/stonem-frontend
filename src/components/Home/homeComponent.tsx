@@ -1,13 +1,8 @@
 import * as React from 'react';
 import {
-  Button,
   Box,
-  Card,
-  Image,
   Flex,
-  Text,
 } from 'rebass';
-import styledComponents from 'styled-components';
 
 import {
   FilterCriteriaBar,
@@ -17,9 +12,6 @@ import {
 } from '../FilterSuite';
 
 import {
-  IncomeStat,
-  IncomeStatsCard,
-  IncomeStatsCardHeading,
   IncomeStatsCardMini,
   IncomeStatsCardPeriodical,
 } from '../IncomeStatsSuite';
@@ -47,11 +39,11 @@ const homeComponent = () => (
     my={4}
     px={4}
     pb={4}
-    css={styles.homeComponentContainer}
+    style={styles.homeComponentContainer}
   >
     <Box
       pb={3}
-      css={styles.homeComponentFiltersContainer}
+      style={styles.homeComponentFiltersContainer}
     >
       <FilterCriteriaHeading />
       <Flex>
