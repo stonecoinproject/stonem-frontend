@@ -14,7 +14,7 @@ const filterButton = ({ isSelected, children }:any) => (
     {isSelected &&
       <Dot
         theme={theme}
-        css={{
+        style={{
           position: 'absolute',
           top: 3,
           right: 3,
