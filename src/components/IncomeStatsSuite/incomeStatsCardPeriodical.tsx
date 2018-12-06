@@ -19,6 +19,16 @@ type periodInterface = {
   incomeFigures: String[];
 };
 
+type incomeStatsCardPeriodicalProps = {
+  requiredCoin: string;
+  periodicalData: periodInterface[];
+  mb?: number;
+  px?: number;
+  py?: number;
+  width?: number;
+  style?: object;
+};
+
 const styles = {
   incomeStatsCardPeriodicalContainer: {
     border: 'solid 2px #4da1ff',
@@ -30,7 +40,7 @@ const styles = {
 const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
-    ...props }:any) => {
+    ...props }:incomeStatsCardPeriodicalProps) => {
   return (
       <Box {...props}>
         <Card

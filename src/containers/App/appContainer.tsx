@@ -7,6 +7,8 @@ import { theme } from '../../config';
 import App from '../../components/App';
 import routes from '../../routes';
 
+import 'react-router-modal/css/react-router-modal.css';
+
 const appContainer = () => {
   return (
     <ThemeProvider theme={theme}>

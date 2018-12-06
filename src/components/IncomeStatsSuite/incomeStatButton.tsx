@@ -8,13 +8,15 @@ import {
 import { CapsText } from '../UI';
 
 type incomeStatButtonProps = {
-  variant: string;
+  variant?: string;
+  children?: React.ReactNode;
+  mb?: number;
 };
 
 const incomeStatButton = ({
     children,
     variant,
-    ...props }:any) => {
+    ...props }:incomeStatButtonProps) => {
   return (
       <Box {...props}>
             <Flex

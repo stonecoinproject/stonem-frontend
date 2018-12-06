@@ -2,7 +2,15 @@ import * as React from 'react';
 import { Button } from 'rebass';
 import { Dot } from '../UI';
 import { theme } from '../../config';
-const filterButton = ({ isSelected, children }:any) => (
+
+type filterButtonProps = {
+  children?: React.ReactNode;
+  isSelected: boolean;
+};
+
+const filterButton = ({
+  isSelected,
+  children }:any) => (
   <Button
     px={3}
     variant={'default'}
