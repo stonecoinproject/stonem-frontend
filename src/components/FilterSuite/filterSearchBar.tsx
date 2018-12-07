@@ -4,10 +4,14 @@ import { Input } from '../UI';
 
 const filterSearchBar = () => {
   return (
-        <Flex mr={3}>
-            <Input
-              data-testid={'filter-search-input'}
-              placeholder={'Search Masternode'} />
+        <Flex
+          flexDirection={'column'}
+          mr={3}
+          width={1}
+        >
+          <Input
+            data-testid={'filter-search-input'}
+            placeholder={'Search Masternode'} />
         </Flex>
   );
 };

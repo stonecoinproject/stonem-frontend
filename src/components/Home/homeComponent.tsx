@@ -49,7 +49,11 @@ const homeComponent = () => (
       <FilterCriteriaHeading />
       <Flex>
         <FilterCriteriaBar filterCriteria={app.filterCriteria}/>
-        <FilterSearchBar/>
+        <Flex style={{
+          flex: 1,
+        }}>
+          <FilterSearchBar/>
+        </Flex>
         <FilterLayoutSwitcher/>
       </Flex>
     </Box>

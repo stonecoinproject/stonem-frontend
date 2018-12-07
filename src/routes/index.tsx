@@ -5,14 +5,11 @@ import HomeScreen from '../screens/HomeScreen';
 import SignupScreen from '../screens/SignupScreen';
 
 export default (
-  <Switch>
+  <div>
+    <ModalRoute path="*/signup" exact component={SignupScreen} parentPath={'/'} />
     <Route
-      exact
       path="/"
       component={HomeScreen}
     />
-    <ModalRoute path="/signup">
-      <SignupScreen />
-    </ModalRoute>
-  </Switch>
+  </div>
 );

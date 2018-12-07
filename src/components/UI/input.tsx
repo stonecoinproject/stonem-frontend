@@ -33,7 +33,7 @@ const input = styledComponents.input`
   border-style: solid;
   border-color: ${theme.colors.lightgray};
 
-  padding: ${props => theme.space[props.size]}px ${props => theme.space[props.size]}px;
+  padding: ${props => theme.space[props.size]}px ${props => theme.space[props.size] * 2}px;
   margin: 0;
 
   ::placeholder {
