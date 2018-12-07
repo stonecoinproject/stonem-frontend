@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import {
     Box,
     Flex,
@@ -41,15 +42,17 @@ const styles:SidebarComponentStyles = {
 
 const sidebarComponent = ({ ...props }:any) => (
   <Box style={styles.sidebarComponentContainer} {...props}>
-    <SidebarComponentItem
-      data-testid={'sidebar-component-item'}
-      style={{
-        ...sidebarComponentItemStyles,
-        ...styles.sidebarComponentBrandContainer,
-      }}
-    >
-      <Image src={require('../Sidebar/stone-icon.png')}/>
-    </SidebarComponentItem>
+    <Link to={'/'}>
+      <SidebarComponentItem
+        data-testid={'sidebar-component-item'}
+        style={{
+          ...sidebarComponentItemStyles,
+          ...styles.sidebarComponentBrandContainer,
+        }}
+      >
+        <Image src={require('../Sidebar/stone-icon.png')}/>
+      </SidebarComponentItem>
+    </Link>
 
     <SidebarComponentItem
       style={styles.sidebarComponentItemStyles}

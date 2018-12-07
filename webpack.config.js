@@ -96,11 +96,6 @@ module.exports = {
     }]
   },
   plugins: [...[
-    // Actually output extracted CSS
-    new ExtractTextPlugin({
-      filename: 'main.css',
-      disable: !IS_PROD
-    }),
     // Generate an HTML-file to include all bundle outputs
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
@@ -111,6 +106,11 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
     })
   ], ...(IS_PROD ? [
+    // Actually output extracted CSS
+    new ExtractTextPlugin({
+      filename: 'main.css',
+      disable: !IS_PROD
+    }),
     // Minify JS
     new UglifyWebpackPlugin({
       sourceMap: true,

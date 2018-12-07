@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Flex,
@@ -52,6 +53,8 @@ const homeComponent = () => (
         <FilterLayoutSwitcher/>
       </Flex>
     </Box>
+
+    <Link to={'/signup'}>Sign up now sir</Link>
 
     <Flex>
       <IncomeStatsCardPeriodical
