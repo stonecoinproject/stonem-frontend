@@ -12,20 +12,20 @@ import routes from '../../routes';
 
 const appContainer = ({ store }:any) => {
   return (
+    <Router>
       <AppContainer>
         <Provider store={store}>
           <ThemeProvider theme={theme}>
-              <Router>
                 <div>
                   <App>
                     {routes}
                   </App>
                   <ModalContainer />
                 </div>
-              </Router>
           </ThemeProvider>
         </Provider>
       </AppContainer>
+    </Router>
   );
 };
 
