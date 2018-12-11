@@ -7,12 +7,14 @@ import {
 type portfolioStatProps = {
   label: string;
   value: string;
+  pt?: number;
+  mr?: number;
 };
 
 const portfolioStat = ({
     label,
     value,
-  ...props }:any) => {
+  ...props }:portfolioStatProps) => {
 
   return (
     <Box {...props}>

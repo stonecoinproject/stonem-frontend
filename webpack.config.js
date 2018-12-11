@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
@@ -10,6 +12,24 @@ if (NODE_ENV !== 'production' && NODE_ENV !== 'development') {
 
 const IS_PROD = NODE_ENV === 'production';
 
+const cssLoaders = (other) => ExtractTextPlugin.extract({
+  use: [{
+    loader: 'css-loader',
+    options: {
+      sourceMap: true,
+      // Enable CSS Modules to scope class names
+      modules: true,
+      minimize: IS_PROD,
+      importLoaders: 1 + other.length
+    }
+  }, {
+    // Adjust URLs in CSS files so that they are relative to the source file rather than the output file
+    loader: 'resolve-url-loader'
+  }, ...other],
+  // Do not extract in development mode for hot reloading
+  fallback: 'style-loader'
+});
+
 const jsLoaders = (other) => [{
   loader: 'babel-loader'
 }, ...other];
@@ -20,6 +40,8 @@ module.exports = {
     extensions: [
     '.js', '.jsx', '.ts', '.tsx'
   ]},
+
+  // plugins: [new TsconfigPathsPlugin({ baseUrl: "types" })],
 
   // Enable source maps
   devtool: IS_PROD ? 'source-map' : 'inline-source-map',
@@ -40,6 +62,9 @@ module.exports = {
 
   module: {
     rules: [{
+      test: /\.css$/,
+      use: cssLoaders([])
+    }, {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       use: jsLoaders([])
@@ -81,6 +106,11 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
     })
   ], ...(IS_PROD ? [
+    // Actually output extracted CSS
+    new ExtractTextPlugin({
+      filename: 'main.css',
+      disable: !IS_PROD
+    }),
     // Minify JS
     new UglifyWebpackPlugin({
       sourceMap: true,

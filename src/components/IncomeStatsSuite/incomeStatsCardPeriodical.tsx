@@ -19,6 +19,17 @@ type periodInterface = {
   incomeFigures: String[];
 };
 
+type incomeStatsCardPeriodicalProps = {
+  requiredCoin: string;
+  periodicalData: periodInterface[];
+  mb?: number;
+  px?: number;
+  py?: number;
+  width?: number;
+  style?: object;
+  onCreateButtonClick: React.ReactEventHandler<HTMLButtonElement>;
+};
+
 const styles = {
   incomeStatsCardPeriodicalContainer: {
     border: 'solid 2px #4da1ff',
@@ -30,7 +41,8 @@ const styles = {
 const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
-    ...props }:any) => {
+    onCreateButtonClick,
+    ...props }:incomeStatsCardPeriodicalProps) => {
   return (
       <Box {...props}>
         <Card
@@ -86,8 +98,9 @@ const incomeStatsCardPeriodical = ({
             })}
           </Flex>
           <IncomeStatButton
-            variant={'primaryLarge'}
             mb={-(theme.space[3] * 2)}
+            variant={'primaryLarge'}
+            onClick={onCreateButtonClick}
           >
             Create Now
           </IncomeStatButton>
