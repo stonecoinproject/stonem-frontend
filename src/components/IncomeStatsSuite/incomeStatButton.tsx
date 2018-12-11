@@ -11,6 +11,7 @@ type incomeStatButtonProps = {
   variant?: string;
   children?: React.ReactNode;
   mb?: number;
+  onClick?: React.ReactEventHandler<HTMLButtonElement>
 };
 
 const incomeStatButton = ({

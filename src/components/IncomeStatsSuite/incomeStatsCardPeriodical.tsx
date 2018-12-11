@@ -27,6 +27,7 @@ type incomeStatsCardPeriodicalProps = {
   py?: number;
   width?: number;
   style?: object;
+  onCreateButtonClick: React.ReactEventHandler<HTMLButtonElement>;
 };
 
 const styles = {
@@ -40,6 +41,7 @@ const styles = {
 const incomeStatsCardPeriodical = ({
     requiredCoin,
     periodicalData,
+    onCreateButtonClick,
     ...props }:incomeStatsCardPeriodicalProps) => {
   return (
       <Box {...props}>
@@ -96,8 +98,9 @@ const incomeStatsCardPeriodical = ({
             })}
           </Flex>
           <IncomeStatButton
-            variant={'primaryLarge'}
             mb={-(theme.space[3] * 2)}
+            variant={'primaryLarge'}
+            onClick={onCreateButtonClick}
           >
             Create Now
           </IncomeStatButton>

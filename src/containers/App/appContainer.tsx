@@ -8,17 +8,17 @@ import { ThemeProvider } from 'styled-components';
 
 import { theme } from '../../config';
 import App from '../../components/App';
-import routes from '../../routes';
+import { default as Routes } from '../../routes';
 
-const appContainer = ({ store }:any) => {
+const appContainer = (props:any) => {
   return (
     <Router>
       <AppContainer>
-        <Provider store={store}>
+        <Provider store={props.store}>
           <ThemeProvider theme={theme}>
                 <div>
                   <App>
-                    {routes}
+                    <Routes />
                   </App>
                   <ModalContainer />
                 </div>
