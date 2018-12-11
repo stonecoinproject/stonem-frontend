@@ -9,10 +9,6 @@ export default class Routes extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    console.log(this);
-  }
-
   render () {
     return (
       <Route render={({ match }) => {
