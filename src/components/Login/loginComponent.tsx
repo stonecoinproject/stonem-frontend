@@ -18,19 +18,19 @@ const styles:any = {
   brandLogoContainer: {
     width: '50px',
   },
-  signupComponentContainer: {
+  componentContainer: {
     height: '95%',
     width: '550px',
     borderRadius: theme.radiusSizes[1],
   },
 };
 
-const signupComponent = () => (
+const loginComponent = () => (
   <Box
     bg={'white'}
     px={3}
     py={4}
-    style={styles.signupComponentContainer}
+    style={styles.componentContainer}
   >
     {/* Start Dialog Modal Heading */}
     <Flex
@@ -47,7 +47,7 @@ const signupComponent = () => (
           <Image src={require('../Sidebar/stone-icon.png')}/>
         </Box>
         <CapsText fontSize={5}>
-          Sign Up
+          Sign In
         </CapsText>
       </Flex>
     </Flex>
@@ -74,12 +74,17 @@ const signupComponent = () => (
             placeholder={'Password'} />
         </Box>
 
-        <Box mb={3}>
-          <Input
-            data-testid={'password-confirm-input'}
-            size={3}
-            type={'password'}
-            placeholder={'Confirm Password'} />
+        <Box mb={4}>
+          <Link
+            href={'/forgotPassword'}
+            style={{
+              textDecoration: 'none',
+            }}
+          >
+            <Text fontWeight={'400'} fontSize={1}>
+              Forgot Password
+            </Text>
+          </Link>
         </Box>
 
        {/* Start Dialog Footer */}
@@ -98,37 +103,37 @@ const signupComponent = () => (
             </Button>
           </Box>
 
-          <Flex
-            alignItems={'center'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            width={1 / 2}
-          >
-            <Box>
-              <Text
-                fontSize={1}
-                textAlign={'center'}
-                mb={2}
-              >
-                  Have an account?
-              </Text>
-              <BrowserLink
-                to={'/signin'}
-                style={{
-                  textDecoration: 'none',
-                  color: theme.colors.blue,
-                }}
-              >
+            <Flex
+              alignItems={'center'}
+              justifyContent={'center'}
+              flexDirection={'column'}
+              width={1 / 2}
+            >
+              <Box>
                 <Text
-                  textAlign={'center'}
                   fontSize={1}
-                  fontWeight={'600'}
-                >
-                  Sign In
+                  textAlign={'center'}
+                  mb={2}
+                  >
+                    Don't have an account?
                 </Text>
-              </BrowserLink>
-            </Box>
-          </Flex>
+                <BrowserLink
+                  to={'/signup'}
+                  style={{
+                    textDecoration: 'none',
+                    color: theme.colors.blue,
+                  }}
+                >
+                  <Text
+                    textAlign={'center'}
+                    fontSize={1}
+                    fontWeight={'600'}
+                  >
+                    Sign Up
+                  </Text>
+                </BrowserLink>
+              </Box>
+            </Flex>
         </Flex>
         {/* End Dialog Modal Footer */}
       </Box>
@@ -136,4 +141,4 @@ const signupComponent = () => (
   </Box>
 );
 
-export default signupComponent;
+export default loginComponent;

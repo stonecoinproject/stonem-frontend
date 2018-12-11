@@ -12,4 +12,3 @@ const mapStateToProps = (state: SignupScreenState) => {
 const mapDispatchToProps = ({ });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);
-// export default Signup;

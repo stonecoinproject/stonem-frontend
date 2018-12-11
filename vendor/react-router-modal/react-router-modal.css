@@ -36,7 +36,8 @@
     transform: translate(-50%, -50%);
     background-color: white;
     border-radius: 5px;
-    border: 1px solid #777
+    border: 1px solid #777;
+    opacity: 0;
   }
   
   /* mobile devices, particularly iOS, have some quirks to work around */
@@ -55,4 +56,33 @@
       transform: translate3d(0, 0, 0)
     }
   }
-  
+
+  .react-router-modal__modal-in  {
+    transition: opacity 0.5s ease-in;
+    opacity: 1 
+  }
+
+  .react-router-modal__modal-out {
+    transition: opacity 0.3s ease-out;
+    opacity: 0
+  }
+
+  .react-router-modal__backdrop {
+    background-color: black;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .react-router-modal__backdrop-in  {
+    transition: opacity 0.3s ease-in;
+    opacity: 0.5;
+  }
+
+  .react-router-modal__backdrop-out  {
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+  }
