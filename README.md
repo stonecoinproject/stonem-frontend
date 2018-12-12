@@ -1,4 +1,4 @@
-# StoneM Front-end
+# StoneM Front-end Docs
 
 This is the base for the StoneM client. It comes configured with the following tools:
 
