@@ -142,7 +142,20 @@
 97
 98
 99
-100</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -182,7 +195,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -241,6 +254,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from 'react';
 import {
     Card,
@@ -257,32 +283,44 @@ import { CapsText } from '../UI';
 import { theme } from '../../config';
 import { isEven } from '../../utils/helpers';
 &nbsp;
-interface periodInterface {
+type periodInterface = {
   label: string;
-  incomeFigures: Array&lt;string&gt;;
-}
+  incomeFigures: String[];
+};
+&nbsp;
+type incomeStatsCardPeriodicalProps = {
+  requiredCoin: string;
+  periodicalData: periodInterface[];
+  mb?: number;
+  px?: number;
+  py?: number;
+  width?: number;
+  style?: object;
+  onCreateButtonClick: React.ReactEventHandler&lt;HTMLButtonElement&gt;;
+};
 &nbsp;
 const styles = {
   incomeStatsCardPeriodicalContainer: {
-    border: 'solid 2px #4da1ff',
+    border: 'solid 2px #4da1ff',<span class="branch-1 cbranch-no" title="branch not covered" ></span>
     borderRadius: theme.radiusSizes[0],
-    boxShadow: '0 0 15px rgba(77, 161, 255, 0.07)',
+    boxShadow: '0 0 15px rgba(77, 161, 2<span class="missing-if-branch" title="if path not taken" >I</span>55, 0.07)',<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span></span>
   },
-};
+};<span class="branch-1 cbranch-no" title="branch not covered" ></span>
 &nbsp;
 const incomeStatsCardPeriodical = ({
-    requiredCoin,
+    <span class="missing-if-branch" title="else path not taken" >E</span>requiredCoin,<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
     periodicalData,
-    ...props }:any) =&gt; {
+    onCreateButtonClick,
+    ...props }:incomeStatsCardPeriodicalProps) =&gt; {
   return (
-      &lt;Box {...props}&gt;<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+      &lt;Box {...props}&gt;
         &lt;Card
-          p={3}<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+          p={3}
           borderRadius={4}
-          css={styles.inco<span class="branch-1 cbranch-no" title="branch not covered" >meStatsCardPeriod</span>icalContainer}
+          style={styles.incomeStatsCardPeriodicalContainer}
         &gt;
           &lt;Flex
-    <span class="missing-if-branch" title="else path not taken" >E</span>        flexDirection={'column'}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+            flexDirection={'column'}
             alignItems={'center'}
           &gt;
             &lt;Box mb={3}&gt;
@@ -312,7 +350,7 @@ const incomeStatsCardPeriodical = ({
               return (
                     &lt;IncomeStatsCard
                         width={1 / 2}
-                        css={{
+                        style={{
                           [xBorder]: `1px solid ${theme.colors.lightgray}`,
                           [yBorder]: `1px solid ${theme.colors.lightgray}`,
                         }}
@@ -329,8 +367,9 @@ const incomeStatsCardPeriodical = ({
             })}
           &lt;/Flex&gt;
           &lt;IncomeStatButton
-            variant={'primaryLarge'}
             mb={-(theme.space[3] * 2)}
+            variant={'primaryLarge'}
+            onClick={onCreateButtonClick}
           &gt;
             Create Now
           &lt;/IncomeStatButton&gt;
@@ -346,7 +385,7 @@ export default incomeStatsCardPeriodical;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 28 2018 11:57:16 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Dec 11 2018 16:10:35 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

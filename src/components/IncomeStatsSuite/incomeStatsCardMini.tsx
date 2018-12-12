@@ -18,11 +18,23 @@ const styles:any = {
   },
 };
 
+type incomeStatCardMiniProps = {
+  price: string;
+  ROI: string;
+  worth: string;
+  style?: object;
+  px?: number;
+  py?: number;
+  mb?: number;
+  bg?: string;
+  width?: number;
+};
+
 const incomeStatsCardMini = ({
     price,
     ROI,
     worth,
-    ...props }:any) => {
+    ...props }:incomeStatCardMiniProps) => {
   return (
       <Box {...props}>
         <IncomeStatsCard style={styles.IncomeStatsCardBase}>

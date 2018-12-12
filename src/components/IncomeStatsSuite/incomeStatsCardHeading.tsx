@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { CapsText } from '../UI';
 
-const incomeStatsCardHeading = ({ children }:any) => (
+type incomeStatCardHeadingProps = {
+  children?: React.ReactNode;
+};
+
+const incomeStatsCardHeading = ({ children }:incomeStatCardHeadingProps) => (
     <CapsText
       color={'darkgray'}
       fontSize={0}

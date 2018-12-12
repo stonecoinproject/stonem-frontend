@@ -1,8 +1,8 @@
-# StoneM Front-end
+# StoneM Front-end Docs
 
 This is the base for the StoneM client. It comes configured with the following tools:
 
-- React
+- React.
 - Redux for state management
 - Hot-reloading for React & Redux
 - React-Router 4
@@ -12,6 +12,14 @@ This is the base for the StoneM client. It comes configured with the following t
 - Webpack for building
 - TSLint with Airbnb config.
 - Jest with configuration to support the environment, i.e. TypeScript and Babel, CSS modules and webpack-file-loader.
+
+### Getting Started.
+
+Looking to contribute code? You may [fork this repository](https://github.com/stonecoinproject/stonem-frontend.git) and create a topical branch. If you are looking to add a feature that checks the health of masternodes, you may run `git checkout -b feature/check-masternodes-health` to create a topical branch for a new feature.
+
+If you're trying to author a fix for a bug, you may run `git checkout -b fix/modal-popup-bug` to create a topical fix branch for a modal popup bug.
+
+Setting up.
 
 ## NPM / Yarn scripts
 
@@ -32,6 +40,10 @@ It is one of the most widely used styleguides by the JS community and offers pre
 ## Testing
 
 Tests are written with Jest and picked up anywhere in the `src` directory if they include `.test` or `.spec` (e.g. `Home.spec.tsx`).
+
+### Typescript
+
+Typescript prerequisites go here.
 
 ## Contributing
 

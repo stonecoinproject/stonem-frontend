@@ -10,8 +10,14 @@ const enhancer = composeEnhancers(applyMiddleware(reduxThunk), applyMiddleware(r
 
 export default function configureStore() {
   const store = createStore(rootReducer, {}, enhancer);
+
   if (module.hot) {
-    module.hot.accept('./reducers', () => store.replaceReducer(require('./reducers').default));
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('./reducers', () => {
+      const nextRootReducer = require('./reducers').default;
+      store.replaceReducer(nextRootReducer);
+    });
   }
+
   return store;
 }

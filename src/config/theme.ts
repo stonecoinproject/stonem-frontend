@@ -14,7 +14,7 @@ const sidebarWidth = 70;
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
-const radiusSizes = [4, 25];
+const radiusSizes = [4, 6, 25];
 const zIndexScale = [-100, 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
 export default {

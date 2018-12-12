@@ -4,7 +4,14 @@ import {
     Flex,
 } from 'rebass';
 
-const incomeStatsCard = ({ children, ...props }:any) => (
+type incomeStatCardProps = {
+  children?: React.ReactNode;
+  mb?: number;
+  width?: number;
+  style?: object;
+};
+
+const incomeStatsCard = ({ children, ...props }:incomeStatCardProps) => (
     <Box
       px={2}
       py={2}
