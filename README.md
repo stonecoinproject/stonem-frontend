@@ -2,7 +2,7 @@
 
 This is the base for the StoneM client. It comes configured with the following tools:
 
-- React
+- React.
 - Redux for state management
 - Hot-reloading for React & Redux
 - React-Router 4
