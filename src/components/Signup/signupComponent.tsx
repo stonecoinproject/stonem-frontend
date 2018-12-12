@@ -27,7 +27,7 @@ const styles:any = {
 
 const signupComponent = () => (
   <Box
-    bg={'blue'}
+    bg={'white'}
     px={3}
     py={4}
     style={styles.signupComponentContainer}
