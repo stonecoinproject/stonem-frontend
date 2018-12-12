@@ -43,7 +43,7 @@ Tests are written with Jest and picked up anywhere in the `src` directory if the
 
 ### Typescript
 
-Typescript prerequisites.
+Typescript prerequisites go here.
 
 ## Contributing
 
