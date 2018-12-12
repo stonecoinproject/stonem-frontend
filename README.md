@@ -41,6 +41,10 @@ It is one of the most widely used styleguides by the JS community and offers pre
 
 Tests are written with Jest and picked up anywhere in the `src` directory if they include `.test` or `.spec` (e.g. `Home.spec.tsx`).
 
+### Typescript
+
+Typescript prerequisites.
+
 ## Contributing
 
 All further information is only relevant if you wish to contribute to this repository.
