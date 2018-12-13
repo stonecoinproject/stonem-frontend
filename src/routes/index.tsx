@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
 import { ModalRoute } from 'react-router-modal';
+import AddWalletsScreen from '../screens/AddWalletsScreen';
 import HomeScreen from '../screens/HomeScreen';
 import SignupScreen from '../screens/SignupScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -25,9 +26,9 @@ export default class Routes extends React.Component {
         return (
           <div>
               <ModalRoute
-                path={'*/signup'}
+                path={'*/add-wallets'}
                 exact
-                component={SignupScreen}
+                component={AddWalletsScreen}
                 parentPath={match.path}
                 {...baseModalProps}
               />
