@@ -8,10 +8,14 @@ import {
 } from 'rebass';
 import {
   CapsText,
-  Dot,
   Input,
 } from '../UI';
 import { theme } from '../../config';
+import { default as ActivationRequirementHeading } from './activationRequirementHeading';
+import {
+  default as Triangle,
+  Direction,
+} from '../UI/triangle';
 
 const styles:any = {
   brandLogoContainer: {},
@@ -19,6 +23,9 @@ const styles:any = {
     height: '95%',
     width: '550px',
     borderRadius: theme.radiusSizes[1],
+  },
+  activationRequirementsContainer: {
+    borderRight: `1px solid ${theme.colors.gray}`,
   },
 };
 
@@ -60,65 +67,72 @@ const addWalletsComponent = () => (
     <Flex mb={4}>
       <Box
         pb={4}
-        style={{
-          borderRight: `1px solid ${theme.colors.gray}`,
-        }}
+        style={styles.activationRequirementsContainer}
         width={1 / 2}
       >
+        <ActivationRequirementHeading
+          stepNumber={'1'}
+          title={'Node Amount'}
+        />
         <Flex
           flexDirection={'column'}
           alignItems={'center'}
-          mb={3}
         >
-          <Dot
-            size={'30px'}
-            style={{
-              background: theme.colors.lightgray,
-              position: 'relative',
-            }}
-          >
-            <Text
-              color={'blue'}
-              fontSize={1}
-              fontWeight={'500'}
-              mb={2}
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translateY(-50%) translateX(-50%)',
-              }}
-            >
-              1
-            </Text>
-          </Dot>
-          <CapsText
-            color={'blue'}
-            fontSize={2}
-            fontWeight={'500'}
-          >
-            Node Amount
-          </CapsText>
-        </Flex>
+          <Flex width={5 / 10}>
+            <Box mr={2}>
+                <Card
+                  border={2}
+                  borderColor={theme.colors.gray}
+                  borderRadius={theme.radiusSizes[0]}
+                  p={1}
+                  px={3}
+                >
+                  <Text
+                    fontSize={4}
+                    fontWeight={'600'}
+                    textAlign={'center'}
+                  >
+                    50%
+                  </Text>
+                </Card>
+            </Box>
+            <Box>
+              <Box mb={1}>
+                <Triangle bg={theme.colors.lightgreen} />
+              </Box>
 
+              <Box>
+                <Triangle
+                  bg={theme.colors.lilac}
+                  direction={Direction.DOWN}
+                />
+              </Box>
+            </Box>
+        </Flex>
+      </Flex>
+
+      </Box>
+      <Box
+        pb={4}
+        width={1 / 2}
+      >
+        <ActivationRequirementHeading
+          stepNumber={'2'}
+          title={'Coin Required'}
+        />
         <Flex
           flexDirection={'column'}
           alignItems={'center'}
         >
-          <Box width={4 / 10}>
-              <Card
-                border={1}
-                borderColor={theme.colors.gray}
-                borderRadius={theme.radiusSizes[0]}
-                p={1}
-              >
-                <Text
+          <Box width={6 / 10}>
+              <Card p={1}>
+                <CapsText
                   fontSize={4}
                   fontWeight={'600'}
                   textAlign={'center'}
                 >
-                  50%
-                </Text>
+                  750 Coin
+                </CapsText>
               </Card>
           </Box>
         </Flex>
@@ -150,8 +164,17 @@ const addWalletsComponent = () => (
             <Box width={9 / 10}>
               <Input
                 data-testid={'address-input'}
-                size={3}
+                size={2}
+                style={{
+                  fontWeight: 600,
+                  fontSize: theme.fontSizes[3],
+                  paddingLeft: theme.space[2],
+                  paddingRight: theme.space[2],
+                  borderColor: theme.colors.blue,
+                  borderWidth: theme.space[1] / 2,
+                }}
                 type={'text'}
+                value={'so2u108sanuoziuboaybluyw9psiusblhjbzouyba'}
                 placeholder={'Coin Address'}
               />
             </Box>

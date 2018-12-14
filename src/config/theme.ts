@@ -2,6 +2,8 @@ const blue:string = '#4da1ff';
 const gray:string = '#f3f3f3';
 const lightgray:string = '#fafbfc';
 const lightergray:string = '#fcfcfc';
+const lightgreen = '#aadfbf';
+const lilac = '#dfaaaa';
 const darkgray:string = '#ccc';
 const darkergray:string = '#999';
 const darkestgray:string = '#333';
@@ -26,6 +28,8 @@ export default {
     gray,
     lightgray,
     lightergray,
+    lightgreen,
+    lilac,
     darkgray,
     darkergray,
     darkestgray,
