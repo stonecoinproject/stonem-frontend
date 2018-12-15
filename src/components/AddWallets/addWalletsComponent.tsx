@@ -174,7 +174,7 @@ const addWalletsComponent = () => (
                   borderWidth: theme.space[1] / 2,
                 }}
                 type={'text'}
-                value={'so2u108sanuoziuboaybluyw9psiusblhjbzouyba'}
+                defaultValue={'so2u108sanuoziuboaybluyw9psiusblhjbzouyba'}
                 placeholder={'Coin Address'}
               />
             </Box>

@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 import { ModalContainer } from 'react-router-modal';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
@@ -16,12 +19,19 @@ const appContainer = (props:any) => {
       <AppContainer>
         <Provider store={props.store}>
           <ThemeProvider theme={theme}>
-                <div>
-                  <App>
-                    <Routes />
-                  </App>
-                  <ModalContainer />
-                </div>
+              <Route
+                render={({ ...props }) => {
+                  return (
+                    <div>
+                      <App {...props}>
+                        <Routes />
+                      </App>
+                      <ModalContainer />
+                    </div>
+                  );
+                }}
+              />
+
           </ThemeProvider>
         </Provider>
       </AppContainer>
