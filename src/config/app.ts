@@ -1,3 +1,18 @@
+import {
+  AddMasternodeIcon,
+  MasternodeManagementIcon,
+  WalletManagementIcon,
+  iconProps,
+} from '../components/Icons';
+
+type sidebarLinkInterface = {
+  icon: React.SFC<iconProps>,
+};
+
+type sidebarLinksInterface = {
+  [link: string]: sidebarLinkInterface,
+};
+
 const name:string = 'STONEm';
 const tagline:string = 'Masternodes Hosting Service';
 const filterCriteria = [
@@ -50,10 +65,26 @@ const periodicalData = [
   },
 ];
 
+const sidebarLinks: sidebarLinksInterface = {
+  '/': {
+    icon: AddMasternodeIcon,
+  },
+
+  '/masternodes': {
+    icon: MasternodeManagementIcon,
+  },
+
+  '/add-wallets': {
+    icon: WalletManagementIcon,
+  },
+
+};
+
 export default {
-  name,
-  tagline,
   filterCriteria,
   incomeSummaries,
+  name,
+  sidebarLinks,
   periodicalData,
+  tagline,
 };
