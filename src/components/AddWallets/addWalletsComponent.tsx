@@ -177,6 +177,7 @@ const addWalletsComponent = () => (
                   borderWidth: theme.space[1] / 2,
                 }}
                 type={'text'}
+                onFocus={(e:React.SyntheticEvent<HTMLInputElement>) => (e.target as HTMLInputElement).select()}
                 defaultValue={'so2u108sanuoziuboaybluyw9psiusblhjbzouyba'}
                 placeholder={'Coin Address'}
               />
