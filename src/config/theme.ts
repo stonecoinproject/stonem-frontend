@@ -19,7 +19,35 @@ const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
 const radiusSizes = [4, 6, 25];
 const zIndexScale = [-100, 0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
 
-export default {
+type ColorsInterface = {
+  blue: string,
+  gray: string,
+  lightgray: string,
+  lightergray: string,
+  lightgreen: string,
+  lilac: string,
+  darkgray: string,
+  darkergray: string,
+  darkestgray: string,
+  placeholdergray: string,
+  copywritegray: string,
+  turquoise: string,
+};
+
+type ThemeInterface = {
+  fontSizes: any,
+  radiusSizes: any,
+  space: any,
+  [color: string] : ColorsInterface,
+  fonts: any,
+  shadows: any,
+  Heading: any,
+  Header: any,
+  Sidebar: any,
+  Text: any,
+  buttons: any,
+};
+const theme = {
   fontSizes,
   radiusSizes,
   space,
@@ -107,3 +135,5 @@ export default {
     zIndex: zIndexScale[7],
   },
 };
+
+export default theme;

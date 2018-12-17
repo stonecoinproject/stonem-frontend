@@ -1,10 +1,10 @@
 import styledComponents, { keyframes } from 'styled-components';
-import theme from '../../config/theme';
+import { default as appTheme } from '../../config/theme';
 
-const borders = ({ color, theme }:any) => {
-  const borderColor = color ? theme.colors[color] : theme.colors.borderGray;
-  const hoverColor = theme.colors.darkgray;
-  const focusColor = theme.colors.darkestgray;
+const borders = ({ color, appTheme, focusHighlight }:any) => {
+  const borderColor = color ? appTheme.colors[color] : appTheme.colors.borderGray;
+  const hoverColor = appTheme.colors.darkgray;
+  const focusColor = focusHighlight ? appTheme.colors[focusHighlight] : appTheme.colors.darkestgray;
   return {
     'border-color': borderColor,
     'box-shadow': `0 0 0 1px ${borderColor}`,
@@ -24,20 +24,20 @@ const input = styledComponents.input`
   appearance: none;
   display: block;
   width: 100%;
-  font-family: ${theme.fonts.sans};
+  font-family: ${appTheme.fonts.sans};
   color: inherit;
-  font-size: ${theme.fontSizes[1]}px;
+  font-size: ${appTheme.fontSizes[1]}px;
   background-color: transparent;
-  border-radius: ${theme.radiusSizes[0]}px;
+  border-radius: ${appTheme.radiusSizes[0]}px;
   border-width: 0px;
   border-style: solid;
-  border-color: ${theme.colors.lightgray};
+  border-color: ${appTheme.colors.lightgray};
 
-  padding: ${props => theme.space[props.size]}px ${props => theme.space[props.size] * 2}px;
+  padding: ${props => appTheme.space[props.theme.size]}px ${props => appTheme.space[props.theme.size] * 2}px;
   margin: 0;
 
   ::placeholder {
-    color: ${theme.colors.placeholdergray};
+    color: ${appTheme.colors.placeholdergray};
     opacity: 0.4;
   }
 
@@ -45,13 +45,16 @@ const input = styledComponents.input`
     display: none;
   }
 
-  ${({ color }) => borders({ color, theme })}
+  ${({ theme: { focusHighlight }, color }) => borders({ color, appTheme, focusHighlight })}
 `;
 
 input.displayName = 'Input';
 input.defaultProps = {
   color: 'gray',
-  size: 2,
+  theme: {
+    size: 2,
+    focusHighlight: appTheme.colors.darkgray,
+  },
 };
 
 export default input;

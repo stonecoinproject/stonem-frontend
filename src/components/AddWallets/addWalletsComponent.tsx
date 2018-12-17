@@ -164,7 +164,10 @@ const addWalletsComponent = () => (
             <Box width={9 / 10}>
               <Input
                 data-testid={'address-input'}
-                size={2}
+                theme = {{
+                  size: 2,
+                  focusHighlight: 'blue',
+                }}
                 style={{
                   fontWeight: 600,
                   fontSize: theme.fontSizes[3],
