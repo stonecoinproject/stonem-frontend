@@ -11,12 +11,13 @@ type appComponentProps = {
   children: React.ReactNode;
 };
 
-const appComponent:React.SFC = ({ children }: appComponentProps) => {
-
+const appComponent:React.SFC = ({
+  children,
+  ...props }: appComponentProps) => {
   return (
     <Base>
       <GlobalStyle />
-        <Sidebar/>
+        <Sidebar {...props} />
         <Base style={{
           width: `calc(100%-${theme.Sidebar.width}px)`,
           marginLeft: theme.Sidebar.width,

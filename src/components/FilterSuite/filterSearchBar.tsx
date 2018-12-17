@@ -11,7 +11,11 @@ const filterSearchBar = () => {
         >
           <Input
             data-testid={'filter-search-input'}
-            placeholder={'Search Masternode'} />
+            placeholder={'Search Masternode'}
+            theme={{
+              size: 2,
+            }}
+            />
         </Flex>
   );
 };

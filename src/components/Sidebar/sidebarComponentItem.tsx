@@ -6,6 +6,7 @@ import {
 
 const sidebarComponentItem = ({
     children,
+    isHighlighted,
     ...props }:any) => {
   return (
       <Flex
@@ -19,6 +20,10 @@ const sidebarComponentItem = ({
           </Box>
       </Flex>
   );
+};
+
+sidebarComponentItem.defaultProps = {
+  isHighlighted: false,
 };
 
 export default sidebarComponentItem;

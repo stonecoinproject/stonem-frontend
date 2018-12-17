@@ -21,7 +21,6 @@ const filterButton = ({
     */}
     {isSelected &&
       <Dot
-        theme={theme}
         style={{
           position: 'absolute',
           top: 3,
