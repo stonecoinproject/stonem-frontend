@@ -13,8 +13,15 @@ type activationRequirementHeadingProps = {
   title: string;
   stepNumber: string;
 };
-
-const activationRequirementHeading = ({
+/**
+ * Creates a heading containing a title and step number.
+ *
+ * @param {title}  title      - Heading title.
+ * @param {string} stepNumber - Current step that this heading corresponds to.
+ *
+ * @returns React.Reactnode
+ */
+const activationRequirementHeading:React.SFC<activationRequirementHeadingProps> = ({
     stepNumber,
     title,
 }: activationRequirementHeadingProps) => {
