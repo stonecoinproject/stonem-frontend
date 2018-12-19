@@ -55,9 +55,10 @@ export default class Routes extends React.Component {
   }
 
   /**
-   * Renders routes defined above
+   * Renders routes defined in the `routeList` params.
    *
-   * @param {match}
+   * @param {Array<IRoute>} routeList - List of routes.
+   * @param {Object} props - Route props.
    *
    * @returns React.ReactNode
    */

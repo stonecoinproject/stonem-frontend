@@ -32,6 +32,55 @@ const styles:HomeComponentStyles = {
   },
 };
 
+/**
+ * Renders the top bar for the home component.
+ */
+const renderTopBar = () => (
+  <Box
+    pb={3}
+    style={styles.homeComponentFiltersContainer}
+  >
+    <FilterCriteriaHeading />
+    <Flex>
+      <FilterCriteriaBar filterCriteria={app.filterCriteria}/>
+      <Flex style={{
+        flex: 1,
+      }}>
+        <FilterSearchBar/>
+      </Flex>
+      <FilterLayoutSwitcher/>
+    </Flex>
+  </Box>
+);
+
+/**
+ * Renders income stat mini cards.
+ */
+const renderMiniCards = () => {
+  return (
+    <Flex width={2 / 3} flexWrap={'wrap'}>
+    {[...Array(12).keys()].map(() => (
+      <IncomeStatsCardMini
+        key={Math.random()}
+        price={app.incomeSummaries[0].price}
+        ROI={app.incomeSummaries[0].ROI}
+        worth={app.incomeSummaries[0].worth}
+        px={2}
+        py={2}
+        mb={4}
+        bg={'white'}
+        width={1 / 4}
+      />
+    ))}
+    </Flex>
+  );
+};
+
+/**
+ * Renders the home screen.
+ *
+ * @param {Object} props
+ */
 const homeComponent = (props:any) => {
   return (
     <Box
@@ -42,21 +91,7 @@ const homeComponent = (props:any) => {
       pb={4}
       style={styles.homeComponentContainer}
     >
-      <Box
-        pb={3}
-        style={styles.homeComponentFiltersContainer}
-      >
-        <FilterCriteriaHeading />
-        <Flex>
-          <FilterCriteriaBar filterCriteria={app.filterCriteria}/>
-          <Flex style={{
-            flex: 1,
-          }}>
-            <FilterSearchBar/>
-          </Flex>
-          <FilterLayoutSwitcher/>
-        </Flex>
-      </Box>
+      {renderTopBar()}
 
       <Flex>
         <IncomeStatsCardPeriodical
@@ -69,21 +104,7 @@ const homeComponent = (props:any) => {
           onCreateButtonClick={e => props.history.push('/signup')}
         />
 
-        <Flex width={2 / 3} flexWrap={'wrap'}>
-        {[...Array(12).keys()].map((key, i) => (
-          <IncomeStatsCardMini
-            price={app.incomeSummaries[0].price}
-            ROI={app.incomeSummaries[0].ROI}
-            worth={app.incomeSummaries[0].worth}
-            px={2}
-            py={2}
-            mb={4}
-            bg={'white'}
-            width={1 / 4}
-            key={i}
-          />
-        ))}
-        </Flex>
+        {renderMiniCards()}
 
       </Flex>
     </Box>
