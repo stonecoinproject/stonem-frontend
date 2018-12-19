@@ -25,9 +25,9 @@
         <span class='fraction'>18/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/6</span>
+        <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -100,41 +100,30 @@
 55
 56
 57
-58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+58
+59
+60
+61</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -147,7 +136,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,13 +147,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styledComponents, { keyframes } from 'styled-components';
-import theme from '../../config/theme';
+import { default as appTheme } from '../../config/theme';
 &nbsp;
-const borders = ({ color, theme }:any) =&gt; {
-  const borderColor = color ? theme.colors[color] : theme.colors.borderGray;
-  const hoverColor = theme.colors.darkgray;
-  const focusColor = theme.colors.darkestgray;
+const borders = ({ color, appTheme, focusHighlight }:any) =&gt; {
+  const borderColor = color ? appTheme.colors[color] : appTheme.colors.borderGray;
+  const hoverColor = appTheme.colors.darkgray;
+  const focusColor = focusHighlight ? appTheme.colors[focusHighlight] : appTheme.colors.darkestgray;
   return {
     'border-color': borderColor,
     'box-shadow': `0 0 0 1px ${borderColor}`,
@@ -183,20 +189,20 @@ const input = styledComponents.input`
   appearance: none;
   display: block;
   width: 100%;
-  font-family: ${theme.fonts.sans};
+  font-family: ${appTheme.fonts.sans};
   color: inherit;
-  font-size: ${theme.fontSizes[1]}px;
+  font-size: ${appTheme.fontSizes[1]}px;
   background-color: transparent;
-  border-radius: ${theme.radiusSizes[0]}px;
+  border-radius: ${appTheme.radiusSizes[0]}px;
   border-width: 0px;
   border-style: solid;
-  border-color: ${theme.colors.lightgray};
+  border-color: ${appTheme.colors.lightgray};
 &nbsp;
-  padding: ${props =&gt; theme.space[props.size]}px ${props =&gt; theme.space[props.size] * 2}px;
+  padding: ${props =&gt; appTheme.space[props.theme.size]}px ${props =&gt; appTheme.space[props.theme.size] * 2}px;
   margin: 0;
 &nbsp;
   ::placeholder {
-    color: ${theme.colors.placeholdergray};
+    color: ${appTheme.colors.placeholdergray};
     opacity: 0.4;
   }
 &nbsp;
@@ -204,13 +210,16 @@ const input = styledComponents.input`
     display: none;
   }
 &nbsp;
-  ${({ color }) =&gt; borders({ color, theme })}
+  ${({ theme: { focusHighlight }, color }) =&gt; borders({ color, appTheme, focusHighlight })}
 `;
 &nbsp;
 input.displayName = 'Input';
 input.defaultProps = {
   color: 'gray',
-  size: 2,
+  theme: {
+    size: 2,
+    focusHighlight: appTheme.colors.darkgray,
+  },
 };
 &nbsp;
 export default input;
@@ -220,7 +229,7 @@ export default input;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Dec 11 2018 16:10:35 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 19 2018 08:36:30 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

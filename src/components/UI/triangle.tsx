@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { theme } from '../../config';
 
+/**
+ * Ratios the lenghtier triangle side to the minumum side length.
+ */
 const SCALING_FACTOR = 1.156;
 
 export enum Direction {
@@ -21,7 +24,17 @@ type triangleDirectionsStyleMapProps = {
   [up: string]: object,
 };
 
-const triangle = ({
+/**
+ * Creates a configurable triangle.
+ *
+ * @param {string}          bg        - The background color of the triangle.
+ * @param {React.ReactNode} children  - Child elements within triangle.
+ * @param {string}          direction - Only 'up', 'down', 'left' and 'right'.
+ * @param {number}          size      - Width and height for this triangle.
+ *
+ * @returns React.ReactNode.
+ */
+const triangle:React.SFC<triangleProps> = ({
     bg,
     children,
     direction,

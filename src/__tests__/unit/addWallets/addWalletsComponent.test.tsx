@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Router } from 'react-router-dom';
 import { render } from 'react-testing-library';
-import HomeComponent from '../../../components/Home/homeComponent';
+import AddWalletsComponent from '../../../components/AddWallets';
   
 import createBrowserHistory from 'history/createBrowserHistory';
 
-test('Renders the <IncomeStatsPeriodical/> component', () => {
+test('Renders the address wallet input', () => {
     // We must simulate a browser history for our component
     // as it is reliant on the context 
     const history = createBrowserHistory({
@@ -17,12 +17,12 @@ test('Renders the <IncomeStatsPeriodical/> component', () => {
         unmount,
     } = render(
         <Router history={history}>
-            <HomeComponent />
+            <AddWalletsComponent />
         </Router>
     );
 
-    const IncomeStatsPeriodical:any = getByTestId('income-stats-card-periodical');
-    expect(IncomeStatsPeriodical).toBeInstanceOf(HTMLElement);
+    const walletAddressInput:any = getByTestId('wallet-address-input');
+    expect(walletAddressInput).toBeInstanceOf(HTMLElement);
 
     unmount();
 })
