@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">89.74% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>30/35</span>
+        <span class='fraction'>35/39</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">52% </span>
+        <span class="strong">68.97% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>13/25</span>
+        <span class='fraction'>20/29</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>22/22</span>
+        <span class='fraction'>26/26</span>
       </div>
     </div>
   </div>
@@ -123,13 +123,50 @@
 78
 79
 80
-81</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,8 +212,49 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -208,15 +286,14 @@ import { Link } from 'react-router-dom';
 import {
     Box,
     Flex,
+    Card,
     Image,
 } from 'rebass';
 import { default as SidebarComponentItem } from './sidebarComponentItem';
 import {
-  AddMasternodeIcon,
-  MasternodeManagementIcon,
-  WalletManagementIcon,
-} from '../Icons';
-import { theme } from '../../config';
+  app,
+  theme,
+} from '../../config';
 &nbsp;
 interface SidebarComponentStyles {
   sidebarComponentItemStyles: object;
@@ -224,15 +301,15 @@ interface SidebarComponentStyles {
   sidebarComponentBrandContainer: object;
 }
 &nbsp;
-const sidebarComponentItemStyles = {
-  width: '100%',<span class="branch-1 cbranch-no" title="branch not covered" ></span>
-  height: theme.Header.height,
-};<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
-&nbsp;
-const styles:SidebarCompon<span class="branch-1 cbranch-no" title="branch not covered" >entStyles = {</span>
-  sidebarComponentItemStyles,
-  sidebarComponentCon<span class="cstat-no" title="statement not covered" >tainer: {<span class="cstat-no" title="statement not covered" ></span></span>
-    <span class="missing-if-branch" title="else path not taken" >E</span>position: 'fixed',<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+const sidebarComponentItemStyles = {<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  width: '100%',
+  height: theme.Header.height,<span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="else path not taken" >E</span><span class="missing-if-branch" title="if path not taken" >I</span></span>
+};
+<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+const styles:SidebarComponentStyles = {
+  sidebarComponentIte<span class="missing-if-branch" title="if path not taken" >I</span>mStyles,<span class="cstat-no" title="statement not covered" ></span>
+  si<span class="missing-if-branch" title="else path not taken" >E</span>debarComponentContainer: {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+    position: 'fixed',
     width: theme.Sidebar.width,
     top: 0,
     bottom: 0,
@@ -245,7 +322,9 @@ const styles:SidebarCompon<span class="branch-1 cbranch-no" title="branch not co
   },
 };
 &nbsp;
-const sidebarComponent = ({ ...props }:any) =&gt; (
+const sidebarComponent = ({
+  location,
+  ...props }:any) =&gt; (
   &lt;Box style={styles.sidebarComponentContainer} {...props}&gt;
     &lt;Link to={'/'}&gt;
       &lt;SidebarComponentItem
@@ -258,27 +337,65 @@ const sidebarComponent = ({ ...props }:any) =&gt; (
         &lt;Image src={require('../Sidebar/stone-icon.png')}/&gt;
       &lt;/SidebarComponentItem&gt;
     &lt;/Link&gt;
+    {/*
+      * Create sidebar links for every sidebarLink object defined in the config.
+      */}
+    {
+      Object
+        .keys(app.sidebarLinks)
+        .map((
+          link,
+          i,
+        ) =&gt; {
+          const currentLink = app.sidebarLinks[link];
+          // tslint:disable-next-line:variable-name
+          const Icon = currentLink.icon;
+          const isActiveSidebarLink = link === location.pathname;
 &nbsp;
-    &lt;SidebarComponentItem
-      style={styles.sidebarComponentItemStyles}
-      data-testid={'sidebar-component-item'}
-    &gt;
-      &lt;AddMasternodeIcon /&gt;
-    &lt;/SidebarComponentItem&gt;
+          return (
+            &lt;Link
+              key={i}
+              to={link}
+            &gt;
+              &lt;SidebarComponentItem
+                data-testid={'sidebar-component-item'}
+                style={styles.sidebarComponentItemStyles}
+              &gt;
+                &lt;Card
+                  borderRadius={theme.radiusSizes[1]}
+                  bg={isActiveSidebarLink &amp;&amp; theme.colors.blue}
+                  style={{
+                    width: '45px',
+                    height: '45px',
+                  }}
+                &gt;
+                {
+                  // TODO: create a &lt;DeadCentered /&gt; component that centers
+                  // child elements vertically and horizontally.
+                }
+                  &lt;Flex
+                    alignItems={'center'}
+                    justifyContent={'center'}
+                  &gt;
+                    &lt;Flex
+                      flexDirection={'column'}
+                      width={1}
+                      alignItems={'center'}
+                      style={{
+                        marginTop: '50%',
+                        transform: 'translateY(-50%)',
+                      }}
+                    &gt;
+                      &lt;Icon baseBg={isActiveSidebarLink ? '#fff' : theme.colors.darkgray} /&gt;
+                    &lt;/Flex&gt;
+                  &lt;/Flex&gt;
+                &lt;/Card&gt;
+              &lt;/SidebarComponentItem&gt;
 &nbsp;
-    &lt;SidebarComponentItem
-      style={styles.sidebarComponentItemStyles}
-      data-testid={'sidebar-component-item'}
-    &gt;
-      &lt;MasternodeManagementIcon /&gt;
-    &lt;/SidebarComponentItem&gt;
+            &lt;/Link&gt;
+          );
+        })}
 &nbsp;
-    &lt;SidebarComponentItem
-      style={styles.sidebarComponentItemStyles}
-      data-testid={'sidebar-component-item'}
-    &gt;
-      &lt;WalletManagementIcon /&gt;
-    &lt;/SidebarComponentItem&gt;
   &lt;/Box&gt;
 );
 &nbsp;
@@ -289,7 +406,7 @@ export default sidebarComponent;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Dec 11 2018 16:10:35 GMT+0100 (W. Central Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 19 2018 08:36:30 GMT+0100 (W. Central Africa Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

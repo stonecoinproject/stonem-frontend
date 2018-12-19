@@ -29,6 +29,9 @@ const styles:any = {
   },
 };
 
+/**
+ * Displays a modal dialog allowing users fund their wallets.
+ */
 const addWalletsComponent = () => (
   <Box
     bg={'white'}
@@ -163,7 +166,7 @@ const addWalletsComponent = () => (
           >
             <Box width={9 / 10}>
               <Input
-                data-testid={'address-input'}
+                data-testid={'wallet-address-input'}
                 theme = {{
                   size: 2,
                   focusHighlight: 'blue',

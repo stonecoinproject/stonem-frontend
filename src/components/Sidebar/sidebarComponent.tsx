@@ -54,7 +54,9 @@ const sidebarComponent = ({
         <Image src={require('../Sidebar/stone-icon.png')}/>
       </SidebarComponentItem>
     </Link>
-
+    {/*
+      * Create sidebar links for every sidebarLink object defined in the config.
+      */}
     {
       Object
         .keys(app.sidebarLinks)
@@ -84,6 +86,10 @@ const sidebarComponent = ({
                     height: '45px',
                   }}
                 >
+                {
+                  // TODO: create a <DeadCentered /> component that centers
+                  // child elements vertically and horizontally.
+                }
                   <Flex
                     alignItems={'center'}
                     justifyContent={'center'}
