@@ -77,7 +77,6 @@ const sidebarLinks: sidebarLinksInterface = {
   '/add-wallets': {
     icon: WalletManagementIcon,
   },
-
 };
 
 export default {

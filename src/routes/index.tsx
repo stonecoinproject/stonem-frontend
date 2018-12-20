@@ -15,41 +15,83 @@ const baseModalProps = {
   outDelay: 500,
 };
 
+type IRoute = {
+  component: React.ComponentClass,
+  isExact: boolean,
+  isModal: boolean,
+  path: string,
+};
+
+const routeList:IRoute[] = [
+  {
+    component: AddWalletsScreen,
+    isExact: true,
+    isModal: true,
+    path: '*/add-wallets',
+  },
+  {
+    component: SignupScreen,
+    isExact: true,
+    isModal: true,
+    path: '*/signup',
+  },
+  {
+    component: LoginScreen,
+    isExact: true,
+    isModal: true,
+    path: '*/signin',
+  },
+  {
+    component: HomeScreen,
+    isModal: false,
+    isExact: false,
+    path: '/',
+  },
+];
+
 export default class Routes extends React.Component {
   constructor (props:any) {
     super(props);
   }
 
+  /**
+   * Renders routes defined in the `routeList` params.
+   *
+   * @param {Array<IRoute>} routeList - List of routes.
+   * @param {Object} props - Route props.
+   *
+   * @returns React.ReactNode
+   */
+  renderRoutes (
+    routeList:IRoute[],
+    props:any,
+  ) {
+    return routeList.map((route, i) => (
+      route.isModal ?
+      <ModalRoute
+        component={route.component}
+        exact={route.isExact}
+        key={i}
+        parentPath={props.match.path}
+        path={route.path}
+        {...baseModalProps}
+      /> :
+      <Route
+        component={route.component}
+        exact={route.isExact}
+        key={i}
+        path={route.path}
+        {...baseModalProps}
+      />
+    ));
+  }
+
   render () {
     return (
-      <Route render={({ match }) => {
+      <Route render={(props) => {
         return (
           <div>
-              <ModalRoute
-                path={'*/add-wallets'}
-                exact
-                component={AddWalletsScreen}
-                parentPath={match.path}
-                {...baseModalProps}
-              />
-              <ModalRoute
-                path={'*/signup'}
-                exact
-                component={SignupScreen}
-                parentPath={match.path}
-                {...baseModalProps}
-              />
-              <ModalRoute
-                path={'*/signin'}
-                exact
-                component={LoginScreen}
-                parentPath={match.path}
-                {...baseModalProps}
-              />
-              <Route
-                path="/"
-                component={HomeScreen}
-              />
+            {this.renderRoutes(routeList, props)}
           </div>
         );
       }} />
