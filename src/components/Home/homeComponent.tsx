@@ -92,7 +92,6 @@ const homeComponent = (props:any) => {
       style={styles.homeComponentContainer}
     >
       {renderTopBar()}
-
       <Flex>
         <IncomeStatsCardPeriodical
           data-testid={'income-stats-card-periodical'}
@@ -103,9 +102,7 @@ const homeComponent = (props:any) => {
           width={1 / 3}
           onCreateButtonClick={e => props.history.push('/signup')}
         />
-
         {renderMiniCards()}
-
       </Flex>
     </Box>
   );
