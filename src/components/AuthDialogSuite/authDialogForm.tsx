@@ -12,10 +12,12 @@ const authDialogForm: React.SFC<authDialogFormProps> = ({ fields }: authDialogFo
     <div>
       {fields.map((field, key) => {
         return (
-          <Box mb={3}>
+          <Box
+            key={key}
+            mb={3}
+          >
             <Input
               data-testid={field.testID}
-              key={key}
               placeholder={field.label}
               theme={{
                 size: 3,
