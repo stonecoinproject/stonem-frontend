@@ -2,17 +2,16 @@ import * as React from 'react';
 import {
   Box,
   Flex,
-  Text,
 } from 'rebass';
 import {
-  BrowserLink,
-  CenteredText,
-  Input,
-} from '../UI';
-import { theme } from '../../config';
+  fields,
+  theme,
+} from '../../config';
 import {
   AuthDialogHeading,
+  AuthDialogForm,
   AuthDialogFooter,
+  AuthDialogFooterAction,
 } from '../AuthDialogSuite';
 
 const styles:any = {
@@ -21,45 +20,6 @@ const styles:any = {
     width: '550px',
     borderRadius: theme.radiusSizes[1],
   },
-};
-
-/**
- * Renders form fields for our signup component.
- */
-const renderFormFields = () => {
-  return (
-    <div>
-        <Box mb={3}>
-          <Input
-            data-testid={'email-input'}
-            theme={{
-              size: 3,
-            }}
-            type={'email'}
-            placeholder={'Email Address'} />
-        </Box>
-
-        <Box mb={3}>
-          <Input
-            data-testid={'password-input'}
-            theme={{
-              size: 3,
-            }}
-            type={'password'}
-            placeholder={'Password'} />
-        </Box>
-
-        <Box mb={3}>
-          <Input
-            data-testid={'password-confirm-input'}
-            theme={{
-              size: 3,
-            }}
-            type={'password'}
-            placeholder={'Confirm Password'} />
-        </Box>
-    </div>
-  );
 };
 
 const signupComponent = () => (
@@ -75,17 +35,15 @@ const signupComponent = () => (
       flexDirection={'column'}
     >
       <Box width={8 / 10}>
-        {renderFormFields()}
+        <AuthDialogForm fields={fields.signupInputFields} />
 
         {/* Start Auth Dialog Footer */}
         <AuthDialogFooter>
-          <Box>
-            <CenteredText mb={2}>Have an account?</CenteredText>
-
-            <BrowserLink to={'/signin'}>
-              <CenteredText fontWeight={'600'}>Sign In</CenteredText>
-            </BrowserLink>
-          </Box>
+          <AuthDialogFooterAction
+            title={'Have an account?'}
+            link={'/signin'}
+            text={'Sign In'}
+          />
         </AuthDialogFooter>
         {/* End Dialog Modal Footer */}
       </Box>

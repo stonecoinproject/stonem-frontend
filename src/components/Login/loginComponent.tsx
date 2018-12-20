@@ -4,15 +4,16 @@ import {
   Flex,
   Text,
 } from 'rebass';
+import { BrowserLink } from '../UI';
 import {
-  BrowserLink,
-  CenteredText,
-  Input,
-} from '../UI';
-import { theme } from '../../config';
+  fields,
+  theme,
+} from '../../config';
 import {
   AuthDialogHeading,
+  AuthDialogForm,
   AuthDialogFooter,
+  AuthDialogFooterAction,
 } from '../AuthDialogSuite';
 
 const styles:any = {
@@ -22,30 +23,6 @@ const styles:any = {
     borderRadius: theme.radiusSizes[1],
   },
 };
-
-const renderFields = () => (
-  <div>
-    <Box mb={3}>
-      <Input
-        data-testid={'email-input'}
-        theme={{
-          size: 3,
-        }}
-        type={'email'}
-        placeholder={'Email Address'} />
-    </Box>
-
-    <Box mb={3}>
-      <Input
-        data-testid={'password-input'}
-        theme={{
-          size: 3,
-        }}
-        type={'password'}
-        placeholder={'Password'} />
-    </Box>
-  </div>
-);
 
 const loginComponent = () => (
   <Box
@@ -61,7 +38,7 @@ const loginComponent = () => (
       flexDirection={'column'}
     >
       <Box width={8 / 10}>
-        {renderFields()}
+        <AuthDialogForm fields={fields.loginInputFields}/>
 
         <Box mb={4}>
           <BrowserLink to={'/forgotPassword'}>
@@ -76,13 +53,11 @@ const loginComponent = () => (
 
        {/* Start Dialog Footer */}
         <AuthDialogFooter>
-          <Box>
-            <CenteredText mb={2}>Don't have an account?</CenteredText>
-
-            <BrowserLink to={'/signup'}>
-              <CenteredText fontWeight={'600'}>Sign Up</CenteredText>
-            </BrowserLink>
-          </Box>
+          <AuthDialogFooterAction
+            title={"Don't have an account?"}
+            link={'/signup'}
+            text={'Sign Up'}
+          />
         </AuthDialogFooter>
         {/* End Dialog Modal Footer */}
       </Box>
