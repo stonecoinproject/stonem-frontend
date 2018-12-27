@@ -1,20 +1,21 @@
 import * as React from 'react';
 import {
   Box,
-  Card,
   Flex,
   Image,
+  Text,
 } from 'rebass';
 
 import {
   CapsText,
   DeadCentered,
   DisplayCard,
+  ProgressBar,
 } from '../UI';
 
 import { MnManagerStatusCard } from '../MnManagerSuite';
 
-import { theme, app } from '../../config';
+import { theme } from '../../config';
 
 interface ComponentStyles {
   ComponentContainer: React.CSSProperties;
@@ -69,7 +70,7 @@ const renderCoinMerchants = () => (
   >
     <Box
       mr={1}
-      width={1 / 8}
+      width={1 / 6}
     >
       <DisplayCard
         displayCaption={'Stone'}
@@ -79,7 +80,7 @@ const renderCoinMerchants = () => (
     </Box>
     <Box
       mr={1}
-      width={1 / 8}
+      width={1 / 6}
     >
       <DisplayCard
         displayCaption={'TRC'}
@@ -91,6 +92,8 @@ const renderCoinMerchants = () => (
 
 /**
  * Renders the masternodes status board.
+ *
+ * @returns {React.ReactNode}
  */
 const renderMasternodesStatusBoard = () => {
   return (
@@ -102,7 +105,7 @@ const renderMasternodesStatusBoard = () => {
       <Flex mb={3}>
         <Box
           mr={1}
-          width={1 / 4}
+          width={1 / 3}
         >
           <MnManagerStatusCard
             isHighlighted
@@ -115,7 +118,7 @@ const renderMasternodesStatusBoard = () => {
 
         <Box
           mr={1}
-          width={1 / 4}
+          width={1 / 3}
         >
           <MnManagerStatusCard
             isHighlighted={false}
@@ -128,7 +131,7 @@ const renderMasternodesStatusBoard = () => {
 
         <Box
           mr={1}
-          width={1 / 4}
+          width={1 / 3}
         >
           <MnManagerStatusCard
             isHighlighted={false}
@@ -144,7 +147,7 @@ const renderMasternodesStatusBoard = () => {
       <Flex>
         <Box
           mr={1}
-          width={1 / 4}
+          width={1 / 3}
         >
           <MnManagerStatusCard
             isHighlighted={false}
@@ -161,24 +164,107 @@ const renderMasternodesStatusBoard = () => {
 };
 
 /**
+ * Renders the uptime stats for the masternode.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderMasternodeUptimeStats = () => {
+  return (
+    <Flex>
+      <Box
+        mr={4}
+        width={1 / 4}
+      >
+        <Box
+          bg={'skyblue'}
+          mb={3}
+          p={2}
+          style={{
+            borderRadius: theme.radiusSizes[1],
+          }}
+          width={1}
+        >
+          <DeadCentered>
+            <Image src={require('../IncomeStatsSuite/stone-logo.png')} />
+          </DeadCentered>
+        </Box>
+
+        <Text
+          color={'coolgray'}
+          textAlign={'right'}
+        >
+          IP:
+        </Text>
+      </Box>
+
+      <Box width={1}>
+        <CapsText
+          fontSize={5}
+          mb={2}
+          style={{
+            /** Account for differences in font heights (please forgive me!). */
+            marginTop: '-5px',
+          }}
+        >
+          Mn 1
+        </CapsText>
+        <ProgressBar
+          theme={{
+            indicatorWidth: '50%',
+          }}
+          width={8 / 10}
+          mb={3}
+        />
+        <Text
+          color={'subemphasisedgray'}
+          fontSize={0}
+          fontWeight={'600'}
+          mb={3}
+        >
+          Active: 3d:02h:05m:06s
+        </Text>
+        <Text color={'copywritegray'}>109.121.209.121:6253</Text>
+      </Box>
+    </Flex>
+  );
+};
+
+/**
  * Renders the masternodes manager.
  *
  * @returns {React.ReactNode}
  */
 const masternodesManagerComponent = () => {
   return (
-    <Box
-      bg={'white'}
-      mx={5}
-      my={4}
-      px={4}
-      pb={4}
-      style={styles.ComponentContainer}
-    >
-      {renderTopBar()}
-      {renderCoinMerchants()}
-      {renderMasternodesStatusBoard()}
-    </Box>
+    <Flex width={1}>
+      <Box
+        bg={'white'}
+        ml={4}
+        mr={2}
+        my={4}
+        px={4}
+        pb={4}
+        style={styles.ComponentContainer}
+        width={6 / 10}
+      >
+        {renderTopBar()}
+        {renderCoinMerchants()}
+        {renderMasternodesStatusBoard()}
+      </Box>
+      <Box
+        bg={'white'}
+        my={4}
+        mx={2}
+        px={3}
+        py={2}
+        style={styles.ComponentContainer}
+        width={4 / 10}
+      >
+        <Flex py={2}>
+          {renderMasternodeUptimeStats()}
+        </Flex>
+      </Box>
+    </Flex>
   );
 };
 

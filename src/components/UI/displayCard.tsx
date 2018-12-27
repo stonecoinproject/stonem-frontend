@@ -15,6 +15,8 @@ type displayCardProps = {
   children?: React.ReactNode,
   /** Filename of image to display within card. */
   displayPhoto?: string,
+  /** Size of image to display within card. */
+  displayPhotoSize?: number,
   /** Caption to be displayed within card. */
   displayCaption?: string,
   /** Will provide a highlight around the card if set to true. */
@@ -28,9 +30,10 @@ type displayCardProps = {
  * Displays an image and a caption.
  *
  * @param { React.ReactNode } children.
- * @param { String } displayCaption - Text to be displayed within card.
- * @param { String } displayPhoto - Filename of image to be displayed within card.
- * @param { String } isHighlighted - Provides a shadow as a highlight.
+ * @param { String } displayCaption   - Text to be displayed within card.
+ * @param { String } displayPhoto     - Filename of image to be displayed within card.
+ * @param { Number } displayPhotoSize - Size of image to be displayed within card.
+ * @param { String } isHighlighted    - Provides a shadow as a highlight.
  *
  * @returns { React.ReactNode }
  */
@@ -39,6 +42,7 @@ const displayCard: React.SFC<displayCardProps> = ({
   children,
   displayCaption,
   displayPhoto,
+  displayPhotoSize,
   isHighlighted,
   style,
   ...props
@@ -62,7 +66,7 @@ const displayCard: React.SFC<displayCardProps> = ({
           {displayPhoto &&
           <Box mb={2}>
             <Image
-              width={50}
+              width={displayPhotoSize}
               src={require(`../IncomeStatsSuite/${displayPhoto}`)}
             />
           </Box>
@@ -76,6 +80,7 @@ const displayCard: React.SFC<displayCardProps> = ({
 
 displayCard.defaultProps = {
   borderWidth: '5px',
+  displayPhotoSize: 50,
   isHighlighted: false,
 };
 
