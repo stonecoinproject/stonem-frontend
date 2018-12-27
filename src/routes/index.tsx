@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { ModalRoute } from 'react-router-modal';
 import AddWalletsScreen from '../screens/AddWalletsScreen';
 import HomeScreen from '../screens/HomeScreen';
+import MasternodesManagerScreen from '../screens/MasternodesManagerScreen';
 import SignupScreen from '../screens/SignupScreen';
 import LoginScreen from '../screens/LoginScreen';
 
@@ -42,9 +43,15 @@ const routeList:IRoute[] = [
     path: '*/signin',
   },
   {
-    component: HomeScreen,
+    component: MasternodesManagerScreen,
     isModal: false,
     isExact: false,
+    path: '/masternodes',
+  },
+  {
+    component: HomeScreen,
+    isModal: false,
+    isExact: true,
     path: '/',
   },
 ];
@@ -90,7 +97,9 @@ export default class Routes extends React.Component {
     return (
       <Route render={(props) => {
         return (
-          <div>
+          <div style={{
+            width: '100%',
+          }}>
             {this.renderRoutes(routeList, props)}
           </div>
         );

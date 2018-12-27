@@ -26,6 +26,7 @@ interface HomeComponentStyles {
 const styles:HomeComponentStyles = {
   homeComponentContainer: {
     height: '95%',
+    borderRadius: theme.radiusSizes[1],
   },
   homeComponentFiltersContainer: {
     borderBottom: `1px solid ${theme.colors.lightgray}`,
