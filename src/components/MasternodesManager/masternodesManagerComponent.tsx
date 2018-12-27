@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {
+  Button,
   Box,
   Flex,
   Image,
@@ -11,6 +12,7 @@ import {
   DeadCentered,
   DisplayCard,
   ProgressBar,
+  StatusIndicator,
 } from '../UI';
 
 import { MnManagerStatusCard } from '../MnManagerSuite';
@@ -170,7 +172,7 @@ const renderMasternodesStatusBoard = () => {
  */
 const renderMasternodeUptimeStats = () => {
   return (
-    <Flex>
+    <Flex mb={4}>
       <Box
         mr={4}
         width={1 / 4}
@@ -230,6 +232,177 @@ const renderMasternodeUptimeStats = () => {
 };
 
 /**
+ * Renders a masternode switch board with indicator status.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderMasternodeSwitch = () => {
+  return (
+    <Box
+      pt={3}
+      pb={4}
+      style={{
+        borderBottom: `1px solid ${theme.colors.gray}`,
+        borderRight: `1px solid ${theme.colors.gray}`,
+      }}
+      width={1 / 2}
+    >
+      <Text
+        color={'coolgray'}
+        mb={3}
+        pl={4}
+      >
+        Status
+      </Text>
+
+      <Box
+        ml={3}
+        mb={3}
+      >
+        <StatusIndicator
+          indicatorBg={'lightgreen'}
+          indicatorHighlight={theme.colors.green}
+          statusText={'Enabled'}
+          statusTextColor={'placeholdergray'}
+        />
+      </Box>
+
+      <Button variant={'warning'}>
+        <Text fontWeight={'normal'}>Switch OFF</Text>
+      </Button>
+    </Box>
+  );
+};
+
+/**
+ * Renders masternode sponsor info.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderMasternodeSponsor = () => {
+  return (
+    <Box
+      pt={3}
+      pb={4}
+      style={{
+        borderBottom: `1px solid ${theme.colors.gray}`,
+      }}
+      width={1 / 2}
+    >
+      <Text
+        color={'coolgray'}
+        mb={3}
+        pr={4}
+        textAlign={'right'}
+      >
+        Powered By
+      </Text>
+
+      <DeadCentered>
+        <Image
+          src={require('../IncomeStatsSuite/logo-copy.png')}
+        />
+      </DeadCentered>
+
+    </Box>
+  );
+};
+
+/**
+ * Renders masternode VPS version info.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderMasternodeVPSVersion = () => {
+  return (
+    <Box
+      pt={3}
+      pb={4}
+      style={{
+        borderRight: `1px solid ${theme.colors.gray}`,
+      }}
+      width={1 / 2}
+    >
+      <Text
+        color={'coolgray'}
+        mb={3}
+        pl={4}
+      >
+        VPS Version
+      </Text>
+
+      <Box ml={4}>
+        <CapsText
+          color={'copywritegray'}
+          fontSize={4}
+        >
+          v 2.1.0.1
+        </CapsText>
+      </Box>
+
+    </Box>
+  );
+};
+
+/**
+ * Renders masternode wallet version info.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderMasternodeWalletVersion = () => {
+  return (
+    <Box
+      pt={3}
+      pb={4}
+      width={1 / 2}
+    >
+      <Text
+        color={'coolgray'}
+        mb={3}
+        pr={4}
+        textAlign={'right'}
+      >
+        Wallet Version
+      </Text>
+
+      <Box ml={4}>
+        <CapsText
+          color={'copywritegray'}
+          fontSize={4}
+          mr={4}
+          textAlign={'right'}
+        >
+          v 2.1.0.1
+        </CapsText>
+      </Box>
+
+    </Box>
+  );
+};
+
+/**
+ * Renders info about the masternode in a tidy, little table.
+ *
+ * @returns {React.Reactnode}
+ */
+const renderMasternodeInfoTable = () => {
+  return (
+    <Flex justifyContent={'center'}>
+      <Box width={9 / 10}>
+        <Flex>
+          {renderMasternodeSwitch()}
+          {renderMasternodeSponsor()}
+        </Flex>
+        <Flex>
+          {renderMasternodeVPSVersion()}
+          {renderMasternodeWalletVersion()}
+        </Flex>
+      </Box>
+    </Flex>
+  );
+};
+
+/**
  * Renders the masternodes manager.
  *
  * @returns {React.ReactNode}
@@ -260,9 +433,10 @@ const masternodesManagerComponent = () => {
         style={styles.ComponentContainer}
         width={4 / 10}
       >
-        <Flex py={2}>
+        <Box py={2}>
           {renderMasternodeUptimeStats()}
-        </Flex>
+          {renderMasternodeInfoTable()}
+        </Box>
       </Box>
     </Flex>
   );

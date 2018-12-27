@@ -2,6 +2,8 @@ const blue:string = '#4da1ff';
 const skyblue:string = '#eaf4ff';
 const gray:string = '#f3f3f3';
 const lightred:string = '#f4bcb1';
+const warningred:string = '#ffb4b6';
+const warningredtext:string = '#d0021b';
 const red:string = '#f54323';
 const coolgray:string = '#cacdd1';
 const lightgray:string = '#fafbfc';
@@ -148,6 +150,10 @@ const theme:ThemeInterface = {
       backgroundColor: '#fcfcfc',
       color: 'black',
       padding: space[0],
+    },
+    warning: {
+      backgroundColor: warningred,
+      color: warningredtext,
     },
   },
   Header: {

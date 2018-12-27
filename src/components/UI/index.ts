@@ -8,4 +8,5 @@ export { default as Dot } from './dot';
 export { default as Input } from './input';
 export { default as GlobalStyle } from './globalStyle';
 export { default as ProgressBar } from './progressBar';
+export { default as StatusIndicator } from './statusIndicator';
 export { default as Triangle } from './triangle';
