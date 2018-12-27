@@ -159,6 +159,19 @@ const renderMasternodesStatusBoard = () => {
             mnTitle={'MN 4'}
           />
         </Box>
+
+        <Box
+          mr={1}
+          width={1 / 3}
+        >
+          <MnManagerStatusCard
+            isHighlighted={false}
+            mnLastRenewalDate={'21/07/2018'}
+            mnLastRenewalTime={'05:33'}
+            mnStatusCode={'off'}
+            mnTitle={'MN 5'}
+          />
+        </Box>
       </Flex>
 
     </Box>
@@ -331,7 +344,7 @@ const renderMasternodeVPSVersion = () => {
         VPS Version
       </Text>
 
-      <Box ml={4}>
+      <Box ml={5}>
         <CapsText
           color={'copywritegray'}
           fontSize={4}
