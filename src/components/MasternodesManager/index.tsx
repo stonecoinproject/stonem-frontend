@@ -1,1 +1,10 @@
 export { default } from './masternodesManagerComponent';
+export { default as MasternodeManagerTopBar } from './masternodesManagerTopBar';
+export { default as MasternodesManagerCoinMerchants } from './masternodesManagerCoinMerchants';
+export { default as MasternodesManagerStatusBoard } from './masternodesManagerStatusBoard';
+export { default as MasternodesManagerInfoTable } from './masternodesManagerInfoTable';
+export { default as MasternodesManagerUptimeStats } from './masternodesManagerUptimeStats';
+export { default as MasternodesManagerSwitch } from './masternodesManagerSwitch';
+export { default as MasternodesManagerSponsor } from './masternodesManagerSponsor';
+export { default as MasternodesManagerVPSVersion } from './masternodesManagerVPSVersion';
+export { default as MasternodesManagerWalletVersion } from './masternodesManagerWalletVersion';
