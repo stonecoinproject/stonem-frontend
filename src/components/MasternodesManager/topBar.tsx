@@ -8,7 +8,7 @@ import { CapsText } from '../UI';
  *
  * @returns React.ReactNode
  */
-const masternodeManagerTopBar = () => (
+const topBar = () => (
   <Box py={3}>
     <CapsText
       color={'darkergray'}
@@ -19,4 +19,4 @@ const masternodeManagerTopBar = () => (
   </Box>
 );
 
-export default masternodeManagerTopBar;
+export default topBar;

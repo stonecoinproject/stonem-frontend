@@ -18,7 +18,7 @@ import { theme } from '../../config';
  *
  * @returns {React.ReactNode}
  */
-const masternodeUptimeStats = () => {
+const uptimeStats = () => {
   return (
     <Box mb={4}>
       <Flex>
@@ -91,4 +91,4 @@ const masternodeUptimeStats = () => {
   );
 };
 
-export default masternodeUptimeStats;
+export default uptimeStats;

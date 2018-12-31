@@ -5,30 +5,26 @@ import {
 } from 'rebass';
 
 import { CapsText } from '../UI';
-import { theme } from '../../config';
-import masternodesManagerWalletVersion from './masternodesManagerWalletVersion';
 
 /**
- * Renders masternode VPS version info.
+ * Renders masternode wallet version info.
  *
  * @returns {React.ReactNode}
  */
-const masternodeVPSVersion = () => {
+const walletVersion = () => {
   return (
     <Box
       pt={3}
       pb={4}
-      style={{
-        borderRight: `1px solid ${theme.colors.gray}`,
-      }}
       width={1 / 2}
     >
       <Text
         color={'coolgray'}
         mb={3}
-        pl={4}
+        pr={5}
+        textAlign={'right'}
       >
-        VPS Version
+        Wallet Version
       </Text>
 
       <Box mr={5}>
@@ -45,4 +41,4 @@ const masternodeVPSVersion = () => {
   );
 };
 
-export default masternodeVPSVersion;
+export default walletVersion;

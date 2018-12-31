@@ -10,7 +10,7 @@ import { MnManagerStatusCard } from '../MnManagerSuite';
  *
  * @returns {React.ReactNode}
  */
-const masternodesStatusBoard = ({ ...props }) => {
+const statusBoard = ({ ...props }) => {
   return (
     <Box
       pt={2}
@@ -91,4 +91,4 @@ const masternodesStatusBoard = ({ ...props }) => {
   );
 };
 
-export default masternodesStatusBoard;
+export default statusBoard;

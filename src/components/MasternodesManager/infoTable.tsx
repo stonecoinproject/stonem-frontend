@@ -9,14 +9,14 @@ import {
   MasternodesManagerSponsor,
   MasternodesManagerWalletVersion,
   MasternodesManagerVPSVersion,
-} from '../MasternodesManager';
+} from '.';
 
 /**
  * Renders info about the masternode in a tidy, little table.
  *
  * @returns {React.Reactnode}
  */
-const masternodesManagerInfoTable = () => {
+const infoTable = () => {
   return (
     <Flex justifyContent={'center'}>
       <Box width={9 / 10}>
@@ -24,13 +24,14 @@ const masternodesManagerInfoTable = () => {
           <MasternodesManagerSwitch />
           <MasternodesManagerSponsor />
         </Flex>
+
         <Flex>
-          <MasternodesManagerWalletVersion />
           <MasternodesManagerVPSVersion />
+          <MasternodesManagerWalletVersion />
         </Flex>
       </Box>
     </Flex>
   );
 };
 
-export default masternodesManagerInfoTable;
+export default infoTable;

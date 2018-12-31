@@ -13,7 +13,7 @@ import { theme } from '../../config';
  *
  * @returns {React.ReactNode}
  */
-const masternodesManagerSponsor = () => {
+const sponsor = () => {
   return (
     <Box
       pt={3}
@@ -26,7 +26,7 @@ const masternodesManagerSponsor = () => {
       <Text
         color={'coolgray'}
         mb={3}
-        pr={4}
+        pr={5}
         textAlign={'right'}
       >
         Powered By
@@ -42,4 +42,4 @@ const masternodesManagerSponsor = () => {
   );
 };
 
-export default masternodesManagerSponsor;
+export default sponsor;

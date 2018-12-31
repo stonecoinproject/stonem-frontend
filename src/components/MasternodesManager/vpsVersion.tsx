@@ -5,7 +5,6 @@ import {
 } from 'rebass';
 
 import { CapsText } from '../UI';
-
 import { theme } from '../../config';
 
 /**
@@ -13,7 +12,7 @@ import { theme } from '../../config';
  *
  * @returns {React.ReactNode}
  */
-const masternodeVPSVersion = () => {
+const vpsVersion = () => {
   return (
     <Box
       pt={3}
@@ -31,10 +30,9 @@ const masternodeVPSVersion = () => {
         VPS Version
       </Text>
 
-      <Box mr={5}>
+      <Box ml={4}>
         <CapsText
           color={'copywritegray'}
-          textAlign={'right'}
           fontSize={4}
         >
           v 2.1.0.1
@@ -45,4 +43,4 @@ const masternodeVPSVersion = () => {
   );
 };
 
-export default masternodeVPSVersion;
+export default vpsVersion;
