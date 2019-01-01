@@ -19,11 +19,16 @@ const appComponent:React.SFC = ({
       <GlobalStyle />
         <Sidebar {...props} />
         <Base style={{
-          width: `calc(100%-${theme.Sidebar.width}px)`,
+          width: `calc(100% - ${theme.Sidebar.width}px)`,
           marginLeft: theme.Sidebar.width,
         }}>
           <Header/>
-          <Base width={1}>{children}</Base>
+          <Base style={{
+            width: '100%',
+          }}
+          >
+            {children}
+          </Base>
         </Base>
     </Base>
   );

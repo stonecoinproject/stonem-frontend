@@ -1,24 +1,17 @@
 import * as React from 'react';
-import {
-    Box,
-    Flex,
-} from 'rebass';
+import { Box } from 'rebass';
+import { DeadCentered } from '../UI';
 
 const sidebarComponentItem = ({
     children,
     isHighlighted,
     ...props }:any) => {
   return (
-      <Flex
-        flexDirection={'column'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        {...props}
-      >
-          <Box px={3}>
-            {children}
-          </Box>
-      </Flex>
+      <DeadCentered {...props}>
+        <Box px={3}>
+          {children}
+        </Box>
+      </DeadCentered>
   );
 };
 

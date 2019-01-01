@@ -17,6 +17,7 @@ const globalStyle = createGlobalStyle`
 
   body {
     padding-top: ${theme.Header.height}px;
+    background: ${theme.colors.gray};
   }
 `;
 
