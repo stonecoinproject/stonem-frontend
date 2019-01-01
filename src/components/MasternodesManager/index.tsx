@@ -1,4 +1,6 @@
 export { default } from './masternodesManagerComponent';
+export { default as MasternodesManagerCollapsibleInfo } from './collapsibleInfo';
+export { default as RecentTransactionItem } from './recentTransactionItem';
 export { default as MasternodeManagerTopBar } from './topBar';
 export { default as MasternodesManagerCoinMerchants } from './coinMerchants';
 export { default as MasternodesManagerStatusBoard } from './statusBoard';

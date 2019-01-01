@@ -142,6 +142,11 @@ const theme:ThemeInterface = {
       backgroundColor: 'transparent',
       boxShadow: 'inset 0 0 0 2px',
     },
+    passiveAction: {
+      color: warningredtext,
+      backgroundColor: gray,
+      width: '100%',
+    },
     transparent: {
       backgroundColor: 'transparent',
       color: 'black',
