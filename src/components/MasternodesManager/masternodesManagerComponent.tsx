@@ -51,7 +51,7 @@ const renderMainSection = () => {
     >
       <MasternodeManagerTopBar />
       <MasternodesManagerCoinMerchants style={styles.CoinMerchantsContainer} />
-      <MasternodesManagerStatusBoard />
+      <MasternodesManagerStatusBoard data-testid={'masternodes-manager-status-board'} />
     </Box>
   );
 };

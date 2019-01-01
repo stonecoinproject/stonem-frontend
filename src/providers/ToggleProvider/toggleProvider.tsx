@@ -25,7 +25,6 @@ type StatefulToggleProps = {
  * independent toggle functions.
  */
 class ToggleProvider extends React.Component<StatefulToggleProps, StatefulToggleState> {
-
   readonly state:StatefulToggleState = {
     isOn: false,
   };
@@ -33,15 +32,20 @@ class ToggleProvider extends React.Component<StatefulToggleProps, StatefulToggle
   constructor (props: StatefulToggleProps) {
     super(props);
 
+    // Bind the method name to the class object to set context.
     this.doToggle = this.doToggle.bind(this);
   }
 
+  /**
+   * Toggles the `isOn` state property.
+   */
   doToggle = () =>
-    this.setState({
-      isOn: !this.state.isOn,
+    this.setState(({ isOn }) => {
+      return { isOn: !isOn };
     })
 
   render () {
+    /** Delegates actual rendering to the child render prop. */
     return this.props.render({
       isOn: this.state.isOn,
       doToggle: this.doToggle,

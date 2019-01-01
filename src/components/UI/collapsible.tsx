@@ -13,6 +13,7 @@ import styledComponents from 'styled-components';
 
 type ComponentProps = {
   children?: React.ReactNode,
+  /** Collapsible component title. */
   title?: string,
 };
 
@@ -23,16 +24,17 @@ const CollapsibleBase = styledComponents(Flex)`
   cursor: pointer;
 
   &:hover {
-    background: ${props => props.theme.colors.lightgray};
+    background: ${theme.colors.lightgray};
   }
 `;
 
 /**
  * Handles the render props callback function for the collapsible component.
  *
- * @param { React.ReactNode } children  - Child elements to render within the collapsible component.
- * @param { Function } Object.doToggle  - Runs the toggle action when called.
- * @param { Boolean } Object.isOn       - Denotes the state of the toggle. Is it active or inactive?
+ * @param {React.ReactNode} children         - Child elements to render within the collapsible component.
+ * @param {Function}        Object.doToggle  - Runs the toggle action when called.
+ * @param {Boolean}         Object.isOn      - Denotes the state of the toggle. Is it active or inactive?
+ * @param {String}          Object.title     - Title of the collapsible panel.
  *
  * @returns {React.ReactNode}
  */

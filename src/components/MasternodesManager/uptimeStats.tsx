@@ -67,7 +67,6 @@ const uptimeStats = () => {
           >
             Active: 3d:02h:05m:06s
           </Text>
-          {/* <Text color={'copywritegray'}>109.121.209.121:6253</Text> */}
         </Box>
       </Flex>
       <Flex>
@@ -83,7 +82,7 @@ const uptimeStats = () => {
           ml={3}
           pl={2}
         >
-          010.071.170.005
+          66.66.66.666:666333
         </Text>
       </Flex>
 
