@@ -4,7 +4,8 @@
       "targets": {
         "browsers": ["chrome >= 57"]
       },
-      "modules": false
+      "modules": false,
+      "include": ["transform-es2015-classes"]
     }],
     "stage-3",
     "react"
