@@ -32,6 +32,22 @@ const styles:ComponentStyles = {
   },
 };
 
+const renderMasternodesDestroyButton = () => (
+  <Box mt={3}>
+    <Button
+      py={4}
+      variant={'passiveAction'}
+    >
+      <CapsText
+        fontSize={3}
+        fontWeight={'normal'}
+      >
+        Remove Masternode
+      </CapsText>
+    </Button>
+  </Box>
+);
+
 /**
  * Renders the main section.
  *
@@ -76,20 +92,7 @@ const renderAsideSection = () => {
         <MasternodesManagerUptimeStats />
         <MasternodesManagerInfoTable />
         <MasternodesManagerCollapsibleInfo />
-
-        <Box mt={3}>
-          <Button
-            py={4}
-            variant={'passiveAction'}
-          >
-            <CapsText
-              fontSize={3}
-              fontWeight={'normal'}
-            >
-              Remove Masternode
-            </CapsText>
-          </Button>
-        </Box>
+        {renderMasternodesDestroyButton()}
       </Box>
     </Box>
   );

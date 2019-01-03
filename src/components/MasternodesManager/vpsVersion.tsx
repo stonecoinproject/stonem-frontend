@@ -7,6 +7,12 @@ import {
 import { CapsText } from '../UI';
 import { theme } from '../../config';
 
+const styles = {
+  vpsVersionStyles: {
+    borderRight: `1px solid ${theme.colors.gray}`,
+  },
+};
+
 /**
  * Renders masternode VPS version info.
  *
@@ -17,9 +23,7 @@ const vpsVersion = () => {
     <Box
       pt={3}
       pb={4}
-      style={{
-        borderRight: `1px solid ${theme.colors.gray}`,
-      }}
+      style={styles.vpsVersionStyles}
       width={1 / 2}
     >
       <Text
