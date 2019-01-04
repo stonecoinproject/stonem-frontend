@@ -6,16 +6,28 @@ import {
 import { MnManagerStatusCard } from '../MnManagerSuite';
 
 /**
+ * Wraps the status item cards.
+ *
+ * @param {React.ReactNode} children -  React children element.
+ */
+// tslint:disable-next-line:variable-name
+const StatusItemContainer:React.SFC = ({ children }) => (
+  <Box
+    mr={1}
+    width={1 / 3}
+  >
+    {children}
+  </Box>
+);
+
+/**
  * Renders the first row of status cards.
  *
  * @returns {React.ReactNode}
  */
 const renderFirstRow = ():React.ReactNode => (
   <Flex mb={3}>
-    <Box
-      mr={1}
-      width={1 / 3}
-    >
+    <StatusItemContainer>
       <MnManagerStatusCard
         isHighlighted
         mnLastRenewalDate={'21/07/2018'}
@@ -23,12 +35,9 @@ const renderFirstRow = ():React.ReactNode => (
         mnStatusCode={'enabled'}
         mnTitle={'MN 1'}
       />
-    </Box>
+    </StatusItemContainer>
 
-    <Box
-      mr={1}
-      width={1 / 3}
-    >
+    <StatusItemContainer>
       <MnManagerStatusCard
         isHighlighted={false}
         mnLastRenewalDate={'21/07/2018'}
@@ -36,12 +45,9 @@ const renderFirstRow = ():React.ReactNode => (
         mnStatusCode={'enabled'}
         mnTitle={'MN 2'}
       />
-    </Box>
+    </StatusItemContainer>
 
-    <Box
-      mr={1}
-      width={1 / 3}
-    >
+    <StatusItemContainer>
       <MnManagerStatusCard
         isHighlighted={false}
         mnLastRenewalDate={'21/07/2018'}
@@ -49,7 +55,7 @@ const renderFirstRow = ():React.ReactNode => (
         mnStatusCode={'restart-required'}
         mnTitle={'MN 3'}
       />
-    </Box>
+    </StatusItemContainer>
   </Flex>
 );
 
@@ -60,10 +66,7 @@ const renderFirstRow = ():React.ReactNode => (
  */
 const renderSecondRow = ():React.ReactNode => (
   <Flex>
-    <Box
-      mr={1}
-      width={1 / 3}
-    >
+    <StatusItemContainer>
       <MnManagerStatusCard
         isHighlighted={false}
         mnLastRenewalDate={'21/07/2018'}
@@ -71,12 +74,9 @@ const renderSecondRow = ():React.ReactNode => (
         mnStatusCode={'off'}
         mnTitle={'MN 4'}
       />
-    </Box>
+    </StatusItemContainer>
 
-    <Box
-      mr={1}
-      width={1 / 3}
-    >
+    <StatusItemContainer>
       <MnManagerStatusCard
         isHighlighted={false}
         mnLastRenewalDate={'21/07/2018'}
@@ -84,7 +84,7 @@ const renderSecondRow = ():React.ReactNode => (
         mnStatusCode={'off'}
         mnTitle={'MN 5'}
       />
-    </Box>
+    </StatusItemContainer>
   </Flex>
 );
 

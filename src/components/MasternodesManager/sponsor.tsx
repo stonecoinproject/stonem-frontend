@@ -16,9 +16,9 @@ import { theme } from '../../config';
 const sponsor = () => {
   return (
     <Box
-      pt={3}
-      pb={4}
       style={{
+        paddingTop: `${theme.space[3]}px`,
+        paddingBottom: `${theme.space[4]}px`,
         borderBottom: `1px solid ${theme.colors.gray}`,
       }}
       width={1 / 2}

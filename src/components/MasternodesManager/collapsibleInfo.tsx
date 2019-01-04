@@ -8,18 +8,30 @@ import {
 } from 'rebass';
 
 /**
+ * Wraps the collapsible item content.
+ *
+ * @param {React.ReactNode} children -  React children element.
+ */
+// tslint:disable-next-line:variable-name
+const CollapsibleContentContainer:React.SFC = ({ children }) => (
+  <Box
+    py={3}
+    px={2}
+  >
+    {children}
+  </Box>
+);
+
+/**
  * Renders the collateral collapsible.
  *
  * @returns {React.ReactNode}
  */
 const renderCollateralPanel = ():React.ReactNode => (
   <Collapsible title={'Collateral'}>
-    <Box
-      py={3}
-      px={2}
-    >
+    <CollapsibleContentContainer>
       <Text fontSize={3}>Collateral</Text>
-    </Box>
+    </CollapsibleContentContainer>
   </Collapsible>
 );
 
@@ -30,11 +42,7 @@ const renderCollateralPanel = ():React.ReactNode => (
  */
 const renderRecentTransactionsPanel = ():React.ReactNode => (
   <Collapsible title={'Recent Transactions'}>
-    <Box
-      py={3}
-      px={2}
-      width={1}
-    >
+    <CollapsibleContentContainer>
       <Box mb={4}>
         <RecentTransactionItem
           transactionAmount={'6.00'}
@@ -52,7 +60,7 @@ const renderRecentTransactionsPanel = ():React.ReactNode => (
           transactionTime={'03:21'}
         />
       </Box>
-    </Box>
+    </CollapsibleContentContainer>
   </Collapsible>
 );
 /**
@@ -62,12 +70,9 @@ const renderRecentTransactionsPanel = ():React.ReactNode => (
  */
 const renderLogsPanel = ():React.ReactNode => (
   <Collapsible title={'Log'}>
-    <Box
-      py={3}
-      px={2}
-    >
+    <CollapsibleContentContainer>
       <Text fontSize={3}>Log</Text>
-    </Box>
+    </CollapsibleContentContainer>
   </Collapsible>
 );
 
@@ -78,12 +83,9 @@ const renderLogsPanel = ():React.ReactNode => (
  */
 const renderWalletPanel = ():React.ReactNode => (
   <Collapsible title={'Wallet'}>
-    <Box
-      py={3}
-      px={2}
-    >
+    <CollapsibleContentContainer>
       <Text fontSize={3}>Wallet</Text>
-    </Box>
+    </CollapsibleContentContainer>
   </Collapsible>
 );
 

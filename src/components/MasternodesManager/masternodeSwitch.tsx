@@ -7,11 +7,15 @@ import {
 
 import { StatusIndicator } from '../UI';
 import { theme } from '../../config';
+import { generateXYBorderStyles } from '../../utils/helpers';
 
 const styles = {
   masternodeSwitchStyles: {
-    borderBottom: `1px solid ${theme.colors.gray}`,
-    borderRight: `1px solid ${theme.colors.gray}`,
+    ...generateXYBorderStyles({
+      color: theme.colors.gray,
+      xBorder: 'borderRight',
+      yBorder: 'borderBottom',
+    }),
   },
 };
 

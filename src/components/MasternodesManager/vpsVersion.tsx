@@ -7,10 +7,10 @@ import {
 import { CapsText } from '../UI';
 import { theme } from '../../config';
 
-const styles = {
-  vpsVersionStyles: {
-    borderRight: `1px solid ${theme.colors.gray}`,
-  },
+const vpsVersionStyles:React.CSSProperties = {
+  paddingTop: `${theme.space[3]}px`,
+  paddingBottom: `${theme.space[4]}px`,
+  borderRight: `1px solid ${theme.colors.gray}`,
 };
 
 /**
@@ -21,9 +21,7 @@ const styles = {
 const vpsVersion = () => {
   return (
     <Box
-      pt={3}
-      pb={4}
-      style={styles.vpsVersionStyles}
+      style={vpsVersionStyles}
       width={1 / 2}
     >
       <Text
@@ -35,12 +33,12 @@ const vpsVersion = () => {
       </Text>
 
       <Box ml={4}>
-        <CapsText
+        <Text
           color={'copywritegray'}
           fontSize={4}
         >
-          v 2.1.0.1
-        </CapsText>
+          V 2.1.0.1
+        </Text>
       </Box>
 
     </Box>
