@@ -79,9 +79,25 @@ const sidebarLinks: sidebarLinksInterface = {
   },
 };
 
+type statusCode = 'off'|'restart-required'|'enabled';
+
+type masternodesDataInterface = {
+  lastRenewalDate: string,
+  lastRenewalTime: string,
+  statusCode: statusCode,
+  title: string,
+};
+
+const masternodesData: masternodesDataInterface[] = [
+  { lastRenewalDate: '21/07/2018', lastRenewalTime: '05:33', statusCode: 'enabled', title: 'MN 1' },
+  { lastRenewalDate: '21/07/2018', lastRenewalTime: '05:33', statusCode: 'restart-required', title: 'MN 3' },
+  { lastRenewalDate: '21/07/2018', lastRenewalTime: '05:33', statusCode: 'off', title: 'MN 5' },
+];
+
 export default {
   filterCriteria,
   incomeSummaries,
+  masternodesData,
   name,
   sidebarLinks,
   periodicalData,

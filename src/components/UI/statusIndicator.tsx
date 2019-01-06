@@ -8,20 +8,7 @@ import {
   Dot,
 } from '../UI';
 import { theme } from '../../config';
-
-/**
- * Status indicator types.
- */
-type statusIndicatorProps = {
-  /** Background color of indicator. */
-  indicatorBg?: string,
-  /** Border highlight color of indicator. Only color codes supported. */
-  indicatorHighlight?: string,
-  /** Text displayed next to the status dot. */
-  statusText: string;
-  /** Text displayed next to the status dot. */
-  statusTextColor: string;
-};
+import { StatusIndicatorProps } from '../../config/types';
 
 /**
  * Creates status text next to a dot indicator.
@@ -32,7 +19,7 @@ type statusIndicatorProps = {
  *
  * @returns {React.ReactNode}
  */
-const statusIndicator:React.SFC<statusIndicatorProps> = ({
+const statusIndicator:React.SFC<StatusIndicatorProps> = ({
   indicatorBg,
   indicatorHighlight,
   statusText,

@@ -5,17 +5,7 @@ import {
   Text,
 } from 'rebass';
 import { CapsText } from '../UI';
-
-type recentTransactionItemProps = {
-  /** Transaction amount for recent transaction item. */
-  transactionAmount: string,
-  /** Transaction date for recent transaction item. Example: 27/11/12 */
-  transactionDate: string,
-  /** Transaction time for recent transaction item. */
-  transactionTime: string,
-  /** Transaction title. */
-  transactionTitle: string,
-};
+import { RecentTransactionItemProps } from '../../config/types';
 
 /**
  * Renders a recent transaction entry for the masternodes manager.
@@ -27,7 +17,7 @@ type recentTransactionItemProps = {
  *
  * @returns {React.ReactNode}
  */
-const recentTransactionItem:React.SFC<recentTransactionItemProps> = ({
+const recentTransactionItem:React.SFC<RecentTransactionItemProps> = ({
   transactionAmount,
   transactionDate,
   transactionTime,

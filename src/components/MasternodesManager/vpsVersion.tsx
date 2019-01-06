@@ -4,8 +4,7 @@ import {
   Text,
 } from 'rebass';
 
-import { CapsText } from '../UI';
-import { theme } from '../../config';
+import { styles } from '../../config';
 
 /**
  * Renders masternode VPS version info.
@@ -15,11 +14,7 @@ import { theme } from '../../config';
 const vpsVersion = () => {
   return (
     <Box
-      pt={3}
-      pb={4}
-      style={{
-        borderRight: `1px solid ${theme.colors.gray}`,
-      }}
+      style={styles.masternodesManagerInfoSection}
       width={1 / 2}
     >
       <Text
@@ -31,12 +26,12 @@ const vpsVersion = () => {
       </Text>
 
       <Box ml={4}>
-        <CapsText
+        <Text
           color={'copywritegray'}
           fontSize={4}
         >
-          v 2.1.0.1
-        </CapsText>
+          V 2.1.0.1
+        </Text>
       </Box>
 
     </Box>
