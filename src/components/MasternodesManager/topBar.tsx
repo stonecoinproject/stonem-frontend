@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box } from 'rebass';
+import { Flex } from 'rebass';
 
 import { CapsText } from '../UI';
 
@@ -9,14 +9,17 @@ import { CapsText } from '../UI';
  * @returns React.ReactNode
  */
 const topBar = () => (
-  <Box py={3}>
+  <Flex
+    flexDirection={'column'}
+    py={3}
+  >
     <CapsText
       color={'darkergray'}
       fontSize={0}
     >
       Your MasterNodes
     </CapsText>
-  </Box>
+  </Flex>
 );
 
 export default topBar;

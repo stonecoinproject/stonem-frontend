@@ -13,24 +13,38 @@ import {
   MasternodesManagerInfoTable,
 } from '../MasternodesManager';
 
-import { theme } from '../../config';
+import {
+  styles as sharedStyles,
+  theme,
+} from '../../config';
 import { MasternodesManagerCollapsibleInfo } from './';
 import { CapsText } from '../UI';
 
 interface ComponentStyles {
-  ComponentContainer: React.CSSProperties;
   CoinMerchantsContainer: React.CSSProperties;
 }
 
 const styles:ComponentStyles = {
-  ComponentContainer: {
-    height: '95%',
-    borderRadius: theme.radiusSizes[1],
-  },
   CoinMerchantsContainer: {
     borderBottom: `2px solid ${theme.colors.gray}`,
   },
 };
+
+const renderMasternodesDestroyButton = () => (
+  <Box mt={3}>
+    <Button
+      py={4}
+      variant={'passiveAction'}
+    >
+      <CapsText
+        fontSize={3}
+        fontWeight={'normal'}
+      >
+        Remove Masternode
+      </CapsText>
+    </Button>
+  </Box>
+);
 
 /**
  * Renders the main section.
@@ -46,7 +60,7 @@ const renderMainSection = () => {
       my={4}
       px={4}
       pb={4}
-      style={styles.ComponentContainer}
+      style={sharedStyles.mainComponentContainer}
       width={6 / 10}
     >
       <MasternodeManagerTopBar />
@@ -69,27 +83,14 @@ const renderAsideSection = () => {
       mx={2}
       px={3}
       py={2}
-      style={styles.ComponentContainer}
+      style={sharedStyles.mainComponentContainer}
       width={4 / 10}
     >
       <Box py={2}>
         <MasternodesManagerUptimeStats />
         <MasternodesManagerInfoTable />
         <MasternodesManagerCollapsibleInfo />
-
-        <Box mt={3}>
-          <Button
-            py={4}
-            variant={'passiveAction'}
-          >
-            <CapsText
-              fontSize={3}
-              fontWeight={'normal'}
-            >
-              Remove Masternode
-            </CapsText>
-          </Button>
-        </Box>
+        {renderMasternodesDestroyButton()}
       </Box>
     </Box>
   );

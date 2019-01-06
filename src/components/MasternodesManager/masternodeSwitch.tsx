@@ -7,6 +7,41 @@ import {
 
 import { StatusIndicator } from '../UI';
 import { theme } from '../../config';
+import { generateXYBorderStyles } from '../../utils/helpers';
+
+const styles = {
+  masternodeSwitchStyles: {
+    ...generateXYBorderStyles({
+      color: theme.colors.gray,
+      xBorder: 'borderRight',
+      yBorder: 'borderBottom',
+    }),
+  },
+};
+
+/**
+ * Renders the switch control for the masternodes switch.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderSwitchControl = () => (
+  <Box>
+    <Box
+      ml={3}
+      mb={3}
+    >
+      <StatusIndicator
+        indicatorBg={'lightgreen'}
+        indicatorHighlight={theme.colors.green}
+        statusText={'Enabled'}
+        statusTextColor={'placeholdergray'}
+      />
+    </Box>
+    <Button variant={'warning'}>
+      <Text fontWeight={'normal'}>Switch OFF</Text>
+    </Button>
+  </Box>
+);
 
 /**
  * Renders a masternode switch board with indicator status.
@@ -18,10 +53,7 @@ const masternodeSwitch = () => {
     <Box
       pt={3}
       pb={4}
-      style={{
-        borderBottom: `1px solid ${theme.colors.gray}`,
-        borderRight: `1px solid ${theme.colors.gray}`,
-      }}
+      style={styles.masternodeSwitchStyles}
       width={1 / 2}
     >
       <Text
@@ -32,21 +64,7 @@ const masternodeSwitch = () => {
         Status
       </Text>
 
-      <Box
-        ml={3}
-        mb={3}
-      >
-        <StatusIndicator
-          indicatorBg={'lightgreen'}
-          indicatorHighlight={theme.colors.green}
-          statusText={'Enabled'}
-          statusTextColor={'placeholdergray'}
-        />
-      </Box>
-
-      <Button variant={'warning'}>
-        <Text fontWeight={'normal'}>Switch OFF</Text>
-      </Button>
+      {renderSwitchControl()}
     </Box>
   );
 };

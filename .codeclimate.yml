@@ -2,4 +2,5 @@
 exclude_patterns:
 - "coverage/"
 - "src/__tests__/**"
+- "src/config/types.ts"
 - "**/reducer.ts"

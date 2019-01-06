@@ -12,7 +12,10 @@ import { default as IncomeStatsCardHeading } from './incomeStatsCardHeading';
 
 import { CapsText } from '../UI';
 import { theme } from '../../config';
-import { isEven } from '../../utils/helpers';
+import {
+  isEven,
+  generateXYBorderStyles,
+} from '../../utils/helpers';
 
 type periodInterface = {
   label: string;
@@ -82,8 +85,11 @@ const incomeStatsCardPeriodical = ({
                     <IncomeStatsCard
                         width={1 / 2}
                         style={{
-                          [xBorder]: `1px solid ${theme.colors.lightgray}`,
-                          [yBorder]: `1px solid ${theme.colors.lightgray}`,
+                          ...generateXYBorderStyles({
+                            xBorder,
+                            yBorder,
+                            color: theme.colors.lightgray,
+                          }),
                         }}
                         key={i}
                     >

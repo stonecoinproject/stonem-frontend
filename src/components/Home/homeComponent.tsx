@@ -16,18 +16,17 @@ import {
   IncomeStatsCardPeriodical,
 } from '../IncomeStatsSuite';
 
-import { theme, app } from '../../config';
+import {
+  app,
+  styles as sharedStyles,
+  theme,
+} from '../../config';
 
 interface HomeComponentStyles {
-  homeComponentContainer: object;
   homeComponentFiltersContainer: object;
 }
 
 const styles:HomeComponentStyles = {
-  homeComponentContainer: {
-    height: '95%',
-    borderRadius: theme.radiusSizes[1],
-  },
   homeComponentFiltersContainer: {
     borderBottom: `1px solid ${theme.colors.lightgray}`,
   },
@@ -90,7 +89,7 @@ const homeComponent = (props:any) => {
       my={4}
       px={4}
       pb={4}
-      style={styles.homeComponentContainer}
+      style={sharedStyles.mainComponentContainer}
     >
       {renderTopBar()}
       <Flex>
