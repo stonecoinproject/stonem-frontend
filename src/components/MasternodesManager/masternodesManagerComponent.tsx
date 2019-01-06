@@ -21,14 +21,10 @@ import { MasternodesManagerCollapsibleInfo } from './';
 import { CapsText } from '../UI';
 
 interface ComponentStyles {
-  ComponentContainer: React.CSSProperties;
   CoinMerchantsContainer: React.CSSProperties;
 }
 
 const styles:ComponentStyles = {
-  ComponentContainer: {
-    ...sharedStyles.mainComponentContainer,
-  },
   CoinMerchantsContainer: {
     borderBottom: `2px solid ${theme.colors.gray}`,
   },
@@ -64,7 +60,7 @@ const renderMainSection = () => {
       my={4}
       px={4}
       pb={4}
-      style={styles.ComponentContainer}
+      style={sharedStyles.mainComponentContainer}
       width={6 / 10}
     >
       <MasternodeManagerTopBar />
@@ -87,7 +83,7 @@ const renderAsideSection = () => {
       mx={2}
       px={3}
       py={2}
-      style={styles.ComponentContainer}
+      style={sharedStyles.mainComponentContainer}
       width={4 / 10}
     >
       <Box py={2}>

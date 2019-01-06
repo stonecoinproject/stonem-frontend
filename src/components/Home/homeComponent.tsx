@@ -23,14 +23,10 @@ import {
 } from '../../config';
 
 interface HomeComponentStyles {
-  homeComponentContainer: object;
   homeComponentFiltersContainer: object;
 }
 
 const styles:HomeComponentStyles = {
-  homeComponentContainer: {
-    ...sharedStyles.mainComponentContainer,
-  },
   homeComponentFiltersContainer: {
     borderBottom: `1px solid ${theme.colors.lightgray}`,
   },
@@ -93,7 +89,7 @@ const homeComponent = (props:any) => {
       my={4}
       px={4}
       pb={4}
-      style={styles.homeComponentContainer}
+      style={sharedStyles.mainComponentContainer}
     >
       {renderTopBar()}
       <Flex>
