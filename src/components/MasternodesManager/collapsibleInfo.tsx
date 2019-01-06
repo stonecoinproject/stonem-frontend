@@ -22,15 +22,19 @@ const CollapsibleContentContainer:React.SFC = ({ children }) => (
   </Box>
 );
 
+type renderCollapsible = {
+  title?: string,
+};
+
 /**
- * Renders the collateral collapsible.
+ * Renders the collapsible with a title.
  *
  * @returns {React.ReactNode}
  */
-const renderCollateralPanel = ():React.ReactNode => (
-  <Collapsible title={'Collateral'}>
+const renderCollapsible = ({ title }:renderCollapsible):React.ReactNode => (
+  <Collapsible title={title}>
     <CollapsibleContentContainer>
-      <Text fontSize={3}>Collateral</Text>
+      <Text fontSize={3}>{title}</Text>
     </CollapsibleContentContainer>
   </Collapsible>
 );
@@ -63,31 +67,6 @@ const renderRecentTransactionsPanel = ():React.ReactNode => (
     </CollapsibleContentContainer>
   </Collapsible>
 );
-/**
- * Renders the logs collapsible.
- *
- * @returns {React.ReactNode}
- */
-const renderLogsPanel = ():React.ReactNode => (
-  <Collapsible title={'Log'}>
-    <CollapsibleContentContainer>
-      <Text fontSize={3}>Log</Text>
-    </CollapsibleContentContainer>
-  </Collapsible>
-);
-
-/**
- * Renders the wallet collapsible.
- *
- * @returns {React.ReactNode}
- */
-const renderWalletPanel = ():React.ReactNode => (
-  <Collapsible title={'Wallet'}>
-    <CollapsibleContentContainer>
-      <Text fontSize={3}>Wallet</Text>
-    </CollapsibleContentContainer>
-  </Collapsible>
-);
 
 /**
  * Renders all collapsible components with info.
@@ -97,10 +76,10 @@ const renderWalletPanel = ():React.ReactNode => (
 const collapsibleInfo:React.SFC = () => {
   return (
     <Box width={1}>
-      {renderCollateralPanel()}
+      {renderCollapsible({ title: 'Collateral' })}
       {renderRecentTransactionsPanel()}
-      {renderLogsPanel()}
-      {renderWalletPanel()}
+      {renderCollapsible({ title: 'Logs' })}
+      {renderCollapsible({ title: 'Wallets' })}
     </Box>
   );
 };

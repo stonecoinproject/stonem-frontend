@@ -4,14 +4,7 @@ import {
   Text,
 } from 'rebass';
 
-import { CapsText } from '../UI';
-import { theme } from '../../config';
-
-const vpsVersionStyles:React.CSSProperties = {
-  paddingTop: `${theme.space[3]}px`,
-  paddingBottom: `${theme.space[4]}px`,
-  borderRight: `1px solid ${theme.colors.gray}`,
-};
+import { styles } from '../../config';
 
 /**
  * Renders masternode VPS version info.
@@ -21,7 +14,7 @@ const vpsVersionStyles:React.CSSProperties = {
 const vpsVersion = () => {
   return (
     <Box
-      style={vpsVersionStyles}
+      style={styles.masternodesManagerInfoSection}
       width={1 / 2}
     >
       <Text

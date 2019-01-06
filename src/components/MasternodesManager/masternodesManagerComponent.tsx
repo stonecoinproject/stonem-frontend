@@ -13,7 +13,10 @@ import {
   MasternodesManagerInfoTable,
 } from '../MasternodesManager';
 
-import { theme } from '../../config';
+import {
+  styles as sharedStyles,
+  theme,
+} from '../../config';
 import { MasternodesManagerCollapsibleInfo } from './';
 import { CapsText } from '../UI';
 
@@ -24,8 +27,7 @@ interface ComponentStyles {
 
 const styles:ComponentStyles = {
   ComponentContainer: {
-    height: '95%',
-    borderRadius: theme.radiusSizes[1],
+    ...sharedStyles.mainComponentContainer,
   },
   CoinMerchantsContainer: {
     borderBottom: `2px solid ${theme.colors.gray}`,

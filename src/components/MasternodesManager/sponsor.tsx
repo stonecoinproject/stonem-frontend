@@ -6,7 +6,7 @@ import {
 } from 'rebass';
 
 import { DeadCentered } from '../UI';
-import { theme } from '../../config';
+import { styles } from '../../config';
 
 /**
  * Renders masternode sponsor info.
@@ -16,11 +16,7 @@ import { theme } from '../../config';
 const sponsor = () => {
   return (
     <Box
-      style={{
-        paddingTop: `${theme.space[3]}px`,
-        paddingBottom: `${theme.space[4]}px`,
-        borderBottom: `1px solid ${theme.colors.gray}`,
-      }}
+      style={styles.masternodesManagerInfoSection}
       width={1 / 2}
     >
       <Text

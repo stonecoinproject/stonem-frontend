@@ -3,6 +3,7 @@ import {
   Box,
   Flex,
 } from 'rebass';
+import { app } from '../../config';
 import { MnManagerStatusCard } from '../MnManagerSuite';
 
 /**
@@ -100,8 +101,21 @@ const statusBoard = ({ ...props }) => {
       pb={3}
       {...props}
     >
-      {renderFirstRow()}
-      {renderSecondRow()}
+      <Flex>
+      {app.masternodesData.map((mn, index) => {
+        return (
+          <StatusItemContainer key={index}>
+            <MnManagerStatusCard
+              isHighlighted={index === 0}
+              mnLastRenewalDate={mn.lastRenewalDate}
+              mnLastRenewalTime={mn.lastRenewalTime}
+              mnStatusCode={mn.statusCode}
+              mnTitle={mn.title}
+            />
+          </StatusItemContainer>
+        );
+      })}
+      </Flex>
     </Box>
   );
 };

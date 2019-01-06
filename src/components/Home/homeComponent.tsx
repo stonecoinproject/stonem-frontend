@@ -16,7 +16,11 @@ import {
   IncomeStatsCardPeriodical,
 } from '../IncomeStatsSuite';
 
-import { theme, app } from '../../config';
+import {
+  app,
+  styles as sharedStyles,
+  theme,
+} from '../../config';
 
 interface HomeComponentStyles {
   homeComponentContainer: object;
@@ -25,8 +29,7 @@ interface HomeComponentStyles {
 
 const styles:HomeComponentStyles = {
   homeComponentContainer: {
-    height: '95%',
-    borderRadius: theme.radiusSizes[1],
+    ...sharedStyles.mainComponentContainer,
   },
   homeComponentFiltersContainer: {
     borderBottom: `1px solid ${theme.colors.lightgray}`,
