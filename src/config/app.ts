@@ -74,7 +74,7 @@ const sidebarLinks: sidebarLinksInterface = {
     icon: MasternodeManagementIcon,
   },
 
-  '/add-wallets': {
+  '/wallets': {
     icon: WalletManagementIcon,
   },
 };
@@ -94,7 +94,21 @@ const masternodesData: masternodesDataInterface[] = [
   { lastRenewalDate: '21/07/2018', lastRenewalTime: '05:33', statusCode: 'off', title: 'MN 5' },
 ];
 
+type balanceDataInterface = {
+  title: string,
+  amount: number,
+  currency: string,
+};
+
+const balanceData:balanceDataInterface[] = [
+  { title: 'Total', amount: 10253.21, currency: 'STONE' },
+  { title: 'Active', amount: 55129.21, currency: 'STONE' },
+  { title: 'Pending', amount: 234.00, currency: 'STONE' },
+  { title: 'Collateral', amount: 4500.00, currency: 'STONE' },
+];
+
 export default {
+  balanceData,
   filterCriteria,
   incomeSummaries,
   masternodesData,

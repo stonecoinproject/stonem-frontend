@@ -26,7 +26,7 @@ const input = styledComponents.input`
   width: 100%;
   font-family: ${appTheme.fonts.sans};
   color: inherit;
-  font-size: ${appTheme.fontSizes[1]}px;
+  font-size: ${props => appTheme.fontSizes[props.theme.fontSize]}px;
   background-color: transparent;
   border-radius: ${appTheme.radiusSizes[0]}px;
   border-width: 0px;
@@ -54,6 +54,7 @@ input.defaultProps = {
   theme: {
     size: 2,
     focusHighlight: appTheme.colors.darkgray,
+    fontSize: 1,
   },
 };
 

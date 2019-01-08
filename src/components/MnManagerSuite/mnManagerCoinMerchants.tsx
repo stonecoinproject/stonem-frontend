@@ -11,7 +11,7 @@ import { DisplayCard } from '../UI';
  *
  * @returns {React.ReactNode}
  */
-const coinMerchants = ({ ...props }) => (
+const mnManagerCoinMerchants = ({ ...props }) => (
   <Flex
     mb={3}
     pt={2}
@@ -40,4 +40,4 @@ const coinMerchants = ({ ...props }) => (
   </Flex>
 );
 
-export default coinMerchants;
+export default mnManagerCoinMerchants;
