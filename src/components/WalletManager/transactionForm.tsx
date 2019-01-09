@@ -13,6 +13,9 @@ import {
 } from '../UI';
 import { theme } from '../../config';
 
+/**
+ * Renders the send and receive action buttons.
+ */
 const renderTransactionActionButtons = () => (
   <Flex pt={3} mb={4}>
     <Button
@@ -34,9 +37,17 @@ const renderTransactionActionButtons = () => (
 );
 
 type transactionFormLabelProps = CardProps & {
+  /** Text to be used as label. */
   label: string,
 };
 
+/**
+ * Creates a form label for the transaction form.
+ *
+ * @param {String} Object.label - String to use as label.
+ *
+ * @return {React.ReactNode}
+ */
 // tslint:disable-next-line:variable-name
 const TransactionFormLabel:React.SFC<transactionFormLabelProps> = ({
   label,
@@ -63,9 +74,17 @@ const TransactionFormLabel:React.SFC<transactionFormLabelProps> = ({
 );
 
 type TransactionFormInputProps = {
+  /** Input type. Example: "text", "number", "password". */
   type?: string,
 };
 
+/**
+ * Input element used for the transaction form.
+ *
+ * @param {String} Object.type  - Input type of the input element.
+ *
+ * @returns {React.ReactNode}
+ */
 // tslint:disable-next-line:variable-name
 const TransactionFormInput:React.SFC<TransactionFormInputProps> = ({
   type,
@@ -93,9 +112,17 @@ TransactionFormInput.defaultProps = {
 };
 
 type TransactionFormGroupsProps = BoxProps & {
+  /** Label for the form group. */
   label: string,
 };
 
+/**
+ * Wraps a label and an input together.
+ *
+ * @param {String} label  - Label for the form group.
+ *
+ * @returns {React.ReactNode}
+ */
 // tslint:disable-next-line:variable-name
 const TransactionFormGroup:React.SFC<TransactionFormGroupsProps> = ({
   label,
@@ -110,6 +137,11 @@ const TransactionFormGroup:React.SFC<TransactionFormGroupsProps> = ({
   </Flex>
 );
 
+/**
+ * Renders a transaction form.
+ *
+ * @returns {React.ReactNode}
+ */
 const transactionForm:React.SFC = () => {
   return (
     <Box>

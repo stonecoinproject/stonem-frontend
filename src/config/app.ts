@@ -107,13 +107,100 @@ const balanceData:balanceDataInterface[] = [
   { title: 'Collateral', amount: 4500.00, currency: 'STONE' },
 ];
 
+type transactionDataMeta = {
+  /** The string to represent the key of the meta key-value pair. */
+  key: string,
+  /** The string to represent the value of the meta key-value pair. */
+  value: string,
+};
+
+type transactionData = {
+  /** Amount the transaction cost. */
+  amount: string,
+  /** A string representing the file name of the transaction vendor brand. */
+  brand: string,
+  /** Date the transaction was initiated */
+  date: string,
+  /** Time the transaction was initiated */
+  time: string,
+  /** The title assigned to this transaction. */
+  title: string,
+  /** Meta information for this transaction. */
+  meta: transactionDataMeta[],
+};
+
+const transactionData = [
+  { amount: '+6.00 STONE', brand: 'stone-logo.png', date: '07:39', time: '24/07/2018', title: 'MN Reward',
+    meta: [
+      { key: 'Status', value: '2833 confirmations' },
+      { key: 'From', value: 'SkK9a0u332fy7xWumTmqJLJmXTL2E' },
+      { key: 'Credit', value: '+6.00 STONE' },
+      { key: 'Transaction fee', value: '-0.0057640 STONE' },
+      { key: 'Net amount', value: '+6.0057640 STONE' },
+      { key: 'Transaction ID', value: '23918921bcf6c792aff' },
+    ],
+  },
+  { amount: '-10.000 TRC', brand: 'terracoin-logo.png', date: '19:21', time: '22/07/2018',
+    title: 'Instant Send',
+    meta: [
+      { key: 'Status', value: '3783 confirmations' },
+      { key: 'To', value: 'ZkK9a0u332fy7xWfmemTJLJmXTL2Q' },
+      { key: 'Credit', value: '-10.00 TRC' },
+      { key: 'Transaction fee', value: '-0.0057640 TRC' },
+      { key: 'Net amount', value: '-10.0057640 TRC' },
+      { key: 'Transaction ID', value: '32218921bcf6c792aff' },
+    ],
+  },
+  { amount: '+6.00 STONE', brand: 'stone-logo.png', date: '07:39', time: '24/07/2018', title: 'MN Reward',
+    meta: [
+      { key: 'Status', value: '2833 confirmations' },
+      { key: 'From', value: 'SkK9a0u332fy7xWumTmqJLJmXTL2E' },
+      { key: 'Credit', value: '+6.00 STONE' },
+      { key: 'Transaction fee', value: '-0.0057640 STONE' },
+      { key: 'Net amount', value: '+6.0057640 STONE' },
+      { key: 'Transaction ID', value: '23918921bcf6c792aff' },
+    ],
+  },
+  { amount: '+3.00 TRC', brand: 'terracoin-logo.png', date: '07:39', time: '24/07/2018', title: 'MN Reward',
+    meta: [
+      { key: 'Status', value: '2833 confirmations' },
+      { key: 'From', value: 'SkK9a0u332fy7xWumTmqJLJmXTL2E' },
+      { key: 'Credit', value: '+3.00 TRC' },
+      { key: 'Transaction fee', value: '-0.0057640 TRC' },
+      { key: 'Net amount', value: '+3.0057640 TRC' },
+      { key: 'Transaction ID', value: '23918921bcf6c792aff' },
+    ],
+  },
+  { amount: '+6.00 STONE', brand: 'stone-logo.png', date: '07:39', time: '24/07/2018', title: 'MN Reward',
+    meta: [
+      { key: 'Status', value: '2833 confirmations' },
+      { key: 'From', value: 'SkK9a0u332fy7xWumTmqJLJmXTL2E' },
+      { key: 'Credit', value: '+6.00 STONE' },
+      { key: 'Transaction fee', value: '-0.0057640 STONE' },
+      { key: 'Net amount', value: '+6.0057640 STONE' },
+      { key: 'Transaction ID', value: '23918921bcf6c792aff' },
+    ],
+  },
+  { amount: '+3.00 TRC', brand: 'terracoin-logo.png', date: '07:39', time: '24/07/2018', title: 'MN Reward',
+    meta: [
+      { key: 'Status', value: '2833 confirmations' },
+      { key: 'From', value: 'SkK9a0u332fy7xWumTmqJLJmXTL2E' },
+      { key: 'Credit', value: '+3.00 TRC' },
+      { key: 'Transaction fee', value: '-0.0057640 TRC' },
+      { key: 'Net amount', value: '+3.0057640 TRC' },
+      { key: 'Transaction ID', value: '23918921bcf6c792aff' },
+    ],
+  },
+];
+
 export default {
   balanceData,
   filterCriteria,
   incomeSummaries,
   masternodesData,
   name,
-  sidebarLinks,
   periodicalData,
+  sidebarLinks,
   tagline,
+  transactionData,
 };
