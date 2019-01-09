@@ -1,8 +1,10 @@
 import * as React from 'react';
 import {
   Box,
+  BoxProps,
   Card,
   Image,
+  SpaceProps,
 } from 'rebass';
 import { theme } from '../../config';
 import {
@@ -10,7 +12,7 @@ import {
   DeadCentered,
 } from '../UI';
 
-type displayCardProps = {
+type displayCardProps = SpaceProps<any> & {
   borderWidth?: string,
   children?: React.ReactNode,
   /** Filename of image to display within card. */
