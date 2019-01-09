@@ -11,4 +11,9 @@ export default {
     height: '95%',
     borderRadius: theme.radiusSizes[1],
   },
+
+  coinMerchantsContainer: {
+    borderBottom: `2px solid ${theme.colors.gray}`,
+  },
+
 };

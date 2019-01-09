@@ -5,6 +5,7 @@ const lightred:string = '#f4bcb1';
 const warningred:string = '#ffb4b6';
 const warningredtext:string = '#d0021b';
 const red:string = '#f54323';
+const bordergray:string = '#e9eff4';
 const coolgray:string = '#cacdd1';
 const lightgray:string = '#fafbfc';
 const lightergray:string = '#fcfcfc';
@@ -35,6 +36,7 @@ type ColorsInterface = {
   gray: string,
   lightred: string,
   red: string,
+  bordergray: string,
   coolgray: string,
   lightgray: string,
   lightergray: string,
@@ -75,6 +77,7 @@ const theme:ThemeInterface = {
     gray,
     lightred,
     red,
+    bordergray,
     coolgray,
     lightgray,
     lightergray,

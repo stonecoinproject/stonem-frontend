@@ -3,9 +3,10 @@ import { Route } from 'react-router-dom';
 import { ModalRoute } from 'react-router-modal';
 import AddWalletsScreen from '../screens/AddWalletsScreen';
 import HomeScreen from '../screens/HomeScreen';
+import LoginScreen from '../screens/LoginScreen';
 import MasternodesManagerScreen from '../screens/MasternodesManagerScreen';
 import SignupScreen from '../screens/SignupScreen';
-import LoginScreen from '../screens/LoginScreen';
+import WalletManagerScreen from '../screens/WalletManagerScreen';
 
 const baseModalProps = {
   inClassName: 'react-router-modal__modal-in',
@@ -16,10 +17,17 @@ const baseModalProps = {
   outDelay: 500,
 };
 
+/**
+ * Route interface definition.
+ */
 type IRoute = {
+  /** Component to be rendered at this route. */
   component: React.ComponentClass,
+  /** Sets the route parser to match only an exact match for the pattern provided. */
   isExact: boolean,
+  /** Is the route serving a modal or a regular view? */
   isModal: boolean,
+  /** Regular expression pattern to serve up this route.  */
   path: string,
 };
 
@@ -49,6 +57,12 @@ const routeList:IRoute[] = [
     path: '/masternodes',
   },
   {
+    component: WalletManagerScreen,
+    isModal: false,
+    isExact: false,
+    path: '/wallets',
+  },
+  {
     component: HomeScreen,
     isModal: false,
     isExact: true,
@@ -74,6 +88,7 @@ export default class Routes extends React.Component {
     props:any,
   ) {
     return routeList.map((route, i) => (
+      // Render the <ModalRoute /> component only if a modal route encountered.
       route.isModal ?
       <ModalRoute
         component={route.component}

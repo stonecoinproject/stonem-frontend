@@ -7,11 +7,12 @@ import {
 
 import {
   MasternodeManagerTopBar,
-  MasternodesManagerCoinMerchants,
   MasternodesManagerStatusBoard,
   MasternodesManagerUptimeStats,
   MasternodesManagerInfoTable,
 } from '../MasternodesManager';
+
+import  { MnManagerCoinMerchants } from '../MnManagerSuite';
 
 import {
   styles as sharedStyles,
@@ -64,7 +65,7 @@ const renderMainSection = () => {
       width={6 / 10}
     >
       <MasternodeManagerTopBar />
-      <MasternodesManagerCoinMerchants style={styles.CoinMerchantsContainer} />
+      <MnManagerCoinMerchants style={styles.CoinMerchantsContainer} />
       <MasternodesManagerStatusBoard data-testid={'masternodes-manager-status-board'} />
     </Box>
   );
