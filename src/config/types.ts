@@ -12,6 +12,28 @@ export type StatusIndicatorProps = {
   statusTextColor: string;
 };
 
+export type TransactionMetaDataInterface = {
+  /** The string to represent the key of the meta key-value pair. */
+  key: string,
+  /** The string to represent the value of the meta key-value pair. */
+  value: string,
+};
+
+export type TransactionDataInterface = {
+  /** Amount the transaction cost. */
+  amount: string,
+  /** A string representing the file name of the transaction vendor brand. */
+  brand: string,
+  /** Date the transaction was initiated */
+  date: string,
+  /** Time the transaction was initiated */
+  time: string,
+  /** The title assigned to this transaction. */
+  title: string,
+  /** Meta information for this transaction. */
+  meta: TransactionMetaDataInterface[],
+};
+
 export type RecentTransactionItemProps = {
   /** Transaction amount for recent transaction item. */
   transactionAmount: string,
