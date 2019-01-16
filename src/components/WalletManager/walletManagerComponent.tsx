@@ -30,14 +30,11 @@ import { TransactionDataInterface, TransactionMetaDataInterface } from '../../co
  * @returns {React.ReactNode}
  */
 const mainSection = (
-  <Box
-    bg={'white'}
+  <ContainerSection
     ml={4}
     mr={2}
     my={4}
     px={4}
-    pb={4}
-    style={styles.mainComponentContainer}
     width={6 / 10}
   >
     <MnManagerTopBar title={'Wallets'} />
@@ -50,7 +47,7 @@ const mainSection = (
       }}
     />
     <WalletManagerTransactionForm />
-  </Box>
+  </ContainerSection>
 );
 
 /**
