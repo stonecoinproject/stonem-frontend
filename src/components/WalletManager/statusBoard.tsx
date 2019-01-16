@@ -9,9 +9,7 @@ import { BalanceDataInterface } from '../../config/types';
 import { CapsText } from '../UI';
 
 import { WalletManagerBalanceCard } from './';
-import { GenericList } from '../../generics/GenericList';
-
-export class WalletBalancesList extends GenericList<BalanceDataInterface> {}
+import { default as WalletBalancesList } from './generics/walletBalancesList';
 
 const renderWalletBalancesList = (
   balance:BalanceDataInterface,
@@ -49,12 +47,12 @@ const statusBoard = ({ ...props }) => {
           Stonecoin Wallet
         </CapsText>
       </Box>
-      <Flex mt={4}>
+      {<Flex mt={4}>
         <WalletBalancesList
           items={app.balanceData}
           itemRenderer={renderWalletBalancesList}
         />
-      </Flex>
+      </Flex>}
     </Box>
   );
 };

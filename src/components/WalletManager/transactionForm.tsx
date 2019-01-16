@@ -173,7 +173,7 @@ const renderTransactionFormElements = () => (
  *
  * @returns {React.ReactNode}
  */
-const transactionForm:React.SFC = () => {
+const transactionForm:React.SFC<{}> = () => {
   return (
     <Box>
       {renderTransactionActionButtons()}

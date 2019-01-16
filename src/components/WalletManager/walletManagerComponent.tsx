@@ -5,25 +5,24 @@ import {
   Text,
 } from 'rebass';
 
-import {
-  WalletManagerTopBar,
-  WalletManagerTransactionItem,
-  WalletManagerTransactionForm,
-  WalletManagerStatusBoard,
-} from './';
+import { default as WalletManagerTransactionItem } from './transactionItem';
+import { default as WalletManagerTransactionForm } from './transactionForm';
+import { default as WalletManagerStatusBoard } from './statusBoard';
+import { default as WalletTransactionItemList } from './generics/transactionItemList';
 
-import  { MnManagerCoinMerchants } from '../MnManagerSuite';
+import { default as MnManagerCoinMerchants } from '../MnManagerSuite/mnManagerCoinMerchants';
+import { default as MnManagerTopBar } from '../MnManagerSuite/topBar';
 import {
   CapsText,
   ContainerSection,
 } from '../UI';
+
 import {
   app,
   styles,
   theme,
 } from '../../config';
 import { TransactionDataInterface, TransactionMetaDataInterface } from '../../config/types';
-import { GenericList } from '../../generics/GenericList';
 
 /**
  * Renders the main section.
@@ -41,7 +40,7 @@ const mainSection = (
     style={styles.mainComponentContainer}
     width={6 / 10}
   >
-    <WalletManagerTopBar />
+    <MnManagerTopBar title={'Wallets'} />
     <MnManagerCoinMerchants style={styles.coinMerchantsContainer} />
     <WalletManagerStatusBoard
       data-testid={'wallet-manager-status-board'}
@@ -123,8 +122,6 @@ const renderWalletManagerTransactionItem = (
       </WalletManagerTransactionItem>
   );
 };
-
-export class WalletTransactionItemList extends GenericList<WalletManagerTransactionItem> {}
 
 /**
  * Renders the side information section.

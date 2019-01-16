@@ -6,13 +6,15 @@ import {
 } from 'rebass';
 
 import {
-  MasternodeManagerTopBar,
   MasternodesManagerStatusBoard,
   MasternodesManagerUptimeStats,
   MasternodesManagerInfoTable,
 } from '../MasternodesManager';
 
-import  { MnManagerCoinMerchants } from '../MnManagerSuite';
+import  {
+  MnManagerCoinMerchants,
+  MnManagerTopBar,
+} from '../MnManagerSuite';
 
 import {
   styles as sharedStyles,
@@ -64,7 +66,7 @@ const renderMainSection = () => {
       style={sharedStyles.mainComponentContainer}
       width={6 / 10}
     >
-      <MasternodeManagerTopBar />
+      <MnManagerTopBar title={'Your Masternodes'} />
       <MnManagerCoinMerchants style={styles.CoinMerchantsContainer} />
       <MasternodesManagerStatusBoard data-testid={'masternodes-manager-status-board'} />
     </Box>
