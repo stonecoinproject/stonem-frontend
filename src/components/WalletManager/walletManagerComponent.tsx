@@ -19,7 +19,8 @@ import {
   styles,
   theme,
 } from '../../config';
-import { TransactionDataInterface, TransactionMetaDataInterface } from '../../config/types'
+import { TransactionDataInterface, TransactionMetaDataInterface } from '../../config/types';
+import { GenericList } from '../../generics/GenericList';
 
 /**
  * Renders the main section.
@@ -53,11 +54,11 @@ const renderMainSection = () => {
 };
 
 /**
- * Renders all the meta data for a particular transaction. 
- * 
+ * Renders all the meta data for a particular transaction.
+ *
  * @param {Array<TransactionMetaDataInterface>} meta  - Array of meta information couplets.
- * 
- * @returns {React.ReactNode} 
+ *
+ * @returns {React.ReactNode}
  */
 const renderWalletManagerTransactionItemMetaData = (meta:TransactionMetaDataInterface[]) => {
   return (
@@ -82,41 +83,47 @@ const renderWalletManagerTransactionItemMetaData = (meta:TransactionMetaDataInte
         </Flex>
       );
     })
-  )
-}
+  );
+};
 
 /**
  * Renders all wallet manager transaction items.
- * 
- * @param {Object} transaction  - Transaction information.
- * @param {Number} index        - Index id of item. 
- * 
+ *
+ * @param {TransactionDataInterface} transaction  - Transaction information.
+ * @param {Number} index        - Index id of item.
+ *
  * @returns {React.ReactNode}
  */
-const renderWalletManagerTransactionItem = ({
+const renderWalletManagerTransactionItem = (
+  item:TransactionDataInterface,
+  index: number,
+  ) => {
+  const {
     amount,
     brand,
     date,
     meta,
     time,
     title,
-  }:TransactionDataInterface,
-  index:number) => {
-    return (
-    <WalletManagerTransactionItem
-      amount={amount}
-      brand={require(`../IncomeStatsSuite/${brand}`)}
-      date={date}
-      key={index}
-      hasNegativeIndex={amount[0] === '-'}
-      time={time}
-      title={title}
-      mb={2}
-    >
-      <Box py={3}>{renderWalletManagerTransactionItemMetaData(meta)}</Box>
-    </WalletManagerTransactionItem>
+  } = item;
+
+  return (
+      <WalletManagerTransactionItem
+        amount={amount}
+        brand={require(`../IncomeStatsSuite/${brand}`)}
+        date={date}
+        hasNegativeIndex={amount[0] === '-'}
+        key={index}
+        time={time}
+        title={title}
+        mb={2}
+      >
+        <Box py={3}>{renderWalletManagerTransactionItemMetaData(meta)}</Box>
+      </WalletManagerTransactionItem>
   );
-}
+};
+
+export class WalletTransactionItemList extends GenericList<WalletManagerTransactionItem> {}
 
 /**
  * Renders the side information section.
@@ -136,11 +143,13 @@ const renderAsideSection = () => {
     >
       <Box py={2}>
         <CapsText mb={4}>Latest Transactions</CapsText>
-        {app.transactionData.map((
+        <WalletTransactionItemList
+          items={app.transactionData}
+          itemRenderer={(
             transaction:TransactionDataInterface,
-            index:number
-          ) => renderWalletManagerTransactionItem(transaction, index))
-        }
+            index: number,
+          ) => renderWalletManagerTransactionItem(transaction, index)}
+        />
       </Box>
     </Box>
   );

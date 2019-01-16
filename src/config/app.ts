@@ -5,7 +5,10 @@ import {
   iconProps,
 } from '../components/Icons';
 
-import { TransactionDataInterface } from './types'
+import {
+  BalanceDataInterface,
+  TransactionDataInterface,
+} from './types';
 
 type sidebarLinkInterface = {
   icon: React.SFC<iconProps>,
@@ -96,13 +99,7 @@ const masternodesData: masternodesDataInterface[] = [
   { lastRenewalDate: '21/07/2018', lastRenewalTime: '05:33', statusCode: 'off', title: 'MN 5' },
 ];
 
-type balanceDataInterface = {
-  title: string,
-  amount: number,
-  currency: string,
-};
-
-const balanceData:balanceDataInterface[] = [
+const balanceData:BalanceDataInterface[] = [
   { title: 'Total', amount: 10253.21, currency: 'STONE' },
   { title: 'Active', amount: 55129.21, currency: 'STONE' },
   { title: 'Pending', amount: 234.00, currency: 'STONE' },

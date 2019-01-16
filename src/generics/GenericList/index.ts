@@ -1,1 +1,1 @@
-export {default as GenericList} from './GenericList';
+export { default as GenericList } from './GenericList';

@@ -1,3 +1,12 @@
+export type BalanceDataInterface = {
+  /** Title of the account balance. */
+  title: string,
+  /** Amount contained within the account. */
+  amount: number,
+  /** Currency of the account */
+  currency: string,
+};
+
 /**
  * Status indicator types.
  */
