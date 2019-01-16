@@ -21,6 +21,6 @@ export default class GenericList<T> extends React.Component<GenericListProps<T>,
       itemRenderer,
     } = this.props;
 
-    return (<div>{items.map(itemRenderer)}</div>);
+    return (items.map(itemRenderer));
   }
 }

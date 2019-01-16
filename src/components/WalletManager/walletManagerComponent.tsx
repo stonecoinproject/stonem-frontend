@@ -13,7 +13,10 @@ import {
 } from './';
 
 import  { MnManagerCoinMerchants } from '../MnManagerSuite';
-import { CapsText } from '../UI';
+import {
+  CapsText,
+  ContainerSection,
+} from '../UI';
 import {
   app,
   styles,
@@ -27,31 +30,29 @@ import { GenericList } from '../../generics/GenericList';
  *
  * @returns {React.ReactNode}
  */
-const renderMainSection = () => {
-  return (
-    <Box
-      bg={'white'}
-      ml={4}
-      mr={2}
-      my={4}
-      px={4}
+const mainSection = (
+  <Box
+    bg={'white'}
+    ml={4}
+    mr={2}
+    my={4}
+    px={4}
+    pb={4}
+    style={styles.mainComponentContainer}
+    width={6 / 10}
+  >
+    <WalletManagerTopBar />
+    <MnManagerCoinMerchants style={styles.coinMerchantsContainer} />
+    <WalletManagerStatusBoard
+      data-testid={'wallet-manager-status-board'}
       pb={4}
-      style={styles.mainComponentContainer}
-      width={6 / 10}
-    >
-      <WalletManagerTopBar />
-      <MnManagerCoinMerchants style={styles.coinMerchantsContainer} />
-      <WalletManagerStatusBoard
-        data-testid={'wallet-manager-status-board'}
-        pb={4}
-        style={{
-          borderBottom: `1px solid ${theme.colors.gray}`,
-        }}
-      />
-      <WalletManagerTransactionForm />
-    </Box>
-  );
-};
+      style={{
+        borderBottom: `1px solid ${theme.colors.gray}`,
+      }}
+    />
+    <WalletManagerTransactionForm />
+  </Box>
+);
 
 /**
  * Renders all the meta data for a particular transaction.
@@ -130,30 +131,17 @@ export class WalletTransactionItemList extends GenericList<WalletManagerTransact
  *
  * @returns {React.ReactNode}
  */
-const renderAsideSection = () => {
-  return (
-    <Box
-      bg={'white'}
-      my={4}
-      mx={2}
-      px={3}
-      py={2}
-      style={styles.mainComponentContainer}
-      width={1 / 3}
-    >
-      <Box py={2}>
-        <CapsText mb={4}>Latest Transactions</CapsText>
+const asideSection = (
+  <ContainerSection width={1 / 3}>
+    <Box py={2}>
+      <CapsText mb={4}>Latest Transactions</CapsText>
         <WalletTransactionItemList
           items={app.transactionData}
-          itemRenderer={(
-            transaction:TransactionDataInterface,
-            index: number,
-          ) => renderWalletManagerTransactionItem(transaction, index)}
+          itemRenderer={renderWalletManagerTransactionItem}
         />
-      </Box>
     </Box>
-  );
-};
+  </ContainerSection>
+);
 
 /**
  * Renders the wallets manager.
@@ -163,8 +151,8 @@ const renderAsideSection = () => {
 const walletManagerComponent = () => {
   return (
     <Flex width={1}>
-      {renderMainSection()}
-      {renderAsideSection()}
+      {mainSection}
+      {asideSection}
     </Flex>
   );
 };
