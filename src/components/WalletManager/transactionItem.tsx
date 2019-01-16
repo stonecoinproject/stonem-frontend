@@ -11,6 +11,96 @@ import ToggleProvider from '../../providers/ToggleProvider';
 import { CapsText } from '../UI';
 import { theme } from '../../config';
 
+/**
+ * Renders the brand artwork.
+ *
+ * @param {String} brand  - Source of brand artwork.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderBrand = (
+  brand: string,
+) => {
+  return (
+    <Box
+      mr={3}
+      width={1 / 5}
+    >
+      <Image width={1} src={brand} />
+    </Box>
+  );
+};
+
+/**
+ * Renders the transaction heading.
+ *
+ * @param {String} title  - Transaction title.
+ * @param {String} time  - Transaction time.
+ *
+ * @returns {React.ReactNode}
+ */
+const renderHeading = (
+  title: string,
+  time: string,
+) => {
+  return (
+  <Flex width={1}>
+    <CapsText
+      fontSize={3}
+      mb={3}
+      width={1 / 2}
+    >
+      {title}
+    </CapsText>
+
+    <CapsText
+      fontSize={3}
+      mb={3}
+      textAlign={'right'}
+      width={1 / 2}
+    >
+      {time}
+    </CapsText>
+  </Flex>
+  );
+};
+
+/**
+ * Renders meta information.
+ *
+ * @param amount {String}
+ * @param date {String}
+ * @param hasNegativeIndex {String}
+ */
+const renderMetaInformation = (
+  amount: string,
+  date: string,
+  hasNegativeIndex: boolean,
+) => {
+  return (
+    <Flex width={1}>
+      <CapsText
+        color={hasNegativeIndex ? 'red' : 'placeholdergray'}
+        fontSize={3}
+        mb={2}
+        width={1 / 2}
+      >
+        {amount}
+      </CapsText>
+
+      <CapsText
+        color={'placeholdergray'}
+        fontSize={3}
+        mb={2}
+        textAlign={'right'}
+        width={1 / 2}
+      >
+        {date}
+      </CapsText>
+    </Flex>
+  );
+};
+
 type transactionItemProps = CardProps & {
   /** Amount the transaction cost. */
   amount: string,
@@ -51,10 +141,7 @@ const transactionItem:React.SFC<transactionItemProps> = (props) => {
 
   return (
     <ToggleProvider
-      render={({
-        isOn,
-        doToggle,
-      }) => (
+      render={({ isOn, doToggle }) => (
       <Card
         border={2}
         borderColor={ isOn ? theme.colors.blue : theme.colors.bordergray}
@@ -67,54 +154,12 @@ const transactionItem:React.SFC<transactionItemProps> = (props) => {
         {...props}
       >
         <Flex>
-          <Box
-            mr={3}
-            width={1 / 5}
-          >
-            <Image width={1} src={brand} />
-          </Box>
-
+          {renderBrand(brand)}
           <Box width={1}>
             <Box width={1}>
-              <Flex width={1}>
-                <CapsText
-                  fontSize={3}
-                  mb={3}
-                  width={1 / 2}
-                >
-                  {title}
-                </CapsText>
 
-                <CapsText
-                  fontSize={3}
-                  mb={3}
-                  textAlign={'right'}
-                  width={1 / 2}
-                >
-                  {time}
-                </CapsText>
-              </Flex>
-
-              <Flex width={1}>
-                <CapsText
-                  color={hasNegativeIndex ? 'red' : 'placeholdergray'}
-                  fontSize={3}
-                  mb={2}
-                  width={1 / 2}
-                >
-                  {amount}
-                </CapsText>
-
-                <CapsText
-                  color={'placeholdergray'}
-                  fontSize={3}
-                  mb={2}
-                  textAlign={'right'}
-                  width={1 / 2}
-                >
-                  {date}
-                </CapsText>
-              </Flex>
+              {renderHeading(title, time)}
+              {renderMetaInformation(amount, date, hasNegativeIndex)}
             </Box>
           </Box>
         </Flex>
