@@ -116,6 +116,13 @@ type transactionItemProps = CardProps & {
   time: string,
 };
 
+const transactionItemCardStyles = {
+  border: 2,
+  borderRadius: theme.radiusSizes[1],
+  cursor: 'pointer',
+  p: 3,
+};
+
 /**
  * Displays information about a masternode transaction.
  *
@@ -128,17 +135,15 @@ type transactionItemProps = CardProps & {
  *
  * @returns {React.ReactNode}
  */
+
 const transactionItem:React.SFC<transactionItemProps> = (props) => {
   return (
     <ToggleProvider
       render={({ isOn, doToggle }) => (
       <Card
-        border={2}
         borderColor={ isOn ? theme.colors.blue : theme.colors.bordergray}
-        borderRadius={theme.radiusSizes[1]}
-        p={3}
         onClick={doToggle}
-        style={{ cursor: 'pointer' }}
+        {...transactionItemCardStyles}
         {...props}
       >
         <Flex>
@@ -148,6 +153,7 @@ const transactionItem:React.SFC<transactionItemProps> = (props) => {
             {renderMetaInformation(props.amount, props.date, props.hasNegativeIndex)}
           </Box>
         </Flex>
+
         <Box style={{
           height: isOn ? 'auto' : '0',
           overflowY: 'hidden',
