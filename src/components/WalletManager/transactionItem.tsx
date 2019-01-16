@@ -148,7 +148,6 @@ const transactionItem:React.SFC<transactionItemProps> = (props) => {
             {renderMetaInformation(props.amount, props.date, props.hasNegativeIndex)}
           </Box>
         </Flex>
-
         <Box style={{
           height: isOn ? 'auto' : '0',
           overflowY: 'hidden',
