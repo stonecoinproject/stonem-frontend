@@ -129,16 +129,6 @@ type transactionItemProps = CardProps & {
  * @returns {React.ReactNode}
  */
 const transactionItem:React.SFC<transactionItemProps> = (props) => {
-  const {
-    amount,
-    brand,
-    children,
-    date,
-    hasNegativeIndex,
-    title,
-    time,
-  } = props;
-
   return (
     <ToggleProvider
       render={({ isOn, doToggle }) => (
@@ -148,28 +138,21 @@ const transactionItem:React.SFC<transactionItemProps> = (props) => {
         borderRadius={theme.radiusSizes[1]}
         p={3}
         onClick={doToggle}
-        style={{
-          cursor: 'pointer',
-        }}
+        style={{ cursor: 'pointer' }}
         {...props}
       >
         <Flex>
-          {renderBrand(brand)}
+          {renderBrand(props.brand)}
           <Box width={1}>
-            <Box width={1}>
-
-              {renderHeading(title, time)}
-              {renderMetaInformation(amount, date, hasNegativeIndex)}
-            </Box>
+            {renderHeading(props.title, props.time)}
+            {renderMetaInformation(props.amount, props.date, props.hasNegativeIndex)}
           </Box>
         </Flex>
 
         <Box style={{
           height: isOn ? 'auto' : '0',
           overflowY: 'hidden',
-        }}>
-          {children}
-        </Box>
+        }}>{props.children}</Box>
       </Card>
     )} />
   );
