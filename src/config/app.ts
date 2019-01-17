@@ -5,6 +5,11 @@ import {
   iconProps,
 } from '../components/Icons';
 
+import {
+  BalanceDataInterface,
+  TransactionDataInterface,
+} from './types';
+
 type sidebarLinkInterface = {
   icon: React.SFC<iconProps>,
 };
@@ -94,42 +99,14 @@ const masternodesData: masternodesDataInterface[] = [
   { lastRenewalDate: '21/07/2018', lastRenewalTime: '05:33', statusCode: 'off', title: 'MN 5' },
 ];
 
-type balanceDataInterface = {
-  title: string,
-  amount: number,
-  currency: string,
-};
-
-const balanceData:balanceDataInterface[] = [
+const balanceData:BalanceDataInterface[] = [
   { title: 'Total', amount: 10253.21, currency: 'STONE' },
   { title: 'Active', amount: 55129.21, currency: 'STONE' },
   { title: 'Pending', amount: 234.00, currency: 'STONE' },
   { title: 'Collateral', amount: 4500.00, currency: 'STONE' },
 ];
 
-type transactionDataMeta = {
-  /** The string to represent the key of the meta key-value pair. */
-  key: string,
-  /** The string to represent the value of the meta key-value pair. */
-  value: string,
-};
-
-type transactionData = {
-  /** Amount the transaction cost. */
-  amount: string,
-  /** A string representing the file name of the transaction vendor brand. */
-  brand: string,
-  /** Date the transaction was initiated */
-  date: string,
-  /** Time the transaction was initiated */
-  time: string,
-  /** The title assigned to this transaction. */
-  title: string,
-  /** Meta information for this transaction. */
-  meta: transactionDataMeta[],
-};
-
-const transactionData = [
+const transactionData:TransactionDataInterface[] = [
   { amount: '+6.00 STONE', brand: 'stone-logo.png', date: '07:39', time: '24/07/2018', title: 'MN Reward',
     meta: [
       { key: 'Status', value: '2833 confirmations' },

@@ -3,12 +3,18 @@ import { Flex } from 'rebass';
 
 import { CapsText } from '../UI';
 
+type topBarProps = {
+  title: string,
+};
+
 /**
  * Renders the top bar for the component.
  *
+ * @param {String} Object.title - Title on the top bar.
+ *
  * @returns React.ReactNode
  */
-const topBar = () => (
+const topBar:React.SFC<topBarProps> = ({ title }) => (
   <Flex
     flexDirection={'column'}
     py={3}
@@ -17,7 +23,7 @@ const topBar = () => (
       color={'darkergray'}
       fontSize={0}
     >
-      Your MasterNodes
+      {title}
     </CapsText>
   </Flex>
 );

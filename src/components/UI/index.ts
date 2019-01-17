@@ -1,5 +1,6 @@
 export { default as Base } from './base';
 export { default as BrowserLink } from './browserLink';
+export { default as ContainerSection } from './containerSection';
 export { default as Caret } from './caret';
 export { default as CapsText } from './capsText';
 export { default as CenteredText } from './centeredText';
