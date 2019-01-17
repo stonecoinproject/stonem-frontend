@@ -138,39 +138,46 @@ const TransactionFormGroup:React.SFC<TransactionFormGroupsProps> = ({
 );
 
 /**
+ * Renders the input groups for the form.
+ */
+const renderTransactionFormElements = () => (
+  <Box>
+    <TransactionFormGroup
+      label={'Pay To'}
+      mb={2}
+    />
+    <TransactionFormGroup
+      label={'Description'}
+      mb={2}
+    />
+    <Flex>
+      <TransactionFormLabel
+        label={'Amount'}
+        width={1 / 4}
+      />
+      <Flex width={1 / 3}>
+        <TransactionFormInput type={'number'} />
+        <Flex
+          flexDirection={'column'}
+          justifyContent={'center'}
+        >
+          <CapsText ml={3}>Stone</CapsText>
+        </Flex>
+      </Flex>
+    </Flex>
+  </Box>
+);
+
+/**
  * Renders a transaction form.
  *
  * @returns {React.ReactNode}
  */
-const transactionForm:React.SFC = () => {
+const transactionForm:React.SFC<{}> = () => {
   return (
     <Box>
       {renderTransactionActionButtons()}
-      <Box>
-        <TransactionFormGroup
-          label={'Pay To'}
-          mb={2}
-        />
-        <TransactionFormGroup
-          label={'Description'}
-          mb={2}
-        />
-        <Flex>
-          <TransactionFormLabel
-            label={'Amount'}
-            width={1 / 4}
-          />
-          <Flex width={1 / 3}>
-            <TransactionFormInput type={'number'} />
-            <Flex
-              flexDirection={'column'}
-              justifyContent={'center'}
-            >
-              <CapsText ml={3}>Stone</CapsText>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Box>
+      {renderTransactionFormElements()}
     </Box>
   );
 };
